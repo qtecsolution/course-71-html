@@ -1,0 +1,56 @@
+/**=======================================================**
+                        HEADER SECTION START
+**=======================================================**/
+
+.header {
+    background: $secondary;
+
+    &-content {
+        @include flex-between;
+
+        .hamburger {
+            width: 33.33%;
+        }
+
+        .sitelogo {
+            width: 33.33%;
+            @include flex-center;
+
+            .logo {
+                width: length(108);
+                height: length(36);
+                @include flex-center;
+                overflow: hidden;
+
+                img {
+                    @include wh100;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .wol-mobilemenu {
+            position: relative;
+            @include flex-end;
+            width: 33.33%;
+
+            .submenu {
+                position: absolute;
+                right: length(-8);
+                top: 100%;
+                @include w100;
+                min-width: length(160);
+                max-width: length(200);
+                padding: length(16) length(8);
+                @include flex-column;
+                gap: length(14);
+                // background: $white;
+                // background: red;
+            }
+        }
+    }
+}
+
+/**=======================================================**
+                        HEADER SECTION END
+**=======================================================**/

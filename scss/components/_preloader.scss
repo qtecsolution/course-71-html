@@ -1,0 +1,10 @@
+.preloader {
+    @include flex-center;
+    position: fixed;
+    @include w100;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 9999;
+    background: $primary;
+}
+

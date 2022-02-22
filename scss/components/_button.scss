@@ -1,0 +1,255 @@
+// @mixin exist($prop, $val) {
+//     @if ($val) {
+//         #{$prop}: $val;
+//     }
+// }
+
+// @mixin position($t, $r, $b, $l) {
+//     @include exist(top, $t);
+//     @include exist(right, $r);
+//     @include exist(bottom, $b);
+//     @include exist(left, $l);
+// }
+
+.btn-border {
+    
+}
+
+// .btn71 {
+//     display: inline-block;
+//     position: relative;
+//     @include transparent-button;
+//     @include radius(8);
+//     @include transition(all .1s ease-out);
+
+//     &::before,
+//     &::after {
+//         content: "";
+//         width: length(0);
+//         height: length(1);
+//         position: absolute;
+//         background: $primary;
+//         @include radius(8);
+//         transition: all 0.2s ease-out;
+//     }
+
+//     .btn-text {
+//         display: inline-block;
+//         @include wh100;
+//         @include radius(8);
+//         @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+//         padding: length(16) length(24);
+
+//         &::before,
+//         &::after {
+//             content: "";
+//             width: 1px;
+//             height: 0;
+//             position: absolute;
+//             background: $primary;
+//             @include radius(8);
+//             transition: all 0.2s ease-out;
+//         }
+//     }
+
+//     @include hover {
+//         &::before,
+//         &::after {
+//             @include w100;
+//         }
+
+//         .btn-text {
+//             &::before,
+//             &::after {
+//                 @include h100;
+//             }
+//         }
+//     }
+// }
+
+// .btn-fill {
+//     @include setBgColor($primary, $white);
+
+//     &::before {
+//         left: 0;
+//         top: 0;
+//         transition-duration: 0.4s;
+//     }
+
+//     &::after {
+//         right: 0;
+//         bottom: 0;
+//         transition-duration: 0.4s;
+//     }
+
+//     .btn-text {
+//         &::after {
+//             right: 0;
+//             bottom: 0;
+//             transition-duration: 0.2s;
+//         }
+
+//         &::before {
+//             left: 0;
+//             top: 0;
+//             transition-duration: 0.2s;
+//         }
+//     }
+    
+//     @include hover {
+//         @include setBgColor($white, $primary);
+//     }
+// }
+
+.btn71 {
+    display: inline-block;
+    position: relative;
+    @include transparent-button;
+    // @include border(solid, 1, transparent);
+    // @include radius(8);
+    @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+    padding: length(16) length(24);
+
+    // &::before {
+    //     border-bottom-width: length(1);
+    //     border-left-width: length(1);
+    //     /* A bottom border of button have to be hidden through 0.21s so I use the 0.21s value as the second argument */
+    //     transition-delay: .21s, .21s, 0s;
+    //     /* .21s for border-color, .21s for width, 0s for height */
+    // }
+
+    // &::after {
+    //     border-top-width: length(1);
+    //     border-right-width: length(1);
+    //     /* A right border of button have to be hidden through 0.21s so I use the 0.21s value as the third argument */
+    //     // transition-delay: .21s, 0s, .21s;
+    //     @include transitions;
+    //     /* .21s for border-color, 0s for width, .21s for height */
+    // }
+
+    // @include hover {
+    //     &::before,
+    //     &::after {
+    //         @include wh100;
+    //         border-color: $primary;
+
+    //         /* Changing border color don't have to be smooth so I use the 0s value as the first argument */
+    //         transition-duration: 0s, .21s, .21s;
+    //         // @include transitions;
+    //         /* 0s for border-color, .21s for width, .21s for height */
+    //     }
+    // }
+}
+
+.btn-border {
+    @include setBgColor($white, $primary);
+    @include radius(8);
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background: $primary;
+        z-index: -1;
+        @include radius(8);
+    }
+
+    &:before {
+        top: -0.1rem;
+        bottom: -0.1rem;
+        left: 0;
+        right: -0.1rem;
+        transition: left .1s 0s, right .1s 0s, bottom .2s .1s;
+    }
+
+    &:after {
+        top: -0.1rem;
+        bottom: -0.1rem;
+        left: -0.1rem;
+        right: 0;
+        transition: left .1s 0s, right .1s 0s, top .2s .1s;
+    }
+
+    @include hover {
+        @include setBgColor($primary, $white);
+
+        &:before {
+            top: -0.1rem;
+            bottom: -0.1rem;
+            left: 0;
+            right: -0.1rem;
+            transition: left .2s 0s, right .2s 0s, bottom .2s .2s;
+        }
+
+        &:after {
+            top: -0.1rem;
+            bottom: -0.1rem;
+            left: -0.1rem;
+            right: 0;
+            transition: left .2s 0s, right .2s 0s, top .2s .2s;
+        }
+    }
+}
+
+.btn-fill {
+    @include setBgColor($primary, $white);
+    @include radius(8);
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background: red;
+        z-index: -1;
+    }
+
+    &:before {
+        top: -0.1rem;
+        bottom: 100%;
+        left: 0;
+        right: 100%;
+        transition: bottom .2s 0s,
+        left .2s .2s,
+        right .2s .2s;
+        @include radius(8);
+    }
+
+    &:after {
+        top: 100%;
+        bottom: -0.1rem;
+        left: 100%;
+        right: 0;
+        transition: top .2s 0s,
+        left .2s .2s,
+        right .2s .2s;
+        @include radius(8);
+    }
+
+    @include hover {
+        @include setBgColor($white, $primary);
+
+        &::before,
+        &::after {
+            background: $primary;
+        }
+
+        &:before {
+            top: -0.1rem;
+            bottom: -0.1rem;
+            left: 0;
+            right: -0.1rem;
+            transition: left .2s 0s, right .2s 0s, bottom .2s .2s;
+        }
+
+        &:after {
+            top: -0.1rem;
+            bottom: -0.1rem;
+            left: -0.1rem;
+            right: 0;
+            transition: left .2s 0s, right .2s 0s, top .2s .2s;
+        }
+    }
+}

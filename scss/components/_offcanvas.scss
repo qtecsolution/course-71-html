@@ -1,0 +1,90 @@
+/**=====================================================
+                WISHLIST DROPDOWN START
+=====================================================**/
+
+.offcanvas-top {
+    height: 100vh;
+    border-bottom: none;
+}
+
+.offcanvas-bottom {
+    height: 100vh;
+    border-top: none;
+}
+
+.offcanvas-start {
+    border-right: none;
+}
+
+.offcanvas-end {
+    border-left: 0;
+}
+
+.offcanvas {
+    @include w100;
+
+    &-header {
+        padding: length(24);
+
+        .brandlogo {
+            @include flex-center;
+            width: length(160);
+            max-width: 30%;
+            height: length(80);
+            overflow: hidden;
+
+            img {
+                @include w100;
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .btn-close {
+            @include square(length(36));
+            background: transparent;
+            margin: 0;
+            padding: 0;
+            @include flex-center;
+            opacity: 1;
+
+            svg {
+                @include transitiontransform;
+
+                path {
+                    @include transitions;
+                }
+            }
+
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+
+            @include hover {
+                svg {
+                    @include transform(rotate(90deg));
+                }
+            }
+        }
+    }
+
+    &-body {
+
+        
+
+        &::-webkit-scrollbar {
+            background: transparent;
+            width: length(8);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            // background: $primary;
+            @include radius(8);
+        }
+    }
+}
+
+/**=====================================================
+                WISHLIST DROPDOWN END
+=====================================================**/
