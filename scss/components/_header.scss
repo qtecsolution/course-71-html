@@ -140,6 +140,78 @@
                         HEADER SECTION END
 **=======================================================**/
 
-h2 {
-    @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(56, 40));
+/**=======================================================**
+                        APP-MENU START
+**=======================================================**/
+
+.appmenu {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    @include w100;
+    height: length(70);
+    background: $white;
+    @include flex-center-between;
+    z-index: 999999;
+
+    .menulink {
+        width: calc(100% / 5);
+        @include h100;
+        @include flex-center-column;
+        gap: length(8);
+        text-align: center;
+
+        .linkicon {
+            @include square(length(24));
+            @include flex-center;
+            overflow: hidden;
+        }
+
+        .linktext {
+            @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(12, 16));
+            color: $gray-600;
+        }
+
+        &:hover:not(.active) {
+            background: $primary;
+            
+            .linkicon {
+                svg {
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+
+            .linktext {
+                color: $white;
+            }
+        }
+
+        &.active {
+            background: $primary;
+
+            .linkicon {
+                svg {
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+
+            .linktext {
+                color: $white;
+            }
+        }
+    }
 }
+
+/**=======================================================**
+                        APP-MENU END
+**=======================================================**/
+
+
+
+// h2 {
+//     @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(56, 40));
+// }

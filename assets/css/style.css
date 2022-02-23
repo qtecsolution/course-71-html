@@ -8,6 +8,9 @@
                     NORMAL-COLORS
 =======================================================**/
 /**=====================================================**
+                    SHADOWS
+=======================================================**/
+/**=====================================================**
                     BOX-SHADOWS
 =======================================================**/
 /**=====================================================**
@@ -19,7 +22,7 @@
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
-@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@100;300;400;500;600;700&family=Noto+Sans+Bengali:wght@100;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100;200;300;400;500;600;700&display=swap");
 @-webkit-keyframes slideDownIn {
   0% {
     -webkit-transform: translateY(-100%);
@@ -853,14 +856,100 @@ select {
 /**=======================================================**
                         HEADER SECTION END
 **=======================================================**/
-h2 {
-  font-family: "Hind Siliguri";
-  font-style: normal;
-  font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 1.4;
+/**=======================================================**
+                        APP-MENU START
+**=======================================================**/
+.appmenu {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4.375rem;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  z-index: 999999;
 }
 
+.appmenu .menulink {
+  width: calc(100% / 5);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.appmenu .menulink .linkicon {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.appmenu .menulink .linktext {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 0.75;
+  color: #718096;
+}
+
+.appmenu .menulink:hover:not(.active) {
+  background: #7D56A5;
+}
+
+.appmenu .menulink:hover:not(.active) .linkicon svg path {
+  fill: #ffffff;
+}
+
+.appmenu .menulink:hover:not(.active) .linktext {
+  color: #ffffff;
+}
+
+.appmenu .menulink.active {
+  background: #7D56A5;
+}
+
+.appmenu .menulink.active .linkicon svg path {
+  fill: #ffffff;
+}
+
+.appmenu .menulink.active .linktext {
+  color: #ffffff;
+}
+
+/**=======================================================**
+                        APP-MENU END
+**=======================================================**/
 /**=======================================================**
                     MOBILEHEADER SECTION START
 **=======================================================**/
@@ -878,7 +967,7 @@ h2 {
   border: solid 0.0625rem transparent;
   border-radius: 0.5rem;
   border-radius: 0.5rem;
-  font-family: "Hind Siliguri";
+  font-family: "Noto Sans Bengali";
   font-style: normal;
   font-size: 0.875rem;
   font-weight: 600;
@@ -982,14 +1071,11 @@ h2 {
 }
 
 .offcanvas {
-  width: 100%;
+  width: 16.25rem;
 }
 
 .offcanvas-header {
-  padding: 1.5rem;
-}
-
-.offcanvas-header .brandlogo {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -999,13 +1085,24 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 10rem;
-  max-width: 30%;
-  height: 5rem;
+}
+
+.offcanvas-header .logo {
+  width: 7.5rem;
+  height: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: hidden;
 }
 
-.offcanvas-header .brandlogo img {
+.offcanvas-header .logo img {
   width: 100%;
   max-width: 100%;
   -o-object-fit: contain;
@@ -1013,11 +1110,13 @@ h2 {
 }
 
 .offcanvas-header .btn-close {
-  height: 2.25rem;
-  width: 2.25rem;
-  background: transparent;
+  height: 1.875rem;
+  width: 1.875rem;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.1), 0 1.875rem 2.5rem rgba(20, 37, 63, 0.08);
+          box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.1), 0 1.875rem 2.5rem rgba(20, 37, 63, 0.08);
   margin: 0;
-  padding: 0;
+  padding: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1027,7 +1126,11 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 100%;
   opacity: 1;
+  position: absolute;
+  top: 0.5rem;
+  left: calc(100% + .5rem);
 }
 
 .offcanvas-header .btn-close svg {
@@ -1052,6 +1155,46 @@ h2 {
 .offcanvas-header .btn-close:not([disabled]):hover svg {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.offcanvas-header .btn-close:not([disabled]):hover svg path {
+  stroke: #F16063;
+}
+
+.offcanvas-body {
+  padding-top: 0rem;
+}
+
+.offcanvas-body .authmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+.offcanvas-body .authmenu .withoutauth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+.offcanvas-body .authmenu .withauth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .offcanvas-body::-webkit-scrollbar {

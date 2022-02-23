@@ -19,11 +19,55 @@
             <div class="header-content">
                 <!-- HAMBURGER START -->
                 <div class="hamburger">
-                    <button class="btn-hamburger" type="button">
+                    <!-- HAMBURGER-BUTTON START -->
+                    <button class="btn-hamburger" type="button" data-bs-toggle="offcanvas" href="#mobileMenu" aria-controls="mobileMenu">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 18H20M4 6H20H4ZM4 12H12H4Z" stroke="#718096" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
+                    <!-- HAMBURGER-BUTTON END -->
+
+                    <!-- OFFCANVAS START -->
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenu">
+                        <!-- OFFCANVAS-HEADER START -->
+                        <div class="offcanvas-header">
+                            <a href="index.html" class="logo">
+                                <img src="assets/images/logo/logo.svg" alt="logo">
+                            </a>
+                            
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 33C9.7155 33 3 26.2845 3 18C3 9.7155 9.7155 3 18 3C26.2845 3 33 9.7155 33 18C33 26.2845 26.2845 33 18 33ZM18 30C21.1826 30 24.2348 28.7357 26.4853 26.4853C28.7357 24.2348 30 21.1826 30 18C30 14.8174 28.7357 11.7652 26.4853 9.51472C24.2348 7.26428 21.1826 6 18 6C14.8174 6 11.7652 7.26428 9.51472 9.51472C7.26428 11.7652 6 14.8174 6 18C6 21.1826 7.26428 24.2348 9.51472 26.4853C11.7652 28.7357 14.8174 30 18 30ZM18 15.879L22.242 11.6355L24.3645 13.758L20.121 18L24.3645 22.242L22.242 24.3645L18 20.121L13.758 24.3645L11.6355 22.242L15.879 18L11.6355 13.758L13.758 11.6355L18 15.879Z" fill="#718096"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- OFFCANVAS-HEADER END -->
+
+                        <!-- OFFCANVAS-BODY START -->
+                        <div class="offcanvas-body">
+
+
+                            <div class="authmenu">
+                                <div class="withoutauth">
+                                    <button class="btn71 btn-border">
+                                        সাইন ইন
+                                    </button>
+
+                                    <button class="btn71 btn-fill">
+                                        সাইন আপ
+                                    </button>
+                                </div>
+
+                                <div class="withauth d-none">
+                                    <button class="btn71 btn-border">
+                                        সাইন আউট
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- OFFCANVAS-BODY END -->
+                    </div>
+                    <!-- OFFCANVAS END -->
                 </div>
                 <!-- HAMBURGER END -->
 
@@ -48,7 +92,7 @@
                 <!-- WITHOUT-LOGIN MENU START -->
                 <div class="wol-menu d-none">
                     <button class="btn71 btn-border">
-                        লগ ইন
+                        সাইন ইন
                     </button>
 
                     <button class="btn71 btn-fill">
@@ -77,6 +121,73 @@
     </header>
     <!-- HEADER SECTION END -->
 
-    <h2 class="my-5">যেখানে সেখানে পড়াশোনার সহজ সমাধান</h2>
+    <!-- APP-MENU START -->
+    <div class="appmenu">
+        <!-- HOME-LINK START -->
+        <a href="index.html" class="menulink active">
+            <span class="linkicon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 19H19V9.97803L12 4.53403L5 9.97803V19H11V13H13V19ZM21 20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8947 20.2652 21 20 21H4C3.73478 21 3.48043 20.8947 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V9.49003C2.99989 9.33764 3.03462 9.18724 3.10152 9.05033C3.16841 8.91341 3.26572 8.79359 3.386 8.70003L11.386 2.47803C11.5615 2.34147 11.7776 2.26733 12 2.26733C12.2224 2.26733 12.4385 2.34147 12.614 2.47803L20.614 8.70003C20.7343 8.79359 20.8316 8.91341 20.8985 9.05033C20.9654 9.18724 21.0001 9.33764 21 9.49003V20Z" fill="#718096"/>
+                </svg>
+            </span>
+
+            <span class="linktext">হোম</span>
+        </a>
+        <!-- HOME-LINK END -->
+
+        <!-- SEARCH-LINK START -->
+        <a href="search-result.html" class="menulink">
+            <span class="linkicon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.031 16.617L22.314 20.899L20.899 22.314L16.617 18.031C15.0237 19.3082 13.042 20.0029 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20.0029 13.042 19.3082 15.0237 18.031 16.617ZM16.025 15.875C17.2941 14.5699 18.0029 12.8204 18 11C18 7.132 14.867 4 11 4C7.132 4 4 7.132 4 11C4 14.867 7.132 18 11 18C12.8204 18.0029 14.5699 17.2941 15.875 16.025L16.025 15.875Z" fill="#718096"/>
+                </svg>
+            </span>
+
+            <span class="linktext">সার্চ</span>
+        </a>
+        <!-- SEARCH-LINK END -->
+
+        <!-- WISHLIST-LINK START -->
+        <a href="#" class="menulink">
+            <span class="linkicon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.001 4.52898C14.35 2.41998 17.98 2.48998 20.243 4.75698C22.505 7.02498 22.583 10.637 20.479 12.993L11.999 21.485L3.52101 12.993C1.41701 10.637 1.49601 7.01898 3.75701 4.75698C6.02201 2.49298 9.64501 2.41698 12.001 4.52898V4.52898ZM18.827 6.16998C17.327 4.66798 14.907 4.60698 13.337 6.01698L12.002 7.21498L10.666 6.01798C9.09101 4.60598 6.67601 4.66798 5.17201 6.17198C3.68201 7.66198 3.60701 10.047 4.98001 11.623L12 18.654L19.02 11.624C20.394 10.047 20.319 7.66498 18.827 6.16998V6.16998Z" fill="#718096"/>
+                </svg>
+            </span>
+
+            <span class="linktext">উইশ লিস্ট</span>
+        </a>
+        <!-- WISHLIST-LINK END -->
+
+        <!-- MY-COURSE LINK START -->
+        <a href="my-course.html" class="menulink">
+            <span class="linkicon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3.993C3 3.445 3.445 3 3.993 3H20.007C20.555 3 21 3.445 21 3.993V20.007C20.9997 20.2703 20.895 20.5227 20.7089 20.7089C20.5227 20.895 20.2703 20.9997 20.007 21H3.993C3.72972 20.9997 3.4773 20.895 3.29114 20.7089C3.10497 20.5227 3.00026 20.2703 3 20.007V3.993ZM5 5V19H19V5H5ZM10.622 8.415L15.501 11.667C15.5559 11.7035 15.6009 11.753 15.632 11.8111C15.6631 11.8692 15.6794 11.9341 15.6794 12C15.6794 12.0659 15.6631 12.1308 15.632 12.1889C15.6009 12.247 15.5559 12.2965 15.501 12.333L10.621 15.585C10.5608 15.6249 10.491 15.6477 10.4189 15.6512C10.3468 15.6546 10.2751 15.6384 10.2114 15.6043C10.1477 15.5703 10.0945 15.5197 10.0573 15.4578C10.02 15.396 10.0003 15.3252 10 15.253V8.747C10.0001 8.67465 10.0199 8.60369 10.0572 8.54168C10.0944 8.47967 10.1478 8.42893 10.2116 8.39486C10.2755 8.36079 10.3473 8.34467 10.4196 8.34822C10.4919 8.35177 10.5618 8.37485 10.622 8.415Z" fill="#718096"/>
+                </svg>
+            </span>
+
+            <span class="linktext">আমার কোর্স</span>
+        </a>
+        <!-- MY-COURSE LINK END -->
+
+        <!-- MY-ACCOUNT LINK START -->
+        <a href="my-account.html" class="menulink">
+            <span class="linkicon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 22C4 19.8783 4.84285 17.8434 6.34315 16.3431C7.84344 14.8429 9.87827 14 12 14C14.1217 14 16.1566 14.8429 17.6569 16.3431C19.1571 17.8434 20 19.8783 20 22H18C18 20.4087 17.3679 18.8826 16.2426 17.7574C15.1174 16.6321 13.5913 16 12 16C10.4087 16 8.88258 16.6321 7.75736 17.7574C6.63214 18.8826 6 20.4087 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z" fill="#718096"/>
+                </svg>
+            </span>
+
+            <span class="linktext">একাউন্ট</span>
+        </a>
+        <!-- MY-ACCOUNT LINK END -->
+    </div>
+    <!-- APP-MENU END -->
+
+    <h2 class="d-none">যেখানে সেখানে পড়াশোনার সহজ সমাধান</h2>
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

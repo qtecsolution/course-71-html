@@ -3,26 +3,9 @@
 =======================================================**/
 $primary: #7D56A5;
 $secondary: #FEEFEC;
+$danger: #F16063;
 
-$primaryBg: #FDF9F2;
-$secondaryBg: #F9F8F8;
-$bannerBg: #F9F8F7;
-$textPlaceholder: #7C7C7C;
-$dividerBg: #DEE2E6;
-$submitBg: #353535;
-$footerText: #969696;
-$textStep: #626262;
-$textTestimonial: #535353;
-$testimonialBg: #FAF9F7;
-$dimondBorder: #ECECEC;
-$textSuccess: #69B756;
-$inputBorder: #CED3DB;
-$formBorder: #D8D8D8;
-$showroomBorder: rgba(21, 21, 21, 0.15);
-$scheduleBg: #0E0E0E;
-$textSchedule: #B9B8B8;
-$faqBtnBg: #EDEDED;
-$grayBg: #eeeeee;
+$gray-600: #718096;
 
 /**=====================================================**
                     BORDER-COLORS
@@ -34,9 +17,17 @@ $grayBg: #eeeeee;
 $black: #000000;
 $white: #ffffff;
 
+
+/**=====================================================**
+                    SHADOWS
+=======================================================**/
+$shadow-1: rgba(12, 26, 75, 0.1);
+$shadow-2: rgba(20, 37, 63, 0.08);
+
 /**=====================================================**
                     BOX-SHADOWS
 =======================================================**/
+$close-shadow: 0 0 .0625rem $shadow-1, 0 1.875rem 2.5rem $shadow-2;
 
 /**=====================================================**
                     TIMING-VARIABLES

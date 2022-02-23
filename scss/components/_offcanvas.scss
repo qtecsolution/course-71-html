@@ -21,16 +21,16 @@
 }
 
 .offcanvas {
-    @include w100;
+    width: length(260);
 
     &-header {
-        padding: length(24);
+        position: relative;
+        @include flex-center;
 
-        .brandlogo {
+        .logo {
+            width: length(120);
+            height: length(40);
             @include flex-center;
-            width: length(160);
-            max-width: 30%;
-            height: length(80);
             overflow: hidden;
 
             img {
@@ -41,12 +41,17 @@
         }
 
         .btn-close {
-            @include square(length(36));
-            background: transparent;
+            @include square(length(30));
+            background: $white;
+            box-shadow: $close-shadow;
             margin: 0;
-            padding: 0;
+            padding: length(8);
             @include flex-center;
+            @include circle;
             opacity: 1;
+            position: absolute;
+            top: length(8);
+            left: calc(100% + .5rem);
 
             svg {
                 @include transitiontransform;
@@ -64,14 +69,31 @@
             @include hover {
                 svg {
                     @include transform(rotate(90deg));
+
+                    path {
+                        stroke: $danger;
+                    }
                 }
             }
         }
     }
 
     &-body {
-
+        padding-top: length(0);
         
+        .authmenu {
+            @include flex-column;
+            gap: length(14);
+
+            .withoutauth {
+                @include flex-column;
+                gap: length(14);
+            }
+
+            .withauth {
+                @include flex-column;
+            }
+        }
 
         &::-webkit-scrollbar {
             background: transparent;
