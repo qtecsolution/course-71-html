@@ -5,22 +5,72 @@
 .header {
     background: $secondary;
 
+    @include breakpoint(tab992) {
+        background: $white;
+    }
+
     &-content {
         @include flex-between;
+        padding: length(12) length(8);
 
         .hamburger {
             width: 33.33%;
+            display: block;
+
+            @include breakpoint(tab992) {
+                display: none;
+            }
+
+            .btn-hamburger {
+                @include transparent-button;
+                @include square(length(24));
+                @include flex-center;
+
+                svg {
+                    @include square(length(24));
+
+                    path {
+                        @include transitions;
+                    }
+                }
+
+                @include hover {
+                    svg {
+                        path {
+                            stroke: $primary;
+                        }
+                    }
+                }
+
+                &:active,
+                &:visited {
+                    svg {
+                        path {
+                            stroke: $primary;
+                        }
+                    }
+                }
+            }
         }
 
         .sitelogo {
             width: 33.33%;
             @include flex-center;
 
+            @include breakpoint(tab992) {
+                justify-content: flex-start;
+            }
+
             .logo {
                 width: length(108);
                 height: length(36);
                 @include flex-center;
                 overflow: hidden;
+
+                @include breakpoint(tab992) {
+                    width: length(162);
+                    height: length(54);
+                }
 
                 img {
                     @include wh100;
@@ -34,18 +84,53 @@
             @include flex-end;
             width: 33.33%;
 
-            .submenu {
-                position: absolute;
-                right: length(-8);
-                top: 100%;
-                @include w100;
-                min-width: length(160);
-                max-width: length(200);
-                padding: length(16) length(8);
-                @include flex-column;
+            @include breakpoint(tab992) {
+                display: none;
+            }
+
+            .btn-cart {
+                @include transparent-button;
+                @include square(length(36));
+                @include circle;
+                background: $white;
+                @include flex-center;
+                padding: length(10);
+                overflow: hidden;
+
+                svg {
+                    @include square(length(24));
+
+                    path {
+                        @include transitions;
+                    }
+                }
+
+                @include hover {
+                    svg {
+                        path {
+                            fill: $primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .wol-menu {
+            display: none;
+            width: 33.33%;
+
+            @include breakpoint(mobile768) {
+                @include flex-end;
                 gap: length(14);
-                // background: $white;
-                // background: red;
+
+                .btn71 {
+                    padding: length(12) length(14);
+                    font-size: length(12);
+
+                    @include breakpoint(tab992) {
+                        padding: length(16) length(24);
+                    }
+                }
             }
         }
     }
@@ -54,3 +139,7 @@
 /**=======================================================**
                         HEADER SECTION END
 **=======================================================**/
+
+h2 {
+    @include font-face($primaryFont, style('normal'), size(40), weight('semibold'), line-height(56, 40));
+}

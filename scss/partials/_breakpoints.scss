@@ -1,9 +1,7 @@
-
 /**=====================================================**
                 BREAKPOINT-VARIABLES
 =======================================================**/
-$breakpoints: (
-    break-321: 321,
+$breakpoints: (break-321: 321,
     break-360: 360,
     break-375: 375,
     break-414: 414,
@@ -17,8 +15,7 @@ $breakpoints: (
     break-1169: 1170,
     break-1200: 1200,
     break-1367: 1367,
-    break-1400: 1400
-);
+    break-1400: 1400);
 
 /**=====================================================**
                 BREAKPOINT-FUNCTIONS
@@ -135,7 +132,7 @@ $breakpoints: (
 // @include breakpoint(mobile414) {}
 // @include breakpoint(mobile480) {}
 // @include breakpoint(mobile500) {}
-// @include breakpoint(mobile575) {}
+// @include breakpoint(mobile576) {}
 // @include breakpoint(mobile600) {}
 // @include breakpoint(mobile768) {}
 // @include breakpoint(tab992) {}
