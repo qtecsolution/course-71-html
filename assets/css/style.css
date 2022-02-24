@@ -22,7 +22,7 @@
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Noto+Sans+Bengali:wght@100;200;300;400;500;600;700&display=swap");
 @-webkit-keyframes slideDownIn {
   0% {
     -webkit-transform: translateY(-100%);
@@ -877,6 +877,12 @@ select {
           justify-content: space-between;
   align-items: center;
   z-index: 999999;
+}
+
+@media screen and (min-width: 62rem) {
+  .appmenu {
+    display: none;
+  }
 }
 
 .appmenu .menulink {

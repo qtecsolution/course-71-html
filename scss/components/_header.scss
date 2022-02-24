@@ -154,6 +154,10 @@
     @include flex-center-between;
     z-index: 999999;
 
+    @include breakpoint(tab992) {
+        display: none;
+    }
+
     .menulink {
         width: calc(100% / 5);
         @include h100;
