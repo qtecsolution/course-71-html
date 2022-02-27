@@ -205,19 +205,19 @@
                 <!-- HEADER MENU START -->
                 <div class="headermenu">
                     <!-- WITHOUT-LOGIN MENU START -->
-                    <div class="wol-menu d-none">
-                        <button class="btn71 btn-border">
+                    <div class="wol-menu">
+                        <button class="btn71 btn-border" type="button">
                             সাইন ইন
                         </button>
 
-                        <button class="btn71 btn-fill">
+                        <button class="btn71 btn-fill" type="button">
                             সাইন আপ
                         </button>
                     </div>
                     <!-- WITHOUT-LOGIN MENU END -->
 
                     <!-- ICON-LIST START (WITH-LOGIN) -->
-                    <ul class="iconlist">
+                    <ul class="iconlist d-none">
                         <!-- CART-ITEM START -->
                         <li class="iconlist-item">
                             <a href="#" class="iconlist-link">
@@ -1331,7 +1331,44 @@
     </section>
     <!-- HOME-BANNER SECTION END -->
 
+    <!-- LOGIN MODAL START -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <!-- AUTHENTICATION START -->
+                    <div class="authentication">
+                        <!-- AUTHENTICATION HEADER START -->
+                        <div class="authentication-header">
+                            <h2 class="authentication-title">Login</h2>
+                        </div>
+                        <!-- AUTHENTICATION HEADER END -->
+                        
+                        <!-- AUTHENTICATION BODY START -->
+                        <div class="authentication-body">
+                            
+                        </div>
+                        <!-- AUTHENTICATION BODY END -->
+                        
+                        <!-- AUTHENTICATION FOOTER START -->
+                        <div class="authentication-footer">
+                            
+                        </div>
+                        <!-- AUTHENTICATION FOOTER END -->
+                    </div>
+                    <!-- AUTHENTICATION END -->
+                    <form class="authenticationform">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOGIN MODAL END -->
+
     <!-- BOOTSTRAP JAVASCRIPT -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- MODAL JS -->
+    <script src="assets/js/modal.js"></script>
 </body>
 </html>
