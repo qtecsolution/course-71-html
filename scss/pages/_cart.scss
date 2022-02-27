@@ -1,0 +1,119 @@
+/**=======================================================**
+                        CART START
+**=======================================================**/
+
+.cart {
+    padding: length(40) length(20) length(94);
+
+    &-content {
+        @include flex-column;
+        gap: length(24);
+    }
+
+    &-header {
+        .cart-title {
+            @include font-face($secondaryFont, style('normal'), size(16), weight('semibold'), line-height(25.6, 16));
+            color: $gray-800;
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(8);
+
+        .card-cart {
+            @include flex-center-vert;
+            gap: length(14);
+
+            .card-horizontal {
+                width: calc(100% - 1.875rem);
+                align-items: flex-start;
+
+                &-cap {
+                    @include square(length(64));
+                }
+
+                &-details {
+                    width: calc(100% - 4.875rem);
+                }
+            }
+
+            .btn-cartremove {
+                @include square(length(16));
+                @include flex-center;
+                @include transparent-button;
+                overflow: hidden;
+
+                svg {
+                    path {
+                        @include transitions;
+                    }
+                }
+
+                @include hover {
+                    svg {
+                        @include transform(rotate(-90deg));
+
+                        path {
+                            fill: $danger;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-footer {
+        @include flex-center-between;
+
+        hgroup {
+            @include flex-center-vert;
+            gap: length(48);
+
+            .subtotal-title {
+                @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(25.6, 14));
+                color: $gray-600;
+            }
+
+            .subtotal-price {
+                .bdtsign {
+                    @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(25.6, 14));
+                    color: $primary;
+                }
+
+                .price {
+                    @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(25.6, 14));
+                    color: $primary;
+                }
+            }
+        }
+
+        .btn-checkout {
+            @include flex-center;
+            gap: length(10);
+            padding: length(10) length(14);
+            @include radius(8);
+            background: $primary;
+            @include transitions;
+
+            .btn-text {
+                @include font-face($secondaryFont, style('normal'), size(12), weight('semibold'), line-height(12, 12));
+                color: $white;
+            }
+
+            .btn-icon {
+                @include square(length(14));
+                @include flex-center;
+                overflow: hidden;
+            }
+
+            @include hover {
+                background: $primary-dark;
+            }
+        }
+    }
+}
+
+/**=======================================================**
+                        CART END
+**=======================================================**/

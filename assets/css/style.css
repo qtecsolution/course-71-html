@@ -855,6 +855,14 @@ select {
   fill: #7D56A5;
 }
 
+.header-content .wol-mobilemenu .btn-cart.active {
+  background: #7D56A5;
+}
+
+.header-content .wol-mobilemenu .btn-cart.active svg path {
+  fill: #ffffff;
+}
+
 .header-content .wol-menu {
   display: none;
   width: 33.33%;
@@ -2469,6 +2477,204 @@ select {
 /**=====================================================
                 HOME-BANNER(MOBILE) END
 =====================================================**/
+/**=======================================================**
+                        CART START
+**=======================================================**/
+.cart {
+  padding: 2.5rem 1.25rem 5.875rem;
+}
+
+.cart-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cart-header .cart-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #2D3748;
+}
+
+.cart-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cart-body .card-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.875rem;
+}
+
+.cart-body .card-cart .card-horizontal {
+  width: calc(100% - 1.875rem);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.cart-body .card-cart .card-horizontal-cap {
+  height: 4rem;
+  width: 4rem;
+}
+
+.cart-body .card-cart .card-horizontal-details {
+  width: calc(100% - 4.875rem);
+}
+
+.cart-body .card-cart .btn-cartremove {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: transparent;
+  border: none;
+  overflow: hidden;
+}
+
+.cart-body .card-cart .btn-cartremove svg path {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cart-body .card-cart .btn-cartremove:not([disabled]):hover svg {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.cart-body .card-cart .btn-cartremove:not([disabled]):hover svg path {
+  fill: #F16063;
+}
+
+.cart-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+.cart-footer hgroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+
+.cart-footer hgroup .subtotal-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.82857;
+  color: #718096;
+}
+
+.cart-footer hgroup .subtotal-price .bdtsign {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.82857;
+  color: #7D56A5;
+}
+
+.cart-footer hgroup .subtotal-price .price {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.82857;
+  color: #7D56A5;
+}
+
+.cart-footer .btn-checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background: #7D56A5;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cart-footer .btn-checkout .btn-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.cart-footer .btn-checkout .btn-icon {
+  height: 0.875rem;
+  width: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.cart-footer .btn-checkout:not([disabled]):hover {
+  background: #73489F;
+}
+
+/**=======================================================**
+                        CART END
+**=======================================================**/
+/**=======================================================**
+                        WISH-LIST START
+**=======================================================**/
 .wishlist {
   padding: 2.5rem 1.25rem 5.875rem;
 }
@@ -2561,6 +2767,9 @@ select {
   fill: #F16063;
 }
 
+/**=======================================================**
+                        WISH-LIST START
+**=======================================================**/
 /**=====================================================
                     PROFILE PAGE START
 =====================================================**/

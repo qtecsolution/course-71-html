@@ -116,6 +116,16 @@
                         }
                     }
                 }
+
+                &.active {
+                    background: $primary;
+
+                    svg {
+                        path {
+                            fill: $white;
+                        }
+                    }
+                }
             }
         }
 
