@@ -9,9 +9,10 @@
     @include radius(8);
 
     &-cap {
-        @include square(length(99));
-        padding: length(4);
         background: $white;
+        padding: length(4);
+        @include square(length(99));
+        @include radius(4);
 
         img {
             @include wh100;

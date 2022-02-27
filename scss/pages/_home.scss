@@ -78,13 +78,12 @@
 .mobilebanner {
     &-content {
         background: $secondary;
-        @include radius(8);
         overflow: hidden;
 
         .banner-details {
             @include flex-column;
             gap: length(24);
-            margin-bottom: length(56);
+            margin-bottom: length(40);
             padding: length(40);
 
             &-header {

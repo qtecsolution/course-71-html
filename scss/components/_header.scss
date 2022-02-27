@@ -6,7 +6,7 @@
     background: $secondary;
 
     @include breakpoint(tab992) {
-        background: transparent;
+        background: $bodyBg;
         height: length(100);
         @include flex-center-vert;
     }

@@ -1,0 +1,61 @@
+.wishlist {
+    padding: length(40) length(20) length(94);
+
+    &-content {
+        @include flex-column;
+        gap: length(24);
+    }
+
+    &-header {
+        .wishlist-title {
+            @include font-face($secondaryFont, style('normal'), size(16), weight('semibold'), line-height(25.6, 16));
+            color: $gray-800;
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(8);
+
+        .card-cart {
+            @include flex-center-vert;
+            gap: length(14);
+
+            .card-horizontal {
+                width: calc(100% - 1.875rem);
+                align-items: flex-start;
+
+                &-cap {
+                    @include square(length(64));
+                }
+
+                &-details {
+                    width: calc(100% - 4.875rem);
+                }
+            }
+
+            .btn-cartremove {
+                @include square(length(16));
+                @include flex-center;
+                @include transparent-button;
+                overflow: hidden;
+
+                svg {
+                    path {
+                        @include transitions;
+                    }
+                }
+
+                @include hover {
+                    svg {
+                        @include transform(rotate(-90deg));
+
+                        path {
+                            fill: $danger;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
