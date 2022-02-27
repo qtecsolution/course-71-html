@@ -1363,18 +1363,20 @@
                                 <div class="inputbox">
                                     <div class="inputinfo">
                                         <label for="loginpassword" class="inputlabel">Password</label>
-                                        <input type="password" id="loginpassword" class="inputfield" placeholder="Enter your password here" autocomplete="off">
+                                        <input type="password" id="loginpassword" class="inputfield passwordfield" placeholder="Enter your password here" autocomplete="off">
+                                    
+                                        <button class="btn-forgot" type="button">Forgot?</button>
                                     </div>
 
                                     <p class="input-information">Must be 8 characters at least</p>
 
-                                    <p class="error-message">Please enter a valid phone number</p>
+                                    <p class="error-message">Password incorrect. please enter valid password.</p>
                                 </div>
                                 <!-- INPUT-BOX END -->
 
                                 <!-- SUBMIT BOX START -->
                                 <div class="submitbox">
-                                    <button class="btn-submit" type="submit">Login</button>
+                                    <button class="btn-submit btn71 btn-fill" type="submit">Login</button>
                                     <p class="authentictext">
                                         Don’t have an account? <button class="btn-signup" type="button">Sign Up</button>
                                     </p>
@@ -1389,14 +1391,16 @@
                         <div class="authentication-footer">
                             <div class="footerhead">
                                 <div class="divider"></div>
-                                <span class="continuetitle">or Cointinue with</span>
+                                <div class="titlebox">
+                                    <span class="continuetitle">or Cointinue with</span>
+                                </div>
                                 <div class="divider"></div>
                             </div>
 
                             <div class="footerbody">
                                 <ul class="authenticationlist">
                                     <li class="authenticationlist-item">
-                                        <button class="">
+                                        <button class="authenticationlist-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sign in with google">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#googlicon)">
                                                     <path d="M5.79676 14.4637L4.98983 17.4761L2.04054 17.5385C1.15913 15.9036 0.65918 14.0332 0.65918 12.0455C0.65918 10.1235 1.12662 8.31097 1.95519 6.715H1.95582L4.58152 7.19638L5.73174 9.80633C5.491 10.5082 5.35979 11.2616 5.35979 12.0455C5.35988 12.8964 5.514 13.7116 5.79676 14.4637Z" fill="#FBBB00"/>
@@ -1412,9 +1416,12 @@
                                             </svg>
                                         </button>
                                     </li>
+
                                     <li class="authenticationlist-item">
-                                        <button class="">
-                                            
+                                        <button class="authenticationlist-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sign in with facebook">
+                                            <svg width="16" height="31" viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.4431 8.81817H10.1108V7.3551C10.1108 5.87783 10.7073 5.01135 12.4829 5.01135C13.2073 5.01135 13.946 5.1676 14.4289 5.32385L15.4943 0.778398C14.7414 0.551125 13.0795 0.181805 11.2187 0.181805C7.11359 0.181805 4.05961 2.49715 4.05961 7.24147V8.81817H0.977228V13.3636H4.05961V30.6364H10.1108V13.3636H14.4431V8.81817Z" fill="#3B5999"/>
+                                            </svg>
                                         </button>
                                     </li>
                                 </ul>
@@ -1431,6 +1438,9 @@
 
     <!-- BOOTSTRAP JAVASCRIPT -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <script src="assets/js/sitetooltip.js"></script>
     <!-- MODAL JS -->
     <script src="assets/js/modal.js"></script>
 </body>

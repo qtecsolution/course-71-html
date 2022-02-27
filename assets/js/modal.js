@@ -22,7 +22,7 @@ const confirmVerificationModal = document.querySelector('#verificationconfirm');
 * // CONFIRM VERIFICATIONS BUTTON
 **/
 const forgotButton = document.querySelector('#forgot-button');
-const signupButtons = Array.from(document.querySelectorAll('.btn-text'));
+const signupButtons = Array.from(document.querySelectorAll('.btn-signup'));
 const backToLoginButtons = Array.from(document.querySelectorAll('.btn-back'));
 const forgotToChangeButton = document.querySelector('#forgot-to-change');
 const changeToVerificationButton = document.querySelector('#change-to-verification');

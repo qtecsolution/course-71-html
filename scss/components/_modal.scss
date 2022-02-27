@@ -2,7 +2,7 @@
 
 .modal {
     &-content {
-        @include radius(0);
+        @include radius(8);
         overflow: hidden;
     }
 
@@ -35,7 +35,177 @@
         // }
     }
 
-    &-body {}
+    &-body {
+        padding: length(0);
+        @include flex-center;
+
+        .authentication {
+            padding: length(44) length(24);
+            @include flex-column;
+            @include w100;
+            max-width: length(450);
+            gap: length(32);
+            
+            &-header {
+                .authentication-title {
+                    @include font-face($secondaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                    color: $gray-700;
+                    text-align: center;
+                }
+            }
+
+            &-body {
+                .authenticationform {
+                    @include flex-column;
+                    gap: length(30);
+
+                    .inputbox {
+                        @include flex-column;
+                        gap: length(8);
+
+                        .inputinfo {
+                            @include flex-column;
+                            gap: length(8);
+                            position: relative;
+
+                            .inputlabel {
+                                @include font-face($secondaryFont, style('normal'), size(14), weight('medium'), line-height(16.94, 14));
+                                color: $textBodyLight;
+                            }
+
+                            .inputfield {
+                                padding: length(14) length(20) length(12);
+                                @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                                @include radius(6);
+                                @include setBgColor($white, $textDark);
+                                box-shadow: $input-shadow;
+
+                                &::placeholder {
+                                    color: $textPlaceholder;
+                                }
+                            }
+
+                            .passwordfield {
+                                padding-right: length(70);
+                            }
+
+                            .btn-forgot {
+                                position: absolute;
+                                top: 70%;
+                                right: length(18);
+                                @include transform(translateY(-50%));
+                                @include setBgColor(transparent, $dark);
+                                @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                                @include transitions;
+
+                                @include hover {
+                                    color: $tertiary;
+                                }
+                            }
+                        }
+
+                        .input-information {
+                            @include font-face($secondaryFont, style('normal'), size(11), weight('normal'), line-height(12, 11));
+                            color: $gray-600;
+                        }
+
+                        .error-message {
+                            @include font-face($secondaryFont, style('normal'), size(11), weight('medium'), line-height(12, 11));
+                            color: $danger;
+                            display: none;
+                        }
+
+                        &.error {
+                            .inputinfo {
+                                .inputfield {
+                                    color: $danger;
+                                    box-shadow: $error-shadow;
+                                }
+                            }
+
+                            .error-message {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .submitbox {
+                        @include flex-center-column;
+                        gap: length(12);
+
+                        .btn-submit {
+                            @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+                            @include w100;
+                        }
+
+                        .authentictext {
+                            @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                            color: $textBodyLight;
+
+                            .btn-signup {
+                                @include font-face($secondaryFont, style('normal'), size(12), weight('bold'), line-height(20, 12));
+                                @include setBgColor(transparent, $textBodyLight);
+                                @include transitions;
+
+                                @include hover {
+                                    color: $tertiary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-footer {
+                @include flex-center-column;
+                gap: length(30);
+                @include w100;
+
+                .footerhead {
+                    @include flex-center-vert;
+                    gap: length(24);
+                    @include w100;
+
+                    .divider {
+                        width: calc((100% - 6.5rem) / 2);
+                        height: length(1);
+                        background: $gray-600;
+                    }
+
+                    .titlebox {
+                        width: length(120);
+                        @include flex-center;
+                        text-align: center;
+
+                        .continuetitle {
+                            @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(14, 12));
+                            color: $gray-600;
+                            text-align: center;
+                            @include w100;
+                        }
+                    }
+
+                }
+
+                .footerbody {
+                    .authenticationlist {
+                        @include list-horizontal;
+                        gap: length(16);
+
+                        &-link {
+                            width: length(68);
+                            height: length(55);
+                            @include flex-center;
+                            padding: length(8);
+                            @include radius(8);
+                            background: $white;
+                            box-shadow: $share-shadow;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // UPLOAD MEDALLION MODAL END
