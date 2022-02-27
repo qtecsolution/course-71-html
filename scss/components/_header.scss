@@ -13,7 +13,7 @@
 
     &-content {
         @include flex-between;
-        padding: length(12) length(8);
+        padding: length(12) length(20);
 
         .hamburger {
             width: 33.33%;
@@ -204,7 +204,7 @@
                     .search-field {
                         width: calc(100% - 3rem);
                         @include h100;
-                        padding: length(13) length(22);
+                        padding: length(14.5) length(22);
                         @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(14, 16));
 
                         &::placeholder {
@@ -518,6 +518,7 @@
     }
 
     .menulink {
+        background: $white;
         width: calc(100% / 5);
         @include h100;
         @include flex-center-column;

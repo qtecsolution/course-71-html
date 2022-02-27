@@ -14,8 +14,8 @@
 </head>
 <body>
     <!-- HEADER SECTION START -->
-    <header class="header">
-        <div class="container">
+    <header class="header sticky-top">
+        <div class="container-fluid container-lg p-md-0">
             <div class="header-content">
                 <!-- HAMBURGER START -->
                 <div class="hamburger">
@@ -1256,7 +1256,7 @@
     <!-- APP-MENU END -->
 
     <!-- HOME-BANNER SECTION START -->
-    <section class="desktopbanner">
+    <section class="desktopbanner d-none d-lg-block">
         <div class="container">
             <div class="desktopbanner-content">
                 <div class="row align-items-center">
@@ -1277,7 +1277,7 @@
 
                     <div class="col-lg-6 col-12">
                         <!-- BANNER-THUMBNAIL START -->
-                        <div class="desktopbanner-thumbnail">
+                        <div class="banner-thumbnail">
                             <img src="assets/images/hero-thumbnail/hero-thumbnail.svg" alt="desktopbanner-thumbnail">
                         </div>
                         <!-- BANNER-THUMBNAIL END -->
@@ -1289,9 +1289,44 @@
     <!-- HOME-BANNER SECTION END -->
 
     <!-- HOME-BANNER SECTION START -->
-    <section class="mobilebanner">
-        <div class="container">
-            
+    <section class="mobilebanner d-lg-none d-md-block">
+        <div class="container-fluid p-0">
+            <div class="mobilebanner-content">
+                <div class="row align-items-center">
+                    <div class="col-12 p-0">
+                        <div class="banner-details">
+                            <div class="banner-details-header">
+                                <h2 class="banner-title">যেখানে সেখানে পড়াশোনার সহজ সমাধান</h2>
+                                <p class="banner-text">
+                                    অভিজ্ঞ মেন্টরের কাছ থেকে ঘরে বসেই শিখুন রান্না, আইটি, কর্পোরেট কালচার,ব্যাবসা বাণিজ্য সহ যেকোনো বিষয়
+                                </p>
+                            </div>
+
+                            <div class="banner-details-body">
+                                <!-- SEARCH-BOX START -->
+                                <div class="searchbox">
+                                    <input type="search" class="search-field" placeholder="আপনি কি শিখতে চাচ্ছেন ?" id="">
+                                
+                                    <button type="submit" class="btn-search">
+                                        <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.4331 15.705L20.3366 19.6075L19.047 20.8971L15.1444 16.9937C13.6923 18.1577 11.8862 18.7908 10.0252 18.7882C5.49744 18.7882 1.82275 15.1135 1.82275 10.5857C1.82275 6.05799 5.49744 2.3833 10.0252 2.3833C14.5529 2.3833 18.2276 6.05799 18.2276 10.5857C18.2303 12.4468 17.5971 14.2529 16.4331 15.705ZM14.6049 15.0287C15.7615 13.8393 16.4075 12.2448 16.4049 10.5857C16.4049 7.06051 13.5495 4.20606 10.0252 4.20606C6.49996 4.20606 3.64552 7.06051 3.64552 10.5857C3.64552 14.11 6.49996 16.9654 10.0252 16.9654C11.6843 16.968 13.2787 16.3221 14.4682 15.1654L14.6049 15.0287Z" fill="white"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- SEARCH-BOX END -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 p-0">
+                        <!-- BANNER-THUMBNAIL START -->
+                        <div class="banner-thumbnail">
+                            <img src="assets/images/hero-thumbnail/hero-thumbnail.svg" alt="desktopbanner-thumbnail">
+                        </div>
+                        <!-- BANNER-THUMBNAIL END -->
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- HOME-BANNER SECTION END -->

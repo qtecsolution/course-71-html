@@ -3,7 +3,6 @@
 =====================================================**/
 
 .desktopbanner {
-
     &-content {
         background: $secondary;
         @include radius(8);
@@ -52,12 +51,17 @@
             }
         }
 
-        .desktopbanner-thumbnail {
+        .banner-thumbnail {
             padding: length(20);
 
             img {
                 max-width: 100%;
                 object-fit: contain;
+                @include transitiontransform;
+
+                @include hover {
+                    @include transform(scale(1.02));
+                }
             }
         }
     }
@@ -65,4 +69,100 @@
 
 /**=====================================================
                 HOME-BANNER(DESKTOP) END
+=====================================================**/
+
+/**=====================================================
+                HOME-BANNER(MOBILE) START
+=====================================================**/
+
+.mobilebanner {
+    &-content {
+        background: $secondary;
+        @include radius(8);
+        overflow: hidden;
+
+        .banner-details {
+            @include flex-column;
+            gap: length(24);
+            margin-bottom: length(56);
+            padding: length(40);
+
+            &-header {
+                @include flex-column;
+                gap: length(24);
+
+                .banner-title {
+                    @include font-face($primaryFont, style('normal'), size(26), weight('bold'), line-height(34, 26));
+                    color: $textDark;
+
+                    @include breakpoint(mobile480) {
+                        @include font-face($primaryFont, style('normal'), size(32), weight('bold'), line-height(42.09, 32));
+                    }
+                }
+
+                .banner-text {
+                    @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.94, 16));
+                    color: $gray-700;
+
+                    @include breakpoint(desktop1200) {
+                        @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(30, 20));
+                    }
+
+
+                    @include breakpoint(desktop1400) {
+                        @include font-face($primaryFont, style('normal'), size(25), weight('normal'), line-height(34.01, 25));
+                    }
+                }
+            }
+
+            &-body {
+                .searchbox {
+                    @include flex-center-vert;
+                    @include w100;
+                    @include radius(8);
+                    overflow: hidden;
+
+                    .search-field {
+                        width: calc(100% - 3rem);
+                        @include h100;
+                        padding: length(13) length(22);
+                        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(14, 16));
+
+                        &::placeholder {
+                            color: $textPlaceholder;
+                        }
+                    }
+
+                    .btn-search {
+                        @include square(length(48));
+                        @include flex-center;
+                        background: $primary;
+                        padding: length(10);
+                        border: none;
+                        @include transitions;
+
+                        @include hover {
+                            background: $primary-dark
+                        }
+                    }
+                }
+            }
+        }
+
+        .banner-thumbnail {
+            img {
+                max-width: 100%;
+                object-fit: contain;
+                @include transitiontransform;
+
+                @include hover {
+                    @include transform(scale(1.02));
+                }
+            }
+        }
+    }
+}
+
+/**=====================================================
+                HOME-BANNER(MOBILE) END
 =====================================================**/
