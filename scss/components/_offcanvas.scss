@@ -71,7 +71,7 @@
                     @include transform(rotate(90deg));
 
                     path {
-                        stroke: $danger;
+                        fill: $danger;
                     }
                 }
             }
@@ -79,8 +79,9 @@
     }
 
     &-body {
+        overflow-x: hidden;
         padding-top: length(0);
-        
+
         .authmenu {
             @include flex-column;
             gap: length(14);
@@ -103,6 +104,155 @@
         &::-webkit-scrollbar-thumb {
             // background: $primary;
             @include radius(8);
+        }
+    }
+}
+
+.mobile-suggestions {
+    .offcanvas {
+        @include w100;
+        height: calc(100vh - 4.375rem);
+        background: $bodyBg;
+
+        &-header {
+            @include w100;
+            @include flex-center-between;
+            position: relative;
+            background: $bodyBg;
+
+            .searchbox {
+                @include flex-center-vert;
+                @include radius(8);
+                overflow: hidden;
+                width: calc(100% - 2.875rem);
+                @include transitions;
+
+                .search-field {
+                    width: calc(100% - 3rem);
+                    @include h100;
+                    padding: length(14.5) length(22);
+                    @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(20, 14));
+
+                    &::placeholder {
+                        color: $textPlaceholder;
+                    }
+                }
+
+                .btn-search {
+                    @include square(length(48));
+                    @include flex-center;
+                    background: $primary;
+                    padding: length(10);
+                    border: none;
+                    @include transitions;
+
+                    @include hover {
+                        background: $primary-dark
+                    }
+                }
+
+                &:focus-within {
+                    box-shadow: $dropdown-shadow;
+                }
+            }
+
+            .btn-close {
+                @include square(length(30));
+                box-shadow: none;
+                background: transparent;
+                margin: 0;
+                @include flex-center;
+                @include circle;
+                opacity: 1;
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
+                left: auto;
+                right: 0;
+
+                svg {
+                    @include wh100;
+                    @include transitiontransform;
+
+                    path {
+                        @include transitions;
+                    }
+                }
+
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                }
+
+                @include hover {
+                    svg {
+                        @include transform(rotate(90deg));
+
+                        path {
+                            fill: $danger;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-body {
+            padding-top: length(0);
+
+            &::-webkit-scrollbar {
+                background: transparent;
+                width: length(4);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $scrollBg;
+            }
+
+            .suggestionslist {
+                @include list-vertical;
+
+                &-item {
+                    @include flex-center-vert;
+                    gap: length(16);
+                    padding: length(8) length(16);
+                    cursor: pointer;
+
+                    .suggestion-thumbnail {
+                        width: length(80);
+                        height: length(45);
+                        @include flex-center;
+                        @include radius(6);
+                        overflow: hidden;
+
+                        img {
+                            @include wh100;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .suggestion-details {
+                        .suggestiontitle {
+                            @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(18, 12));
+                            color: $gray-600;
+                            @include transitions;
+
+                            @include breakpoint(mobile576) {
+                                @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.6, 14));
+                            }
+                        }
+                    }
+
+                    @include hover {
+                        background: $card-background;
+
+                        .suggestion-details {
+                            .suggestiontitle {
+                                color: $tertiary;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

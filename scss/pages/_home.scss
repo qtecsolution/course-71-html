@@ -1,9 +1,68 @@
 /**=====================================================
-                    HOME-PAGE START
+                HOME-BANNER(DESKTOP) START
 =====================================================**/
 
+.desktopbanner {
 
+    &-content {
+        background: $secondary;
+        @include radius(8);
+        overflow: hidden;
+
+        .banner-details {
+            padding: length(40) length(40) length(0) length(40);
+            @include flex-column;
+            gap: length(30);
+            margin-bottom: length(48);
+
+            @include breakpoint(tab992) {
+                margin-bottom: length(0);
+            }
+
+            &-header {
+                @include flex-column;
+                gap: length(36);
+
+                .banner-title {
+                    @include font-face($primaryFont, style('normal'), size(32), weight('bold'), line-height(42.09, 32));
+                    color: $textDark;
+
+                    @include breakpoint(desktop1200) {
+                        @include font-face($primaryFont, style('normal'), size(38), weight('bold'), line-height(48.09, 38));
+                    }
+
+                    @include breakpoint(desktop1400) {
+                        @include font-face($primaryFont, style('normal'), size(48), weight('bold'), line-height(58.09, 48));
+                    }
+                }
+
+                .banner-text {
+                    @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.94, 16));
+                    color: $gray-700;
+
+                    @include breakpoint(desktop1200) {
+                        @include font-face($primaryFont, style('normal'), size(20), weight('normal'), line-height(30, 20));
+                    }
+
+
+                    @include breakpoint(desktop1400) {
+                        @include font-face($primaryFont, style('normal'), size(25), weight('normal'), line-height(34.01, 25));
+                    }
+                }
+            }
+        }
+
+        .desktopbanner-thumbnail {
+            // margin-left: length(-60);
+
+            img {
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
 
 /**=====================================================
-                    HOME-PAGE END
+                HOME-BANNER(DESKTOP) END
 =====================================================**/

@@ -6,7 +6,9 @@
     background: $secondary;
 
     @include breakpoint(tab992) {
-        background: $white;
+        background: transparent;
+        height: length(100);
+        @include flex-center-vert;
     }
 
     &-content {
@@ -59,6 +61,7 @@
 
             @include breakpoint(tab992) {
                 justify-content: flex-start;
+                width: auto;
             }
 
             .logo {
@@ -86,6 +89,7 @@
 
             @include breakpoint(tab992) {
                 display: none;
+                width: auto;
             }
 
             .btn-cart {
@@ -122,6 +126,7 @@
             @include breakpoint(mobile768) {
                 @include flex-end;
                 gap: length(14);
+                width: auto;
 
                 .btn71 {
                     padding: length(12) length(14);
@@ -129,6 +134,360 @@
 
                     @include breakpoint(tab992) {
                         padding: length(16) length(24);
+                    }
+                }
+            }
+        }
+
+        .desktopmenu {
+            padding-left: length(0);
+            display: none;
+
+            @include breakpoint(tab992) {
+                padding-left: length(40);
+                flex: 1;
+                @include flex-center-vert;
+                gap: length(40);
+            }
+
+            @include breakpoint(desktop1400) {
+                padding-left: length(102);
+            }
+
+            .allcourses {
+                .desktopmenu-link {
+                    @include flex-center-vert;
+                    gap: length(12);
+
+                    .linktext {
+                        @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+                        color: $gray-700;
+                    }
+
+                    .linkicon {
+                        @include square(length(14));
+                        @include flex-center;
+                        overflow: hidden;
+                        margin-top: length(-2);
+                    }
+                }
+
+                @include hover {
+                    .desktopmenu-link {
+                        .linktext {
+                            color: $primary;
+                        }
+
+                        .linkicon {
+                            svg {
+                                @include transform(rotate(180deg));
+
+                                path {
+                                    fill: $primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .desktopsearch {
+                flex: 1;
+                position: relative;
+
+                .searchbox {
+                    @include flex-center-vert;
+                    width: length(472);
+                    @include radius(8);
+                    overflow: hidden;
+
+                    .search-field {
+                        width: calc(100% - 3rem);
+                        @include h100;
+                        padding: length(13) length(22);
+                        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(14, 16));
+
+                        &::placeholder {
+                            color: $textPlaceholder;
+                        }
+                    }
+
+                    .btn-search {
+                        @include square(length(48));
+                        @include flex-center;
+                        background: $primary;
+                        padding: length(10);
+                        border: none;
+                        @include transitions;
+
+                        @include hover {
+                            background: $primary-dark
+                        }
+                    }
+                }
+
+                .search-suggestions {
+                    background: $white;
+                    box-shadow: $dropdown-shadow;
+                    position: absolute;
+                    width: length(472);
+                    top: 100%;
+                    @extend %animation;
+                    @extend %slideUpIn;
+                    @include double-radius(bottom, left, 5, bottom, right, 5);
+
+                    .suggestionslist {
+                        @include list-vertical;
+                        max-height: length(250);
+                        overflow-x: hidden;
+                        overflow-y: scroll;
+
+                        &::-webkit-scrollbar {
+                            background: transparent;
+                            width: length(4);
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background: $scrollBg;
+                        }
+
+                        &-item {
+                            @include flex-center-vert;
+                            gap: length(16);
+                            padding: length(8) length(16);
+                            cursor: pointer;
+
+                            .suggestion-thumbnail {
+                                width: length(80);
+                                height: length(45);
+                                @include flex-center;
+                                @include radius(6);
+                                overflow: hidden;
+
+                                img {
+                                    @include wh100;
+                                    object-fit: contain;
+                                }
+                            }
+
+                            .suggestion-details {
+                                .suggestiontitle {
+                                    @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.6, 14));
+                                    color: $gray-600;
+                                    @include transitions;
+                                }
+                            }
+
+                            @include hover {
+                                background: $card-background;
+
+                                .suggestion-details {
+                                    .suggestiontitle {
+                                        color: $tertiary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .headermenu {
+            display: none;
+
+            @include breakpoint(tab992) {
+                @include flex-center-vert;
+            }
+
+            .iconlist {
+                position: relative;
+                @include list-horizontal;
+
+                &-link {
+                    padding: length(37) length(7.5);
+
+                    svg {
+                        path {
+                            @include transitions;
+                        }
+                    }
+
+                    @include hover {
+                        svg {
+                            path {
+                                fill: $primary;
+                            }
+                        }
+                    }
+                }
+
+                &-item {
+                    position: relative;
+
+                    @include hover {
+                        .headerdropdown {
+                            @include flex-column;
+                        }
+
+                        .dropdownshow {
+                            @include flex-column;
+                        }
+                    }
+                }
+
+                .headerdropdown {
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    background: $white;
+                    @include radius(5);
+                    box-shadow: $dropdown-shadow;
+                    width: length(470);
+                    display: none;
+                    @extend %animation;
+                    @extend %slideUpIn;
+
+                    .btn-remove {
+                        background: $white;
+                        box-shadow: $close-shadow;
+                        @include square(length(60));
+                        @include flex-center;
+                        @include circle;
+                        padding: length(15);
+                        overflow: hidden;
+                        position: absolute;
+                        top: length(8);
+                        left: length(-72);
+
+                        svg {
+                            @include wh100;
+                            @include transitions;
+                        }
+
+                        @include hover {
+                            svg {
+                                @include transform(rotate(90deg));
+
+                                path {
+                                    fill: $danger;
+                                }
+                            }
+                        }
+                    }
+
+                    &-header {
+                        padding: length(25) length(20) length(21);
+
+                        .dropdown-title {
+                            @include font-face($secondaryFont, style('normal'), size(16), weight('semibold'), line-height(25.6, 16));
+                            color: $gray-800;
+                        }
+                    }
+
+                    &-body {
+                        @include flex-column;
+                        gap: length(8);
+                        max-height: length(539);
+                        padding-right: length(24);
+                        padding: length(0) length(20) length(18);
+                        overflow-x: hidden;
+                        overflow-y: scroll;
+                        margin-bottom: length(18);
+
+                        &::-webkit-scrollbar {
+                            background: transparent;
+                            width: length(4);
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background: $scrollBg;
+                        }
+
+                        .card-cart {
+                            @include flex-center-vert;
+                            gap: length(14);
+
+                            .card-horizontal {
+                                width: calc(100% - 1.875rem);
+                            }
+
+                            .btn-cartremove {
+                                @include square(length(16));
+                                @include flex-center;
+                                @include transparent-button;
+                                overflow: hidden;
+
+                                svg {
+                                    path {
+                                        @include transitions;
+                                    }
+                                }
+
+                                @include hover {
+                                    svg {
+                                        @include transform(rotate(-90deg));
+
+                                        path {
+                                            fill: $danger;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &-footer {
+                        @include flex-center-between;
+                        padding: length(20) length(20) length(28);
+                        background: $card-background;
+
+                        hgroup {
+                            @include flex-center-vert;
+                            gap: length(48);
+
+                            .subtotal-title {
+                                @include font-face($secondaryFont, style('normal'), size(16), weight('semibold'), line-height(25.6, 16));
+                                color: $gray-600;
+                            }
+
+                            .subtotal-price {
+                                .bdtsign {
+                                    @include font-face($secondaryFont, style('normal'), size(16), weight('semibold'), line-height(25.6, 16));
+                                    color: $primary;
+                                }
+
+                                .price {
+                                    @include font-face($secondaryFont, style('normal'), size(16), weight('semibold'), line-height(25.6, 16));
+                                    color: $primary;
+                                }
+                            }
+                        }
+
+                        .btn-checkout {
+                            @include flex-center;
+                            gap: length(10);
+                            padding: length(16) length(24);
+                            @include radius(8);
+                            background: $primary;
+                            @include transitions;
+
+                            .btn-text {
+                                @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+                                color: $white;
+                            }
+
+                            .btn-icon {
+                                @include square(length(14));
+                                @include flex-center;
+                                overflow: hidden;
+                            }
+
+                            @include hover {
+                                background: $primary-dark;
+                            }
+                        }
+
                     }
                 }
             }
@@ -172,13 +531,13 @@
         }
 
         .linktext {
-            @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(12, 16));
+            @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
             color: $gray-600;
         }
 
         &:hover:not(.active) {
             background: $primary;
-            
+
             .linkicon {
                 svg {
                     path {

@@ -1,3 +1,65 @@
 /**=====================================================**
                         HOME-CARDS
 =======================================================**/
+.card-horizontal {
+    @include flex-center-vert;
+    gap: length(14);
+    padding: length(14) length(12);
+    background: $card-background;
+    @include radius(8);
+
+    &-cap {
+        @include square(length(99));
+        padding: length(4);
+        background: $white;
+
+        img {
+            @include wh100;
+            object-fit: contain;
+        }
+    }
+
+    &-details {
+        width: calc(100% - 7.0625rem);
+        @include flex-column;
+        gap: length(8);
+
+        .card-horizontal-title {
+            @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+            color: $gray-700;
+            @include text-overflow;
+        }
+
+        .bedge-course {
+            @include flex-center;
+            gap: length(6);
+            width: length(90);
+            height: length(24);
+            padding: length(4) length(10);
+            @include radius(6);
+            background: $tertiary;
+
+            .badge-icon {
+                @include square(length(10));
+                @include flex-center;
+            }
+
+            .badge-title {
+                @include font-face($secondaryFont, style('normal'), size(10), weight('semibold'), line-height(16, 10));
+                color: $white;
+            }
+        }
+
+        .cart-price {
+            .btdsign {
+                @include font-face($secondaryFont, style('normal'), size(16), weight('semibold'), line-height(25.6, 16));
+                color: $gray-800;
+            }
+
+            .price {
+                @include font-face($secondaryFont, style('normal'), size(16), weight('semibold'), line-height(25.6, 16));
+                color: $gray-800;
+            }
+        }
+    }
+}
