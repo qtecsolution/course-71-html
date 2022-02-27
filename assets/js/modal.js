@@ -7,7 +7,7 @@
 * // CONFIRM VERIFICATIONS MODAL
 **/
 const loginModal = document.querySelector('#loginModal');
-const registerModal = document.querySelector('#register');
+const registerModal = document.querySelector('#registerModal');
 const forgotPasswordModal = document.querySelector('#forgotpass');
 const changePasswordModal = document.querySelector('#changepassword');
 const verificationsModal = document.querySelector('#verifications');
