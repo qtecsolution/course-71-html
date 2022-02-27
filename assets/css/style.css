@@ -2482,6 +2482,7 @@ select {
 **=======================================================**/
 .cart {
   padding: 2.5rem 1.25rem 5.875rem;
+  position: relative;
 }
 
 .cart-content {
@@ -2513,6 +2514,22 @@ select {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5rem;
+  padding-bottom: 4rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .cart-body {
+    padding-bottom: 0rem;
+  }
+}
+
+.cart-body::-webkit-scrollbar {
+  background: transparent;
+  width: 0.25rem;
+}
+
+.cart-body::-webkit-scrollbar-thumb {
+  background: #C4C4C4;
 }
 
 .cart-body .card-cart {
@@ -2583,6 +2600,23 @@ select {
       -ms-flex-pack: justify;
           justify-content: space-between;
   align-items: center;
+  position: fixed;
+  bottom: 4.375rem;
+  left: 0;
+  width: 100%;
+  background: #FCFAFF;
+  background: #ffffff;
+  padding: 1.25rem;
+  z-index: 100;
+}
+
+@media screen and (min-width: 62rem) {
+  .cart-footer {
+    position: static;
+    bottom: 0;
+    background: #FCFAFF;
+    padding: 1.25rem 0rem 0rem;
+  }
 }
 
 .cart-footer hgroup {
@@ -2592,7 +2626,7 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 
 .cart-footer hgroup .subtotal-title {
@@ -2604,6 +2638,16 @@ select {
   color: #718096;
 }
 
+@media screen and (min-width: 62rem) {
+  .cart-footer hgroup .subtotal-title {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+}
+
 .cart-footer hgroup .subtotal-price .bdtsign {
   font-family: "Inter";
   font-style: normal;
@@ -2613,6 +2657,16 @@ select {
   color: #7D56A5;
 }
 
+@media screen and (min-width: 62rem) {
+  .cart-footer hgroup .subtotal-price .bdtsign {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+}
+
 .cart-footer hgroup .subtotal-price .price {
   font-family: "Inter";
   font-style: normal;
@@ -2620,6 +2674,16 @@ select {
   font-weight: 600;
   line-height: 1.82857;
   color: #7D56A5;
+}
+
+@media screen and (min-width: 62rem) {
+  .cart-footer hgroup .subtotal-price .price {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
+  }
 }
 
 .cart-footer .btn-checkout {
@@ -2639,6 +2703,12 @@ select {
   background: #7D56A5;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
+}
+
+@media screen and (min-width: 62rem) {
+  .cart-footer .btn-checkout {
+    padding: 1rem 1.5rem;
+  }
 }
 
 .cart-footer .btn-checkout .btn-text {

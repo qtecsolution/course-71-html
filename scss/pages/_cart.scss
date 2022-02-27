@@ -4,6 +4,7 @@
 
 .cart {
     padding: length(40) length(20) length(94);
+    position: relative;
 
     &-content {
         @include flex-column;
@@ -20,6 +21,20 @@
     &-body {
         @include flex-column;
         gap: length(8);
+        padding-bottom: length(64);
+
+        @include breakpoint(tab992) {
+            padding-bottom: length(0);
+        }
+
+        &::-webkit-scrollbar {
+            background: transparent;
+            width: length(4);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $scrollBg;
+        }
 
         .card-cart {
             @include flex-center-vert;
@@ -65,25 +80,52 @@
 
     &-footer {
         @include flex-center-between;
+        position: fixed;
+        bottom: length(70);
+        left: 0;
+        @include w100;
+        background: $bodyBg;
+        background: $white;
+        padding: length(20);
+        z-index: 100;
+
+        @include breakpoint(tab992) {
+            position: static;
+            bottom: 0;
+            background: $bodyBg;
+            padding: length(20) length(0) length(0);
+        }
 
         hgroup {
             @include flex-center-vert;
-            gap: length(48);
+            gap: length(24);
 
             .subtotal-title {
                 @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(25.6, 14));
                 color: $gray-600;
+
+                @include breakpoint(tab992) {
+                    @include font-face($secondaryFont, style('normal'), size(16), weight('semibold'), line-height(25.6, 16));
+                }
             }
 
             .subtotal-price {
                 .bdtsign {
                     @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(25.6, 14));
                     color: $primary;
+
+                    @include breakpoint(tab992) {
+                        @include font-face($secondaryFont, style('normal'), size(16), weight('semibold'), line-height(25.6, 16));
+                    }
                 }
 
                 .price {
                     @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(25.6, 14));
                     color: $primary;
+
+                    @include breakpoint(tab992) {
+                        @include font-face($secondaryFont, style('normal'), size(16), weight('semibold'), line-height(25.6, 16));
+                    }
                 }
             }
         }
@@ -95,6 +137,10 @@
             @include radius(8);
             background: $primary;
             @include transitions;
+
+            @include breakpoint(tab992) {
+                padding: length(16) length(24);
+            }
 
             .btn-text {
                 @include font-face($secondaryFont, style('normal'), size(12), weight('semibold'), line-height(12, 12));
