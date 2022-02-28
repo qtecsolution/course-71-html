@@ -82,6 +82,14 @@
     @include radius(8);
     overflow: hidden;
 
+    @include breakpoint(mobile360) {
+        width: length(240);
+    }
+
+    @include breakpoint(mobile500) {
+        @include w100;
+    }
+
     &-header {
         .course-thumbnail {
             @include flex-center;
@@ -120,8 +128,14 @@
         }
 
         .cardcoursedetail {
-            @include flex-center-vert;
-            gap: length(36);
+            @include flex-column;
+            gap: length(10);
+
+            @include breakpoint(mobile360) {
+                flex-direction: row;
+                align-items: center;
+                gap: length(36);
+            }
 
             .courseinfo {
                 @include flex-column;
@@ -142,8 +156,14 @@
         }
 
         .course-prices {
-            @include flex-center-vert;
-            gap: length(16);
+            @include flex-column;
+            gap: length(0);
+
+            @include breakpoint(mobile360) {
+                flex-direction: row;
+                align-items: center;
+                gap: length(16);
+            }
 
             .current-price {
                 .btdsign {
@@ -172,6 +192,87 @@
                     color: $gray-800;
                 }
             }
+        }
+    }
+}
+
+.card-about {
+    @include flex-center-column;
+    gap: length(16);
+    padding: length(8) length(20);
+    background: $white;
+    @include radius(8);
+
+    .about-thumbnail {
+        @include square(length(72));
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: contain;
+        }
+    }
+
+    &-details {
+        @include flex-center-column;
+        gap: length(8);
+        text-align: center;
+
+        .about-title {
+            @include font-face($primaryFont, style('normal'), size(20), weight('semibold'), line-height(22, 20));
+            color: $text-about;
+
+        }
+
+        .about-text {
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+            color: $text-about;
+        }
+    }
+}
+
+.card-testimonial {
+    @include flex-center-vert;
+    padding: length(8);
+
+    &-cap {
+        width: length(54);
+        height: length(92);
+        @include flex-center;
+        overflow: hidden;
+        margin-right: length(-10);
+        margin-top: length(20);
+        
+        img {
+            @include wh100;
+            object-fit: cover;
+        }
+    }
+    
+    &-details {
+        width: calc(100% - 3.375rem);
+        @include flex-center-vert;
+        gap: length(18);
+    }
+    
+    &-header {
+        @include square(length(51));
+        @include flex-center;
+        @include border(solid, 2, $border-thumb);
+        @include circle;
+        overflow: hidden;
+
+        img {
+            @include wh100;
+        }
+    }
+
+    &-body {
+        width: calc(100% - 4.3125rem);
+        .testimonial-text {
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+            color: $black;
         }
     }
 }

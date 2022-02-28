@@ -175,10 +175,10 @@
 =====================================================**/
 
 .topcategory {
-    padding: length(32) length(0);
+    padding: length(32) length(20);
 
     @include breakpoint(tab992) {
-        padding: length(60) length(0);
+        padding: length(60) length(20);
     }
 
     &-content {
@@ -237,10 +237,10 @@
 =====================================================**/
 
 .carouselsection {
-    padding: length(32) length(0);
+    padding: length(32) length(20);
 
     @include breakpoint(tab992) {
-        padding: length(60) length(0);
+        padding: length(60) length(20);
     }
 
     &-content {
@@ -255,19 +255,139 @@
         }
     }
 
-    &-body {}
+    &-body {
+        .swiper-slide {
+            flex-shrink: auto;
+
+            @include breakpoint(mobile360) {
+                width: length(240);
+            }
+
+            @include breakpoint(mobile500) {
+                @include w100;
+            }
+
+            @include breakpoint(mobile576) {
+                flex-shrink: 0;
+            }
+        }
+    }
 }
 
 /**=====================================================
                 CAROUSEL-SECTION END
 =====================================================**/
 
+
 /**=====================================================
-                TOP-CATEGORY START
+                HOME-BANNER START
+=====================================================**/
+
+.banner {
+    padding: length(32) length(0);
+
+    @include breakpoint(tab992) {
+        padding: length(60) length(20);
+    }
+
+    &-thumbnail {
+        @include w100;
+        height: length(140);
+        overflow: hidden;
+
+        @include breakpoint(mobile480) {
+            height: length(240);
+        }
+
+        @include breakpoint(mobile576) {
+            height: length(340);
+        }
+
+        @include breakpoint(mobile768) {
+            height: length(440);
+        }
+
+        img {
+            @include w100;
+            object-fit: contain;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+}
+
+/**=====================================================
+                HOME-BANNER END
 =====================================================**/
 
 
+/**=====================================================
+                ABOUT-SECTION START
+=====================================================**/
+
+.about {
+    padding: length(32) length(20);
+
+    @include breakpoint(tab992) {
+        padding: length(60) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(36);
+    }
+
+    &-header {
+        .aboutus-title {
+            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            color: $textDark;
+        }
+    }
+}
 
 /**=====================================================
-                TOP-CATEGORY END
+                ABOUT-SECTION END
+=====================================================**/
+
+
+/**=====================================================
+            STUDENTS-TESTIMONIALS START
+=====================================================**/
+
+.testimonial {
+    padding: length(32) length(20);
+    background: $white;
+
+    @include breakpoint(tab992) {
+        padding: length(60) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(36);
+    }
+
+    &-header {
+        .testimonial-title {
+            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            color: $textDark;
+        }
+    }
+
+    &-body {
+        .swiper-slide {
+            flex-shrink: auto;
+
+            @include breakpoint(mobile576) {
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+/**=====================================================
+            STUDENTS-TESTIMONIALS END
 =====================================================**/

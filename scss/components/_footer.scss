@@ -92,6 +92,21 @@
                 @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(25.6, 14));
                 color: $white;
                 text-align: center;
+
+                .footlink {
+                    @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(25.6, 14));
+                    color: $white;
+                    display: block;
+                    @include transitions;
+
+                    @include breakpoint(mobile480) {
+                        display: inline-block;
+                    }
+
+                    @include hover {
+                        color: $tertiary;
+                    }
+                }
             }
         }
     }

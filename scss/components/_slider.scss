@@ -1,0 +1,80 @@
+.swiper-button-prev,
+.swiper-button-next {
+    @include transparent-button;
+    @include transform(translateY(-50%));
+    @include square(length(36));
+    display: none;
+    overflow: hidden;
+
+    @include breakpoint(mobile768) {
+        @include flex-center;
+    }
+
+    &::after {
+        content: '';
+        font-family: none;
+        font-size: 0;
+        text-transform: none !important;
+        letter-spacing: 0;
+        text-transform: none;
+        font-variant: none;
+        line-height: 0;
+        display: none;
+    }
+
+    svg {
+        path {
+            @include transitions;
+        }
+    }
+
+    @include hover {
+        svg {
+            path {
+                stroke: $primary;
+            }
+        }
+    }
+}
+.swiper-button-prev {
+    left: 0;
+
+    @include breakpoint(tab992) {
+        // left: length(-64);
+    }
+}
+
+.swiper-button-next {
+    right: 0;
+    
+    @include breakpoint(tab992) {
+        // right: length(-64);
+    }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    position: static;
+    bottom: length(0);
+    height: length(48);
+    @include flex-center;
+    gap: length(8);
+
+    .swiper-pagination-bullet {
+        background: $scrollBg;
+        margin: 0;
+        display: inline-block;
+        @include square(length(8));
+        
+        &:hover:not(.active) {
+            background: $bulletActiveBg;
+        }
+
+        &.active {
+            background: $bulletActiveBg;
+        }
+    }
+
+}

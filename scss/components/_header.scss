@@ -204,12 +204,22 @@
             .desktopsearch {
                 flex: 1;
                 position: relative;
+                margin-right: length(40);
+
+                @include breakpoint(desktop1200) {
+                    margin-right: length(0);
+                }
 
                 .searchbox {
                     @include flex-center-vert;
-                    width: length(472);
                     @include radius(8);
                     overflow: hidden;
+                    
+                    @include breakpoint(desktop1200) {
+                        @include w100;
+                        min-width: length(472);
+                        max-width: length(572);
+                    }
 
                     .search-field {
                         width: calc(100% - 3rem);
@@ -240,7 +250,9 @@
                     background: $white;
                     box-shadow: $dropdown-shadow;
                     position: absolute;
-                    width: length(472);
+                    @include w100;
+                    min-width: length(472);
+                    max-width: length(572);
                     top: 100%;
                     @extend %animation;
                     @extend %slideUpIn;
