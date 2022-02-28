@@ -2,7 +2,100 @@
                 FOOTER SECTION START
 =====================================================**/
 
+.footer {
+    padding-bottom: length(70);
 
+    @include breakpoint(tab992) {
+        padding-bottom: length(0);
+    }
+
+    &-content {
+        @include flex-column;
+    }
+
+    &-top {
+        background: $primary;
+        padding: length(40) length(0) length(20);
+
+        .socialinfo {
+            @include flex-center-column;
+            gap: length(32);
+
+            @include breakpoint(tab992) {
+                align-items: flex-start;
+            }
+
+            .footlogo {
+                width: length(108);
+                height: length(36);
+                @include flex-center;
+                overflow: hidden;
+
+                img {
+                    @include wh100;
+                    object-fit: contain;
+                }
+            }
+
+            .social-list {
+                @include list-horizontal;
+                gap: length(16);
+
+                &-link {
+                    @include square(length(32));
+                    @include flex-center;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        .footermenu {
+            @include flex-center-column;
+            gap: length(16);
+            text-align: center;
+
+            @include breakpoint(tab992) {
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            &-title {
+                @include font-face($secondaryFont, style('normal'), size(20), weight('normal'), line-height(27.2, 20));
+                color: $white;
+            }
+
+            .footerlist {
+                @include list-vertical;
+                gap: length(4);
+
+                &-link {
+                    @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(28, 14));
+                    color: $white;
+                    @include transitions;
+
+                    @include hover {
+                        color: $tertiary;
+                    }
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        background: $primary-dark;
+
+        .footer-copyright {
+            padding: length(22);
+            @include flex-center;
+
+            .text-copyright {
+                @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(25.6, 14));
+                color: $white;
+                text-align: center;
+            }
+        }
+    }
+}
 
 /**=====================================================
                 FOOTER SECTION END
