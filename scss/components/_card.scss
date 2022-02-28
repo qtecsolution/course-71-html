@@ -67,10 +67,15 @@
 
 .card-category {
     padding: length(8);
-    @include flex-center;
+    @include flex-center-vert;
     gap: length(8);
     @include radius(8);
     background: $white;
+    min-width: length(200);
+
+    @include breakpoint(tab992) {
+        min-width: auto;
+    }
 
     .card-category-cap {
         @include square(length(40));

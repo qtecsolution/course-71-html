@@ -181,7 +181,10 @@
         padding: length(60) length(0);
     }
 
-    &-content {}
+    &-content {
+        @include flex-column;
+        gap: length(36);
+    }
 
     &-header {
         .category-title {
@@ -189,12 +192,38 @@
         }
     }
 
-    &-body {
-        @include flex-center-vert;
-        gap: length(16);
-        flex-wrap: wrap;
+    .desktop-category {
+        display: none;
 
-        @include breakpoint(tab992) {}
+        @include breakpoint(tab992) {
+            display: block;
+        }
+
+        .topcategory-body {
+            @include flex-center-vert;
+            gap: length(16);
+            flex-wrap: wrap;
+        }
+    }
+
+
+    .mobilecategory {
+        display: block;
+
+        @include breakpoint(tab992) {
+            display: none;
+        }
+
+        .mobile-category {
+            @include flex-center-vert;
+            gap: length(16);
+            flex-wrap: nowrap;
+            overflow: hidden;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
     }
 }
 

@@ -1899,13 +1899,17 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 0.5rem;
   border-radius: 0.5rem;
   border-radius: 0.5rem;
   background: #ffffff;
+  min-width: 12.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .card-category {
+    min-width: auto;
+  }
 }
 
 .card-category .card-category-cap {
@@ -3278,6 +3282,17 @@ select {
   }
 }
 
+.topcategory-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.25rem;
+}
+
 .topcategory-header .category-title {
   font-family: "Noto Sans Bengali";
   font-style: normal;
@@ -3286,7 +3301,17 @@ select {
   line-height: 1.36036;
 }
 
-.topcategory-body {
+.topcategory .desktop-category {
+  display: none;
+}
+
+@media screen and (min-width: 62rem) {
+  .topcategory .desktop-category {
+    display: block;
+  }
+}
+
+.topcategory .desktop-category .topcategory-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3296,6 +3321,33 @@ select {
   gap: 1rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.topcategory .mobilecategory {
+  display: block;
+}
+
+@media screen and (min-width: 62rem) {
+  .topcategory .mobilecategory {
+    display: none;
+  }
+}
+
+.topcategory .mobilecategory .mobile-category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.topcategory .mobilecategory .mobile-category::-webkit-scrollbar {
+  display: none;
 }
 
 /**=====================================================
