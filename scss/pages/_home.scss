@@ -189,6 +189,7 @@
     &-header {
         .category-title {
             @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            color: $textDark;
         }
     }
 
@@ -232,13 +233,33 @@
 =====================================================**/
 
 /**=====================================================
-                TOP-CATEGORY START
+                CAROUSEL-SECTION START
 =====================================================**/
 
+.carouselsection {
+    padding: length(32) length(0);
 
+    @include breakpoint(tab992) {
+        padding: length(60) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(36);
+    }
+
+    &-header {
+        .carousel-title {
+            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            color: $textDark;
+        }
+    }
+
+    &-body {}
+}
 
 /**=====================================================
-                TOP-CATEGORY END
+                CAROUSEL-SECTION END
 =====================================================**/
 
 /**=====================================================

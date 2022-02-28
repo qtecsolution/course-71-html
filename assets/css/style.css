@@ -1773,6 +1773,48 @@ select {
   color: #7D56A5;
 }
 
+.bedge-course {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.375rem;
+  width: 5.625rem;
+  height: 1.5rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  background: #F78B64;
+}
+
+.bedge-course .badge-icon {
+  height: 0.625rem;
+  width: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bedge-course .badge-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.625rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
 /**=====================================================**
                         HOME-CARDS
 =======================================================**/
@@ -1829,48 +1871,6 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.card-horizontal-details .bedge-course {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 0.375rem;
-  width: 5.625rem;
-  height: 1.5rem;
-  padding: 0.25rem 0.625rem;
-  border-radius: 0.375rem;
-  border-radius: 0.375rem;
-  background: #F78B64;
-}
-
-.card-horizontal-details .bedge-course .badge-icon {
-  height: 0.625rem;
-  width: 0.625rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.card-horizontal-details .bedge-course .badge-title {
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 0.625rem;
-  font-weight: 600;
-  line-height: 1.6;
-  color: #ffffff;
 }
 
 .card-horizontal-details .cart-price .btdsign {
@@ -1942,6 +1942,177 @@ select {
   color: #352424;
   -webkit-font-feature-settings: 'salt'on;
           font-feature-settings: 'salt'on;
+}
+
+.cardcourse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.cardcourse-header .course-thumbnail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 10.125rem;
+  overflow: hidden;
+}
+
+.cardcourse-header .course-thumbnail img {
+  max-width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.cardcourse-header .course-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.cardcourse-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem;
+}
+
+.cardcourse-body .course-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.62;
+  color: #2D3748;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  height: 3.25rem;
+}
+
+.cardcourse-body .course-title:not([disabled]):hover {
+  color: #F78B64;
+}
+
+.cardcourse-body .cardcoursedetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.25rem;
+}
+
+.cardcourse-body .cardcoursedetail .courseinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardcourse-body .cardcoursedetail .courseinfo .course-category {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #718096;
+}
+
+.cardcourse-body .cardcoursedetail .courseinfo .course-teacher {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #2D3748;
+}
+
+.cardcourse-body .course-prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.cardcourse-body .course-prices .current-price .btdsign {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.62;
+  color: #2D3748;
+}
+
+.cardcourse-body .course-prices .current-price .price {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.62;
+  color: #2D3748;
+}
+
+.cardcourse-body .course-prices .previous-price {
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+  color: #2D3748;
+}
+
+.cardcourse-body .course-prices .previous-price .btdsign {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.62;
+  color: #2D3748;
+}
+
+.cardcourse-body .course-prices .previous-price .price {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.62;
+  color: #2D3748;
 }
 
 .modal-content {
@@ -3299,6 +3470,7 @@ select {
   font-size: 1.75rem;
   font-weight: 600;
   line-height: 1.36036;
+  color: #352424;
 }
 
 .topcategory .desktop-category {
@@ -3354,10 +3526,40 @@ select {
                 TOP-CATEGORY END
 =====================================================**/
 /**=====================================================
-                TOP-CATEGORY START
+                CAROUSEL-SECTION START
 =====================================================**/
+.carouselsection {
+  padding: 2rem 0rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .carouselsection {
+    padding: 3.75rem 0rem;
+  }
+}
+
+.carouselsection-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.25rem;
+}
+
+.carouselsection-header .carousel-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36036;
+  color: #352424;
+}
+
 /**=====================================================
-                TOP-CATEGORY END
+                CAROUSEL-SECTION END
 =====================================================**/
 /**=====================================================
                 TOP-CATEGORY START
