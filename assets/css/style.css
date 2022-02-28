@@ -1721,8 +1721,25 @@ select {
           justify-content: center;
 }
 
-.modal-body .authentication {
-  padding: 2.75rem 1.5rem;
+#loginModal {
+  z-index: 999999999;
+}
+
+.auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
+.authentication {
+  padding: 1.5rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1733,19 +1750,71 @@ select {
   width: 100%;
   max-width: 28.125rem;
   gap: 2rem;
+  background: #ffffff;
 }
 
-.modal-body .authentication-header .authentication-title {
+@media screen and (min-width: 62rem) {
+  .authentication {
+    padding: 2.75rem 1.5rem;
+  }
+}
+
+.authentication-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.authentication-header .authentication-title {
   font-family: "Inter";
   font-style: normal;
   font-size: 1.75rem;
   font-weight: 600;
   line-height: 1.36036;
   color: #4A5568;
-  text-align: center;
 }
 
-.modal-body .authentication-body .authenticationform {
+.authentication-header .subtitle {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.62;
+  color: #27272E;
+}
+
+.authentication-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .authentication-info {
+    max-height: 100%;
+    overflow: hidden;
+    padding: 0rem;
+  }
+}
+
+.authentication-body .authenticationform {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1756,7 +1825,7 @@ select {
   gap: 1.875rem;
 }
 
-.modal-body .authentication-body .authenticationform .inputbox {
+.authentication-body .authenticationform .inputbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1767,7 +1836,105 @@ select {
   gap: 0.5rem;
 }
 
-.modal-body .authentication-body .authenticationform .inputbox .inputinfo {
+.authentication-body .authenticationform .inputbox .checkinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.authentication-body .authenticationform .inputbox .checkinfo .checkfield:checked ~ .checklabel::before {
+  background: #7D56A5;
+  border-color: #7D56A5;
+}
+
+.authentication-body .authenticationform .inputbox .checkinfo .checkfield:checked ~ .checklabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.authentication-body .authenticationform .inputbox .checkinfo .checklabel {
+  position: relative;
+  padding-left: 1.875rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #425466;
+  cursor: pointer;
+}
+
+.authentication-body .authenticationform .inputbox .checkinfo .checklabel::-moz-selection {
+  background: #ffffff;
+  color: #425466;
+}
+
+.authentication-body .authenticationform .inputbox .checkinfo .checklabel::selection {
+  background: #ffffff;
+  color: #425466;
+}
+
+.authentication-body .authenticationform .inputbox .checkinfo .checklabel .link {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.66667;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  color: #425466;
+}
+
+.authentication-body .authenticationform .inputbox .checkinfo .checklabel .link:not([disabled]):hover {
+  color: #F78B64;
+}
+
+.authentication-body .authenticationform .inputbox .checkinfo .checklabel .link::-moz-selection {
+  background: #ffffff;
+  color: #425466;
+}
+
+.authentication-body .authenticationform .inputbox .checkinfo .checklabel .link::selection {
+  background: #ffffff;
+  color: #425466;
+}
+
+.authentication-body .authenticationform .inputbox .checkinfo .checklabel::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 1.25rem;
+  width: 1.25rem;
+  border: solid 0.125rem #C9CED6;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  background: #ffffff;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.authentication-body .authenticationform .inputbox .checkinfo .checklabel::after {
+  content: '';
+  position: absolute;
+  top: 32%;
+  left: 0.4375rem;
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid 0.125rem #ffffff;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+  border-top: 0;
+  border-left: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.authentication-body .authenticationform .inputbox .inputinfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1779,7 +1946,7 @@ select {
   position: relative;
 }
 
-.modal-body .authentication-body .authenticationform .inputbox .inputinfo .inputlabel {
+.authentication-body .authenticationform .inputbox .inputinfo .inputlabel {
   font-family: "Inter";
   font-style: normal;
   font-size: 0.875rem;
@@ -1788,7 +1955,7 @@ select {
   color: #425466;
 }
 
-.modal-body .authentication-body .authenticationform .inputbox .inputinfo .inputfield {
+.authentication-body .authenticationform .inputbox .inputinfo .inputfield {
   padding: 0.875rem 1.25rem 0.75rem;
   font-family: "Inter";
   font-style: normal;
@@ -1803,27 +1970,27 @@ select {
           box-shadow: 0 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0 0 0.0625rem rgba(50, 50, 71, 0.2);
 }
 
-.modal-body .authentication-body .authenticationform .inputbox .inputinfo .inputfield::-webkit-input-placeholder {
+.authentication-body .authenticationform .inputbox .inputinfo .inputfield::-webkit-input-placeholder {
   color: #B5B5BD;
 }
 
-.modal-body .authentication-body .authenticationform .inputbox .inputinfo .inputfield:-ms-input-placeholder {
+.authentication-body .authenticationform .inputbox .inputinfo .inputfield:-ms-input-placeholder {
   color: #B5B5BD;
 }
 
-.modal-body .authentication-body .authenticationform .inputbox .inputinfo .inputfield::-ms-input-placeholder {
+.authentication-body .authenticationform .inputbox .inputinfo .inputfield::-ms-input-placeholder {
   color: #B5B5BD;
 }
 
-.modal-body .authentication-body .authenticationform .inputbox .inputinfo .inputfield::placeholder {
+.authentication-body .authenticationform .inputbox .inputinfo .inputfield::placeholder {
   color: #B5B5BD;
 }
 
-.modal-body .authentication-body .authenticationform .inputbox .inputinfo .passwordfield {
+.authentication-body .authenticationform .inputbox .inputinfo .passwordfield {
   padding-right: 4.375rem;
 }
 
-.modal-body .authentication-body .authenticationform .inputbox .inputinfo .btn-forgot {
+.authentication-body .authenticationform .inputbox .inputinfo .btn-forgot {
   position: absolute;
   top: 70%;
   right: 1.125rem;
@@ -1840,11 +2007,11 @@ select {
   transition: all 250ms ease-in-out;
 }
 
-.modal-body .authentication-body .authenticationform .inputbox .inputinfo .btn-forgot:not([disabled]):hover {
+.authentication-body .authenticationform .inputbox .inputinfo .btn-forgot:not([disabled]):hover {
   color: #F78B64;
 }
 
-.modal-body .authentication-body .authenticationform .inputbox .input-information {
+.authentication-body .authenticationform .inputbox .input-information {
   font-family: "Inter";
   font-style: normal;
   font-size: 0.6875rem;
@@ -1853,7 +2020,7 @@ select {
   color: #718096;
 }
 
-.modal-body .authentication-body .authenticationform .inputbox .error-message {
+.authentication-body .authenticationform .inputbox .error-message {
   font-family: "Inter";
   font-style: normal;
   font-size: 0.6875rem;
@@ -1863,17 +2030,17 @@ select {
   display: none;
 }
 
-.modal-body .authentication-body .authenticationform .inputbox.error .inputinfo .inputfield {
+.authentication-body .authenticationform .inputbox.error .inputinfo .inputfield {
   color: #F16063;
   -webkit-box-shadow: 0 0.0625rem 0.125rem rgba(241, 96, 99, 0.5), 0 0 0.0625rem rgba(241, 96, 99, 0.5);
           box-shadow: 0 0.0625rem 0.125rem rgba(241, 96, 99, 0.5), 0 0 0.0625rem rgba(241, 96, 99, 0.5);
 }
 
-.modal-body .authentication-body .authenticationform .inputbox.error .error-message {
+.authentication-body .authenticationform .inputbox.error .error-message {
   display: block;
 }
 
-.modal-body .authentication-body .authenticationform .submitbox {
+.authentication-body .authenticationform .submitbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1890,7 +2057,7 @@ select {
   gap: 0.75rem;
 }
 
-.modal-body .authentication-body .authenticationform .submitbox .btn-submit {
+.authentication-body .authenticationform .submitbox .btn-submit {
   font-family: "Inter";
   font-style: normal;
   font-size: 0.875rem;
@@ -1899,7 +2066,7 @@ select {
   width: 100%;
 }
 
-.modal-body .authentication-body .authenticationform .submitbox .authentictext {
+.authentication-body .authenticationform .submitbox .authentictext {
   font-family: "Inter";
   font-style: normal;
   font-size: 0.75rem;
@@ -1908,7 +2075,7 @@ select {
   color: #425466;
 }
 
-.modal-body .authentication-body .authenticationform .submitbox .authentictext .btn-signup {
+.authentication-body .authenticationform .submitbox .authentictext .btn-signup {
   font-family: "Inter";
   font-style: normal;
   font-size: 0.75rem;
@@ -1920,11 +2087,27 @@ select {
   transition: all 250ms ease-in-out;
 }
 
-.modal-body .authentication-body .authenticationform .submitbox .authentictext .btn-signup:not([disabled]):hover {
+.authentication-body .authenticationform .submitbox .authentictext .btn-signup:not([disabled]):hover {
   color: #F78B64;
 }
 
-.modal-body .authentication-footer {
+.authentication-body .authenticationform .submitbox .authentictext .btn-signin {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.66667;
+  background: transparent;
+  color: #425466;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.authentication-body .authenticationform .submitbox .authentictext .btn-signin:not([disabled]):hover {
+  color: #F78B64;
+}
+
+.authentication-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1942,7 +2125,7 @@ select {
   width: 100%;
 }
 
-.modal-body .authentication-footer .footerhead {
+.authentication-footer .footerhead {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1951,29 +2134,36 @@ select {
           align-items: center;
   gap: 1.5rem;
   width: 100%;
-}
-
-.modal-body .authentication-footer .footerhead .divider {
-  width: calc((100% - 6.5rem) / 2);
-  height: 0.0625rem;
-  background: #718096;
-}
-
-.modal-body .authentication-footer .footerhead .titlebox {
-  width: 7.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  position: relative;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
 }
 
-.modal-body .authentication-footer .footerhead .titlebox .continuetitle {
+.authentication-footer .footerhead::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: 0.0625rem;
+  background: #718096;
+}
+
+.authentication-footer .footerhead .titlebox {
+  margin-top: -0.25rem;
+  background: #ffffff;
+  position: relative;
+  z-index: 12;
+  padding: 0rem 1.5rem;
+}
+
+.authentication-footer .footerhead .titlebox .continuetitle {
   font-family: "Inter";
   font-style: normal;
   font-size: 0.75rem;
@@ -1984,7 +2174,7 @@ select {
   width: 100%;
 }
 
-.modal-body .authentication-footer .footerbody .authenticationlist {
+.authentication-footer .footerbody .authenticationlist {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1997,7 +2187,7 @@ select {
   gap: 1rem;
 }
 
-.modal-body .authentication-footer .footerbody .authenticationlist-link {
+.authentication-footer .footerbody .authenticationlist-link {
   width: 4.25rem;
   height: 3.4375rem;
   display: -webkit-box;
@@ -2015,6 +2205,16 @@ select {
   background: #ffffff;
   -webkit-box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.2), 0 0.0625rem 0.1875rem rgba(50, 50, 71, 0.1);
           box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.2), 0 0.0625rem 0.1875rem rgba(50, 50, 71, 0.1);
+}
+
+#registerModal .authentication-footer {
+  padding-bottom: 5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  #registerModal .authentication-footer {
+    padding-bottom: 1.25rem;
+  }
 }
 
 /**=====================================================

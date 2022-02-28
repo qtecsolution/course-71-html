@@ -38,174 +38,318 @@
     &-body {
         padding: length(0);
         @include flex-center;
+    }
+}
 
-        .authentication {
-            padding: length(44) length(24);
+// UPLOAD MEDALLION MODAL END
+
+#loginModal {
+    z-index: 999999999;
+}
+
+.auth {
+    @include flex-center;
+    min-height: 100vh;
+}
+
+.authentication {
+    padding: length(24) length(16);
+    @include flex-column;
+    @include w100;
+    max-width: length(450);
+    gap: length(32);
+    background: $white;
+
+    @include breakpoint(tab992) {
+        padding: length(44) length(24);
+    }
+
+    &-header {
+        @include flex-center-column;
+        gap: length(12);
+        text-align: center;
+
+        .authentication-title {
+            @include font-face($secondaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            color: $gray-700;
+        }
+
+        .subtitle {
+            @include font-face($secondaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+            color: $dark;
+        }
+    }
+
+    &-info {
+        @include flex-column;
+        gap: length(24);
+        // max-height: length(330);
+        // overflow-y: scroll;
+        // padding: length(8);
+
+        @include breakpoint(tab992) {
+            max-height: 100%;
+            overflow: hidden;
+            padding: length(0);
+        }
+    }
+
+    &-body {
+        .authenticationform {
             @include flex-column;
-            @include w100;
-            max-width: length(450);
-            gap: length(32);
-            
-            &-header {
-                .authentication-title {
-                    @include font-face($secondaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
-                    color: $gray-700;
-                    text-align: center;
-                }
-            }
+            gap: length(30);
 
-            &-body {
-                .authenticationform {
-                    @include flex-column;
-                    gap: length(30);
+            .inputbox {
+                @include flex-column;
+                gap: length(8);
 
-                    .inputbox {
-                        @include flex-column;
-                        gap: length(8);
+                .checkinfo {
+                    display: flex;
 
-                        .inputinfo {
-                            @include flex-column;
-                            gap: length(8);
-                            position: relative;
-
-                            .inputlabel {
-                                @include font-face($secondaryFont, style('normal'), size(14), weight('medium'), line-height(16.94, 14));
-                                color: $textBodyLight;
+                    .checkfield {
+                        &:checked~.checklabel {
+                            &::before {
+                                background: $primary;
+                                border-color: $primary;
                             }
 
-                            .inputfield {
-                                padding: length(14) length(20) length(12);
-                                @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
-                                @include radius(6);
-                                @include setBgColor($white, $textDark);
-                                box-shadow: $input-shadow;
-
-                                &::placeholder {
-                                    color: $textPlaceholder;
-                                }
-                            }
-
-                            .passwordfield {
-                                padding-right: length(70);
-                            }
-
-                            .btn-forgot {
-                                position: absolute;
-                                top: 70%;
-                                right: length(18);
-                                @include transform(translateY(-50%));
-                                @include setBgColor(transparent, $dark);
-                                @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
-                                @include transitions;
-
-                                @include hover {
-                                    color: $tertiary;
-                                }
-                            }
-                        }
-
-                        .input-information {
-                            @include font-face($secondaryFont, style('normal'), size(11), weight('normal'), line-height(12, 11));
-                            color: $gray-600;
-                        }
-
-                        .error-message {
-                            @include font-face($secondaryFont, style('normal'), size(11), weight('medium'), line-height(12, 11));
-                            color: $danger;
-                            display: none;
-                        }
-
-                        &.error {
-                            .inputinfo {
-                                .inputfield {
-                                    color: $danger;
-                                    box-shadow: $error-shadow;
-                                }
-                            }
-
-                            .error-message {
-                                display: block;
+                            &::after {
+                                opacity: 1;
+                                visibility: visible;
                             }
                         }
                     }
 
-                    .submitbox {
-                        @include flex-center-column;
-                        gap: length(12);
+                    .checklabel {
+                        position: relative;
+                        padding-left: length(30);
+                        @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                        color: $textBodyLight;
+                        cursor: pointer;
 
-                        .btn-submit {
-                            @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(14, 14));
-                            @include w100;
+                        &::selection {
+                            background: $white;
+                            color: $textBodyLight;
                         }
 
-                        .authentictext {
-                            @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                        .link {
+                            @include font-face($secondaryFont, style('normal'), size(12), weight('bold'), line-height(20, 12));
+                            @include transitions;
                             color: $textBodyLight;
 
-                            .btn-signup {
-                                @include font-face($secondaryFont, style('normal'), size(12), weight('bold'), line-height(20, 12));
-                                @include setBgColor(transparent, $textBodyLight);
-                                @include transitions;
+                            @include hover {
+                                color: $tertiary;
+                            }
 
-                                @include hover {
-                                    color: $tertiary;
-                                }
+                            &::selection {
+                                background: $white;
+                                color: $textBodyLight;
                             }
                         }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 35%;
+                            left: 0;
+                            @include transform(translateY(-50%));
+                            @include square(length(20));
+                            @include border(solid, 2, $checkborder);
+                            @include radius(4);
+                            background: $white;
+                            @include transitions;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 32%;
+                            left: length(7);
+                            width: length(5);
+                            height: length(10);
+                            @include border(solid, 2, $white);
+                            @include transform(translateY(-50%) rotate(45deg));
+                            border-top: 0;
+                            border-left: 0;
+                            opacity: 0;
+                            visibility: hidden;
+                            @include transitions;
+                        }
+                    }
+                }
+
+                .inputinfo {
+                    @include flex-column;
+                    gap: length(8);
+                    position: relative;
+
+                    .inputlabel {
+                        @include font-face($secondaryFont, style('normal'), size(14), weight('medium'), line-height(16.94, 14));
+                        color: $textBodyLight;
+                    }
+
+                    .inputfield {
+                        padding: length(14) length(20) length(12);
+                        @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                        @include radius(6);
+                        @include setBgColor($white, $textDark);
+                        box-shadow: $input-shadow;
+
+                        &::placeholder {
+                            color: $textPlaceholder;
+                        }
+                    }
+
+                    .passwordfield {
+                        padding-right: length(70);
+                    }
+
+                    .btn-forgot {
+                        position: absolute;
+                        top: 70%;
+                        right: length(18);
+                        @include transform(translateY(-50%));
+                        @include setBgColor(transparent, $dark);
+                        @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                        @include transitions;
+
+                        @include hover {
+                            color: $tertiary;
+                        }
+                    }
+                }
+
+                .input-information {
+                    @include font-face($secondaryFont, style('normal'), size(11), weight('normal'), line-height(12, 11));
+                    color: $gray-600;
+                }
+
+                .error-message {
+                    @include font-face($secondaryFont, style('normal'), size(11), weight('medium'), line-height(12, 11));
+                    color: $danger;
+                    display: none;
+                }
+
+                &.error {
+                    .inputinfo {
+                        .inputfield {
+                            color: $danger;
+                            box-shadow: $error-shadow;
+                        }
+                    }
+
+                    .error-message {
+                        display: block;
                     }
                 }
             }
 
-            &-footer {
+            .submitbox {
                 @include flex-center-column;
-                gap: length(30);
-                @include w100;
+                gap: length(12);
 
-                .footerhead {
-                    @include flex-center-vert;
-                    gap: length(24);
+                .btn-submit {
+                    @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(14, 14));
                     @include w100;
+                }
 
-                    .divider {
-                        width: calc((100% - 6.5rem) / 2);
-                        height: length(1);
-                        background: $gray-600;
-                    }
+                .authentictext {
+                    @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                    color: $textBodyLight;
 
-                    .titlebox {
-                        width: length(120);
-                        @include flex-center;
-                        text-align: center;
+                    .btn-signup {
+                        @include font-face($secondaryFont, style('normal'), size(12), weight('bold'), line-height(20, 12));
+                        @include setBgColor(transparent, $textBodyLight);
+                        @include transitions;
 
-                        .continuetitle {
-                            @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(14, 12));
-                            color: $gray-600;
-                            text-align: center;
-                            @include w100;
+                        @include hover {
+                            color: $tertiary;
                         }
                     }
 
-                }
+                    .btn-signin {
+                        @include font-face($secondaryFont, style('normal'), size(12), weight('bold'), line-height(20, 12));
+                        @include setBgColor(transparent, $textBodyLight);
+                        @include transitions;
 
-                .footerbody {
-                    .authenticationlist {
-                        @include list-horizontal;
-                        gap: length(16);
-
-                        &-link {
-                            width: length(68);
-                            height: length(55);
-                            @include flex-center;
-                            padding: length(8);
-                            @include radius(8);
-                            background: $white;
-                            box-shadow: $share-shadow;
+                        @include hover {
+                            color: $tertiary;
                         }
                     }
                 }
             }
         }
     }
+
+    &-footer {
+        @include flex-center-column;
+        gap: length(30);
+        @include w100;
+        // padding-bottom: length(80);
+
+        .footerhead {
+            @include flex-center-vert;
+            gap: length(24);
+            @include w100;
+            position: relative;
+            @include flex-center;
+            text-align: center;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
+                left: 0;
+                @include w100;
+                height: length(1);
+                background: $gray-600;
+            }
+
+            .titlebox {
+                margin-top: length(-4);
+                background: $white;
+                position: relative;
+                z-index: 12;
+                padding: length(0) length(24);
+
+                .continuetitle {
+                    @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(14, 12));
+                    color: $gray-600;
+                    text-align: center;
+                    @include w100;
+                }
+            }
+
+        }
+
+        .footerbody {
+            .authenticationlist {
+                @include list-horizontal;
+                gap: length(16);
+
+                &-link {
+                    width: length(68);
+                    height: length(55);
+                    @include flex-center;
+                    padding: length(8);
+                    @include radius(8);
+                    background: $white;
+                    box-shadow: $share-shadow;
+                }
+            }
+        }
+    }
 }
 
-// UPLOAD MEDALLION MODAL END
+#registerModal {
+    .authentication {
+        &-footer {
+            padding-bottom: length(80);
+
+            @include breakpoint(tab992) {
+                padding-bottom: length(20);
+            }
+        }
+    }
+}
