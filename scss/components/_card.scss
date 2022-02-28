@@ -64,3 +64,30 @@
         }
     }
 }
+
+.card-category {
+    padding: length(8);
+    @include flex-center;
+    gap: length(8);
+    @include radius(8);
+    background: $white;
+
+    .card-category-cap {
+        @include square(length(40));
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .card-category-details {
+        .category {
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+            color: $textDark;
+            font-feature-settings: 'salt'on;
+        }
+    }
+}
