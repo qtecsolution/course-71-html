@@ -4,6 +4,7 @@
     &-content {
         @include radius(8);
         overflow: hidden;
+        border: none;
     }
 
     &-header {
@@ -43,15 +44,6 @@
 
 // UPLOAD MEDALLION MODAL END
 
-#loginModal {
-    z-index: 999999999;
-}
-
-.auth {
-    @include flex-center;
-    min-height: 100vh;
-}
-
 .authentication {
     padding: length(24) length(16);
     @include flex-column;
@@ -70,28 +62,63 @@
         text-align: center;
 
         .authentication-title {
-            @include font-face($secondaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            @include font-face($secondaryFont, style('normal'), size(20), weight('semibold'), line-height(32, 20));
             color: $gray-700;
+
+            @include breakpoint(mobile576) {
+                @include font-face($secondaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            }
         }
 
         .subtitle {
             @include font-face($secondaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
             color: $dark;
         }
+
+        .forgot {
+            @include flex-center-between;
+            @include w100;
+
+            .authentication-title {
+                @include font-face($secondaryFont, style('normal'), size(20), weight('semibold'), line-height(32, 20));
+                color: $gray-700;
+
+                @include breakpoint(mobile576) {
+                    @include font-face($secondaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                }
+            }
+
+            .btn-back {
+                @include font-face($secondaryFont, style('normal'), size(12), weight('semibold'), line-height(20, 12));
+                letter-spacing: length(-0.08);
+                @include setBgColor(transparent, $primary);
+                @include transitions;
+
+                @include hover {
+                    color: $tertiary;
+                }
+            }
+        }
+
+        .change {
+            @include w100;
+
+            .authentication-title {
+                @include font-face($secondaryFont, style('normal'), size(20), weight('semibold'), line-height(32, 20));
+                color: $gray-700;
+                text-align: left;
+
+                @include breakpoint(mobile576) {
+                    @include font-face($secondaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                }
+            }
+
+        }
     }
 
     &-info {
         @include flex-column;
         gap: length(24);
-        // max-height: length(330);
-        // overflow-y: scroll;
-        // padding: length(8);
-
-        @include breakpoint(tab992) {
-            max-height: 100%;
-            overflow: hidden;
-            padding: length(0);
-        }
     }
 
     &-body {
@@ -102,9 +129,11 @@
             .inputbox {
                 @include flex-column;
                 gap: length(8);
+                padding: length(0) length(4);
 
                 .checkinfo {
                     display: flex;
+                    @include w100;
 
                     .checkfield {
                         &:checked~.checklabel {
@@ -182,6 +211,7 @@
                     @include flex-column;
                     gap: length(8);
                     position: relative;
+                    @include w100;
 
                     .inputlabel {
                         @include font-face($secondaryFont, style('normal'), size(14), weight('medium'), line-height(16.94, 14));
@@ -285,7 +315,6 @@
         @include flex-center-column;
         gap: length(30);
         @include w100;
-        // padding-bottom: length(80);
 
         .footerhead {
             @include flex-center-vert;
@@ -327,6 +356,7 @@
             .authenticationlist {
                 @include list-horizontal;
                 gap: length(16);
+                padding: length(8);
 
                 &-link {
                     width: length(68);
@@ -342,6 +372,7 @@
     }
 }
 
+#loginModal,
 #registerModal {
     .authentication {
         &-footer {

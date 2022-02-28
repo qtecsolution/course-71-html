@@ -584,6 +584,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  overflow-y: scroll !important;
   position: relative;
 }
 
@@ -1702,6 +1703,7 @@ select {
   border-radius: 0.5rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  border: none;
 }
 
 .modal-header {
@@ -1719,23 +1721,6 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-#loginModal {
-  z-index: 999999999;
-}
-
-.auth {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 100vh;
 }
 
 .authentication {
@@ -1780,10 +1765,20 @@ select {
 .authentication-header .authentication-title {
   font-family: "Inter";
   font-style: normal;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.36036;
+  line-height: 1.6;
   color: #4A5568;
+}
+
+@media screen and (min-width: 36rem) {
+  .authentication-header .authentication-title {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
 }
 
 .authentication-header .subtitle {
@@ -1795,6 +1790,80 @@ select {
   color: #27272E;
 }
 
+.authentication-header .forgot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.authentication-header .forgot .authentication-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #4A5568;
+}
+
+@media screen and (min-width: 36rem) {
+  .authentication-header .forgot .authentication-title {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
+}
+
+.authentication-header .forgot .btn-back {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.66667;
+  letter-spacing: -0.005rem;
+  background: transparent;
+  color: #7D56A5;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.authentication-header .forgot .btn-back:not([disabled]):hover {
+  color: #F78B64;
+}
+
+.authentication-header .change {
+  width: 100%;
+}
+
+.authentication-header .change .authentication-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #4A5568;
+  text-align: left;
+}
+
+@media screen and (min-width: 36rem) {
+  .authentication-header .change .authentication-title {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
+}
+
 .authentication-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1804,14 +1873,6 @@ select {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.5rem;
-}
-
-@media screen and (min-width: 62rem) {
-  .authentication-info {
-    max-height: 100%;
-    overflow: hidden;
-    padding: 0rem;
-  }
 }
 
 .authentication-body .authenticationform {
@@ -1834,12 +1895,14 @@ select {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5rem;
+  padding: 0rem 0.25rem;
 }
 
 .authentication-body .authenticationform .inputbox .checkinfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 
 .authentication-body .authenticationform .inputbox .checkinfo .checkfield:checked ~ .checklabel::before {
@@ -1944,6 +2007,7 @@ select {
           flex-direction: column;
   gap: 0.5rem;
   position: relative;
+  width: 100%;
 }
 
 .authentication-body .authenticationform .inputbox .inputinfo .inputlabel {
@@ -2185,6 +2249,7 @@ select {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
+  padding: 0.5rem;
 }
 
 .authentication-footer .footerbody .authenticationlist-link {
@@ -2207,11 +2272,13 @@ select {
           box-shadow: 0 0 0.0625rem rgba(12, 26, 75, 0.2), 0 0.0625rem 0.1875rem rgba(50, 50, 71, 0.1);
 }
 
+#loginModal .authentication-footer,
 #registerModal .authentication-footer {
   padding-bottom: 5rem;
 }
 
 @media screen and (min-width: 62rem) {
+  #loginModal .authentication-footer,
   #registerModal .authentication-footer {
     padding-bottom: 1.25rem;
   }

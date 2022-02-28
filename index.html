@@ -1331,7 +1331,7 @@
 
     <!-- LOGIN MODAL START -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-lg-centered">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
                     <!-- AUTHENTICATION START -->
@@ -1438,7 +1438,7 @@
 
     <!-- REGISTER MODAL START -->
     <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-lg-centered">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
                     <!-- AUTHENTICATION START -->
@@ -1562,13 +1562,137 @@
     </div>
     <!-- REGISTER MODAL END -->
 
+    <!-- FORGOT-PASSWORD MODAL START -->
+    <div class="modal fade" id="forgotModal" tabindex="-1" aria-labelledby="forgotModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <!-- AUTHENTICATION START -->
+                    <div class="authentication">
+                        <!-- AUTHENTICATION HEADER START -->
+                        <div class="authentication-header">
+                            <div class="forgot">
+                                <h2 class="authentication-title">Forgot Password?</h2>
+                                <button type="button" class="btn-back">Back to Login</button>
+                            </div>
+                        </div>
+                        <!-- AUTHENTICATION HEADER END -->
+
+                        <!-- AUTHENTICATION-INFO START -->
+                        <div class="authentication-info">
+                            <!-- AUTHENTICATION BODY START -->
+                            <div class="authentication-body">
+                                <!-- AUTHENTICATION-FORM START -->
+                                <form class="authenticationform">
+                                    <!-- INPUT-BOX START -->
+                                    <div class="inputbox">
+                                        <div class="inputinfo">
+                                            <label for="forgotphone" class="inputlabel">Phone number</label>
+                                            <input type="tel" pattern="[0-9]{3} [0-9]{8}" id="forgotphone" class="inputfield" placeholder="Enter your phone number here" autocomplete="off">
+                                        </div>
+
+                                        <p class="error-message">Please enter a valid phone number</p>
+                                    </div>
+                                    <!-- INPUT-BOX END -->
+
+                                    <!-- SUBMIT BOX START -->
+                                    <div class="submitbox">
+                                        <button class="btn-submit btn71 btn-fill btn-otp" type="button">Send OTP</button>
+                                        <p class="authentictext">
+                                            Already have an account? <button class="btn-signup" type="button">Sign Up</button>
+                                        </p>
+                                    </div>
+                                    <!-- SUBMIT BOX END -->
+                                </form>
+                                <!-- AUTHENTICATION-FORM END -->
+                            </div>
+                            <!-- AUTHENTICATION BODY END -->
+                        </div>
+                        <!-- AUTHENTICATION-INFO END -->
+                    </div>
+                    <!-- AUTHENTICATION END -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FORGOT-PASSWORD MODAL END -->
+
+    <!-- CHANGE-PASSWORD MODAL START -->
+    <div class="modal fade" id="changeModal" tabindex="-1" aria-labelledby="changeModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <!-- AUTHENTICATION START -->
+                    <div class="authentication">
+                        <!-- AUTHENTICATION HEADER START -->
+                        <div class="authentication-header">
+                            <div class="change">
+                                <h2 class="authentication-title">Change Password?</h2>
+                            </div>
+                        </div>
+                        <!-- AUTHENTICATION HEADER END -->
+
+                        <!-- AUTHENTICATION-INFO START -->
+                        <div class="authentication-info">
+                            <!-- AUTHENTICATION BODY START -->
+                            <div class="authentication-body">
+                                <!-- AUTHENTICATION-FORM START -->
+                                <form class="authenticationform">
+                                    <!-- INPUT-BOX START -->
+                                    <div class="inputbox">
+                                        <div class="inputinfo">
+                                            <label for="newpassword" class="inputlabel">New Password</label>
+                                            <input type="password" id="newpassword" class="inputfield" placeholder="Enter your new password here" autocomplete="off">
+                                        </div>
+
+                                        <p class="input-information">Must be 8 characters at least</p>
+
+                                        <p class="error-message">Password incorrect. please enter valid password.</p>
+                                    </div>
+                                    <!-- INPUT-BOX END -->
+
+                                    <!-- INPUT-BOX START -->
+                                    <div class="inputbox">
+                                        <div class="inputinfo">
+                                            <label for="confirmpassword" class="inputlabel">Confirm Password</label>
+                                            <input type="password" id="confirmpassword" class="inputfield" placeholder="Confirm password here" autocomplete="off">
+                                        </div>
+
+                                        <p class="input-information">Must be 8 characters at least</p>
+
+                                        <p class="error-message">Password incorrect. please enter valid password.</p>
+                                    </div>
+                                    <!-- INPUT-BOX END -->
+
+                                    <!-- SUBMIT BOX START -->
+                                    <div class="submitbox">
+                                        <button class="btn-submit btn71 btn-fill" type="submit">Change Password</button>
+
+                                        <p class="authentictext">
+                                            Already have an account? <button class="btn-signup" type="button">Sign Up</button>
+                                        </p>
+                                    </div>
+                                    <!-- SUBMIT BOX END -->
+                                </form>
+                                <!-- AUTHENTICATION-FORM END -->
+                            </div>
+                            <!-- AUTHENTICATION BODY END -->
+                        </div>
+                        <!-- AUTHENTICATION-INFO END -->
+                    </div>
+                    <!-- AUTHENTICATION END -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CHANGE-PASSWORD MODAL END -->
+
     <!-- BOOTSTRAP JAVASCRIPT -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-
     <!-- BOOTSTRAP JAVASCRIPT -->
     <script src="assets/js/sitetooltip.js"></script>
     <!-- MODAL JS -->
-    <!-- <script src="assets/js/modal.js"></script> -->
+    <script src="assets/js/modal.js"></script>
     <script src="assets/js/offscreen.js"></script>
 </body>
 </html>
