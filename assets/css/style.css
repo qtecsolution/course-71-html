@@ -5,10 +5,10 @@
                     TEXT-COLORS
 =======================================================**/
 /**=====================================================**
-                    BACKGROUND-COLORS
+BACKGROUND-COLORS
 =======================================================**/
 /**=====================================================**
-                    BORDER-COLORS
+BORDER-COLORS
 =======================================================**/
 /**=====================================================**
                     NORMAL-COLORS
@@ -574,6 +574,8 @@ section {
 
 html {
   font-size: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 /**=====================================================**
@@ -3486,6 +3488,419 @@ select {
 /**=====================================================
                 CHECKOUT-PAGE-START
 =====================================================**/
+.checkout-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.25rem;
+  padding: 2rem 0rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .checkout-content {
+    padding: 3.75rem 1.25rem;
+  }
+}
+
+.checkout-header .checkout-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36036;
+  color: #352424;
+}
+
+.checkout-body .checkout-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkout-body .checkout-items .card-horizontal {
+  background: #ffffff;
+}
+
+.checkout-body .checkout-info {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 2.125rem 1rem 1rem;
+}
+
+.checkout-body .checkout-info .checkout-subtotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: solid 0.0625rem #EBEBEB;
+}
+
+.checkout-body .checkout-info .checkout-subtotal .subtotal-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #2D3748;
+}
+
+.checkout-body .checkout-info .checkout-subtotal .subtotal-price .btdsign {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #2D3748;
+}
+
+.checkout-body .checkout-info .checkout-subtotal .subtotal-price .price {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #2D3748;
+}
+
+.checkout-body .checkout-info .checkout-coupon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 0rem;
+  border-bottom: solid 0.0625rem #EBEBEB;
+}
+
+.checkout-body .checkout-info .checkout-coupon .couponlabel {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.21;
+  color: #425466;
+}
+
+.checkout-body .checkout-info .checkout-coupon .couponinput {
+  background: #ffffff;
+  color: #2D3748;
+  border: solid 0.0625rem #7D56A5;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1;
+  padding: 0.875rem 1rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.checkout-body .checkout-info .checkout-coupon .couponinput::-webkit-input-placeholder {
+  color: #B5B5BD;
+}
+
+.checkout-body .checkout-info .checkout-coupon .couponinput:-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.checkout-body .checkout-info .checkout-coupon .couponinput::-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.checkout-body .checkout-info .checkout-coupon .couponinput::placeholder {
+  color: #B5B5BD;
+}
+
+.checkout-body .checkout-info .checkout-coupon .couponinput:focus {
+  -webkit-box-shadow: 0 0 0 0.125rem rgba(76, 111, 255, 0.3);
+          box-shadow: 0 0 0 0.125rem rgba(76, 111, 255, 0.3);
+}
+
+.checkout-body .checkout-info .discount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0rem;
+  border-bottom: solid 0.0625rem #EBEBEB;
+}
+
+.checkout-body .checkout-info .discount .discount-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #2D3748;
+}
+
+.checkout-body .checkout-info .discount .discount-price .btdsign {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #2D3748;
+}
+
+.checkout-body .checkout-info .discount .discount-price .price {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #2D3748;
+}
+
+.checkout-body .checkout-info .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0rem;
+  border-bottom: solid 0.0625rem #EBEBEB;
+}
+
+.checkout-body .checkout-info .total .total-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #2D3748;
+}
+
+.checkout-body .checkout-info .total .total-price {
+  letter-spacing: -0.005rem;
+}
+
+.checkout-body .checkout-info .total .total-price .btdsign {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.22222;
+  color: #2D3748;
+}
+
+.checkout-body .checkout-info .total .total-price .price {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.22222;
+  color: #2D3748;
+}
+
+.checkout-body .checkout-info .payment-methods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.125rem;
+  padding: 1.5rem 0rem;
+}
+
+.checkout-body .checkout-info .payment-methods .paymentitem .paymentinput:checked ~ .paymentlabel::before {
+  border-color: #7D56A5;
+}
+
+.checkout-body .checkout-info .payment-methods .paymentitem .paymentinput:checked ~ .paymentlabel::after {
+  background: #7D56A5;
+}
+
+.checkout-body .checkout-info .payment-methods .paymentitem .paymentlabel {
+  position: relative;
+  padding-left: 1.875rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71429;
+  color: #4E5D78;
+  cursor: pointer;
+}
+
+.checkout-body .checkout-info .payment-methods .paymentitem .paymentlabel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  border: solid 0.125rem #C9CED6;
+  border-radius: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.checkout-body .checkout-info .payment-methods .paymentitem .paymentlabel::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0.3125rem;
+  height: 0.625rem;
+  width: 0.625rem;
+  border-radius: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: #ffffff;
+}
+
+.checkout-body .checkout-info .checkrequire {
+  padding-bottom: 1.5rem;
+}
+
+.checkout-body .checkout-info .checkrequire .checkinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.checkout-body .checkout-info .checkrequire .checkinfo .checkfield:checked ~ .checklabel::before {
+  background: #7D56A5;
+  border-color: #7D56A5;
+}
+
+.checkout-body .checkout-info .checkrequire .checkinfo .checkfield:checked ~ .checklabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.checkout-body .checkout-info .checkrequire .checkinfo .checklabel {
+  position: relative;
+  padding-left: 1.875rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #425466;
+  cursor: pointer;
+}
+
+.checkout-body .checkout-info .checkrequire .checkinfo .checklabel::-moz-selection {
+  background: #ffffff;
+  color: #425466;
+}
+
+.checkout-body .checkout-info .checkrequire .checkinfo .checklabel::selection {
+  background: #ffffff;
+  color: #425466;
+}
+
+.checkout-body .checkout-info .checkrequire .checkinfo .checklabel .link {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.66667;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  color: #425466;
+}
+
+.checkout-body .checkout-info .checkrequire .checkinfo .checklabel .link:not([disabled]):hover {
+  color: #F78B64;
+}
+
+.checkout-body .checkout-info .checkrequire .checkinfo .checklabel .link::-moz-selection {
+  background: #ffffff;
+  color: #425466;
+}
+
+.checkout-body .checkout-info .checkrequire .checkinfo .checklabel .link::selection {
+  background: #ffffff;
+  color: #425466;
+}
+
+.checkout-body .checkout-info .checkrequire .checkinfo .checklabel::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 1.25rem;
+  width: 1.25rem;
+  border: solid 0.125rem #C9CED6;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  background: #ffffff;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.checkout-body .checkout-info .checkrequire .checkinfo .checklabel::after {
+  content: '';
+  position: absolute;
+  top: 32%;
+  left: 0.4375rem;
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid 0.125rem #ffffff;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+  border-top: 0;
+  border-left: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.checkout-body .checkout-info .payment-submit .btn-payment {
+  font-family: "Inter";
+  width: 100%;
+}
+
 /**=====================================================
                 CHECKOUT-PAGE-END
 =====================================================**/
@@ -3493,7 +3908,7 @@ select {
                 HOME-BANNER(DESKTOP) START
 =====================================================**/
 .desktopbanner {
-  margin-bottom: 3.75rem;
+  margin: 7.5rem 0rem 3.75rem;
 }
 
 .desktopbanner-content {
@@ -3618,7 +4033,7 @@ select {
                 HOME-BANNER(MOBILE) START
 =====================================================**/
 .mobilebanner {
-  margin-bottom: 2rem;
+  margin: 3rem 0rem 2rem;
 }
 
 .mobilebanner-content {
@@ -3761,6 +4176,10 @@ select {
   background: #73489F;
 }
 
+.mobilebanner-content .banner-thumbnail {
+  height: auto;
+}
+
 .mobilebanner-content .banner-thumbnail img {
   max-width: 100%;
   -o-object-fit: contain;
@@ -3783,16 +4202,6 @@ select {
 /**=====================================================
                 TOP-CATEGORY START
 =====================================================**/
-.topcategory {
-  padding: 2rem 1.25rem;
-}
-
-@media screen and (min-width: 62rem) {
-  .topcategory {
-    padding: 3.75rem 1.25rem;
-  }
-}
-
 .topcategory-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3802,6 +4211,13 @@ select {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2.25rem;
+  padding: 2rem 1.25rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .topcategory-content {
+    padding: 3.75rem 1.25rem;
+  }
 }
 
 .topcategory-header .category-title {
@@ -3868,16 +4284,6 @@ select {
 /**=====================================================
                 CAROUSEL-SECTION START
 =====================================================**/
-.carouselsection {
-  padding: 2rem 1.25rem;
-}
-
-@media screen and (min-width: 62rem) {
-  .carouselsection {
-    padding: 3.75rem 1.25rem;
-  }
-}
-
 .carouselsection-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3887,6 +4293,13 @@ select {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2.25rem;
+  padding: 2rem 1.25rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .carouselsection-content {
+    padding: 3.75rem 1.25rem;
+  }
 }
 
 .carouselsection-header .carousel-title {
@@ -3928,12 +4341,8 @@ select {
 /**=====================================================
                 HOME-BANNER START
 =====================================================**/
-.banner {
-  padding: 2rem 0rem;
-}
-
 @media screen and (min-width: 62rem) {
-  .banner {
+  .banner-content {
     padding: 3.75rem 1.25rem;
   }
 }
@@ -3984,16 +4393,6 @@ select {
 /**=====================================================
                 ABOUT-SECTION START
 =====================================================**/
-.about {
-  padding: 2rem 1.25rem;
-}
-
-@media screen and (min-width: 62rem) {
-  .about {
-    padding: 3.75rem 0rem;
-  }
-}
-
 .about-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4003,6 +4402,13 @@ select {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2.25rem;
+  padding: 2rem 1.25rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .about-content {
+    padding: 3.75rem 1.25rem;
+  }
 }
 
 .about-header .aboutus-title {
@@ -4021,14 +4427,7 @@ select {
             STUDENTS-TESTIMONIALS START
 =====================================================**/
 .testimonial {
-  padding: 2rem 1.25rem;
   background: #ffffff;
-}
-
-@media screen and (min-width: 62rem) {
-  .testimonial {
-    padding: 3.75rem 0rem;
-  }
 }
 
 .testimonial-content {
@@ -4040,6 +4439,13 @@ select {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2.25rem;
+  padding: 2rem 1.25rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .testimonial-content {
+    padding: 3.75rem 1.25rem;
+  }
 }
 
 .testimonial-header .testimonial-title {

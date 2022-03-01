@@ -214,7 +214,7 @@
                     @include flex-center-vert;
                     @include radius(8);
                     overflow: hidden;
-                    
+
                     @include breakpoint(desktop1200) {
                         @include w100;
                         min-width: length(472);

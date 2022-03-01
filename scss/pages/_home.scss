@@ -3,7 +3,7 @@
 =====================================================**/
 
 .desktopbanner {
-    margin-bottom: length(60);
+    margin: length(120) length(0) length(60);
 
     &-content {
         background: $secondary;
@@ -78,7 +78,7 @@
 =====================================================**/
 
 .mobilebanner {
-    margin-bottom: length(32);
+    margin: length(48) length(0) length(32);
 
     &-content {
         background: $secondary;
@@ -153,6 +153,8 @@
         }
 
         .banner-thumbnail {
+            height: auto;
+
             img {
                 max-width: 100%;
                 object-fit: contain;
@@ -175,15 +177,14 @@
 =====================================================**/
 
 .topcategory {
-    padding: length(32) length(20);
-
-    @include breakpoint(tab992) {
-        padding: length(60) length(20);
-    }
-
     &-content {
         @include flex-column;
         gap: length(36);
+        padding: length(32) length(20);
+
+        @include breakpoint(tab992) {
+            padding: length(60) length(20);
+        }
     }
 
     &-header {
@@ -237,15 +238,14 @@
 =====================================================**/
 
 .carouselsection {
-    padding: length(32) length(20);
-
-    @include breakpoint(tab992) {
-        padding: length(60) length(20);
-    }
-
     &-content {
         @include flex-column;
         gap: length(36);
+        padding: length(32) length(20);
+
+        @include breakpoint(tab992) {
+            padding: length(60) length(20);
+        }
     }
 
     &-header {
@@ -284,10 +284,10 @@
 =====================================================**/
 
 .banner {
-    padding: length(32) length(0);
-
-    @include breakpoint(tab992) {
-        padding: length(60) length(20);
+    &-content {
+        @include breakpoint(tab992) {
+            padding: length(60) length(20);
+        }
     }
 
     &-thumbnail {
@@ -329,15 +329,14 @@
 =====================================================**/
 
 .about {
-    padding: length(32) length(20);
-
-    @include breakpoint(tab992) {
-        padding: length(60) length(0);
-    }
-
     &-content {
         @include flex-column;
         gap: length(36);
+        padding: length(32) length(20);
+
+        @include breakpoint(tab992) {
+            padding: length(60) length(20);
+        }
     }
 
     &-header {
@@ -358,16 +357,16 @@
 =====================================================**/
 
 .testimonial {
-    padding: length(32) length(20);
     background: $white;
-
-    @include breakpoint(tab992) {
-        padding: length(60) length(0);
-    }
 
     &-content {
         @include flex-column;
         gap: length(36);
+        padding: length(32) length(20);
+
+        @include breakpoint(tab992) {
+            padding: length(60) length(20);
+        }
     }
 
     &-header {

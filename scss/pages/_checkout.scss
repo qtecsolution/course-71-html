@@ -2,7 +2,279 @@
                 CHECKOUT-PAGE-START
 =====================================================**/
 
+.checkout {
+    &-content {
+        @include flex-column;
+        gap: length(36);
+        padding: length(32) length(0);
 
+        @include breakpoint(tab992) {
+            padding: length(60) length(20);
+        }
+    }
+
+    &-header {
+        .checkout-title {
+            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            color: $textDark;
+        }
+    }
+
+    &-body {
+        .checkout-items {
+            @include flex-column;
+            gap: length(12);
+
+            .card-horizontal {
+                background: $white;
+            }
+        }
+
+        .checkout-info {
+            background: $white;
+            @include radius(8);
+            padding: length(34) length(16) length(16);
+
+            .checkout-subtotal {
+                @include flex-center-between;
+                padding-bottom: length(24);
+                @include border-single(bottom, solid, 1, $checkoutborder);
+
+                .subtotal-title {
+                    @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+                    color: $gray-800;
+                }
+
+                .subtotal-price {
+                    .btdsign {
+                        @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+                        color: $gray-800;
+                    }
+
+                    .price {
+                        @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+                        color: $gray-800;
+                    }
+                }
+            }
+
+            .checkout-coupon {
+                @include flex-column;
+                gap: length(8);
+                padding: length(24) length(0);
+                @include border-single(bottom, solid, 1, $checkoutborder);
+
+                .couponlabel {
+                    @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(16.94, 14));
+                    color: $textBodyLight;
+                }
+
+                .couponinput {
+                    @include setBgColor($white, $gray-800);
+                    @include border(solid, 1, $primary);
+                    @include radius(6);
+                    @include font-face($secondaryFont, style('normal'), size(15), weight('normal'), line-height(15, 15));
+                    padding: length(14) length(16);
+                    @include transitions;
+
+                    &::placeholder {
+                        color: $textPlaceholder;
+                    }
+
+                    &:focus {
+                        box-shadow: $coupon-shade;
+                    }
+                }
+            }
+
+            .discount {
+                @include flex-center-between;
+                padding: length(24) length(0);
+                @include border-single(bottom, solid, 1, $checkoutborder);
+
+                .discount-title {
+                    @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+                    color: $gray-800;
+                }
+
+                .discount-price {
+                    .btdsign {
+                        @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+                        color: $gray-800;
+                    }
+
+                    .price {
+                        @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+                        color: $gray-800;
+                    }
+                }
+            }
+
+            .total {
+                @include flex-center-between;
+                padding: length(24) length(0);
+                @include border-single(bottom, solid, 1, $checkoutborder);
+
+                .total-title {
+                    @include font-face($secondaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+                    color: $gray-800;
+                }
+
+                .total-price {
+                    letter-spacing: length(-0.08);
+
+                    .btdsign {
+                        @include font-face($secondaryFont, style('normal'), size(18), weight('bold'), line-height(22, 18));
+                        color: $gray-800;
+                    }
+
+                    .price {
+                        @include font-face($secondaryFont, style('normal'), size(18), weight('bold'), line-height(22, 18));
+                        color: $gray-800;
+                    }
+                }
+            }
+
+            .payment-methods {
+                @include flex-column;
+                gap: length(18);
+                padding: length(24) length(0);
+
+                .paymentitem {
+                    .paymentinput {
+                        &:checked~.paymentlabel {
+                            &::before {
+                                border-color: $primary;
+                            }
+
+                            &::after {
+                                background: $primary;
+                            }
+                        }
+                    }
+
+                    .paymentlabel {
+                        position: relative;
+                        padding-left: length(30);
+                        @include font-face($secondaryFont, style('normal'), size(14), weight('medium'), line-height(24, 14));
+                        color: $paymentLabelText;
+                        cursor: pointer;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            @include square(length(20));
+                            @include border(solid, 2, $checkborder);
+                            @include circle;
+                            @include transform(translateY(-50%));
+                            @include flex-center;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: length(5);
+                            @include square(length(10));
+                            @include circle;
+                            @include transform(translateY(-50%));
+                            background: $white;
+                        }
+                    }
+                }
+            }
+
+            .checkrequire {
+                padding-bottom: length(24);
+
+                .checkinfo {
+                    display: flex;
+                    @include w100;
+
+                    .checkfield {
+                        &:checked~.checklabel {
+                            &::before {
+                                background: $primary;
+                                border-color: $primary;
+                            }
+
+                            &::after {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+
+                    .checklabel {
+                        position: relative;
+                        padding-left: length(30);
+                        @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                        color: $textBodyLight;
+                        cursor: pointer;
+
+                        &::selection {
+                            background: $white;
+                            color: $textBodyLight;
+                        }
+
+                        .link {
+                            @include font-face($secondaryFont, style('normal'), size(12), weight('bold'), line-height(20, 12));
+                            @include transitions;
+                            color: $textBodyLight;
+
+                            @include hover {
+                                color: $tertiary;
+                            }
+
+                            &::selection {
+                                background: $white;
+                                color: $textBodyLight;
+                            }
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 35%;
+                            left: 0;
+                            @include transform(translateY(-50%));
+                            @include square(length(20));
+                            @include border(solid, 2, $checkborder);
+                            @include radius(4);
+                            background: $white;
+                            @include transitions;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 32%;
+                            left: length(7);
+                            width: length(5);
+                            height: length(10);
+                            @include border(solid, 2, $white);
+                            @include transform(translateY(-50%) rotate(45deg));
+                            border-top: 0;
+                            border-left: 0;
+                            opacity: 0;
+                            visibility: hidden;
+                            @include transitions;
+                        }
+                    }
+                }
+            }
+
+            .payment-submit {
+                .btn-payment {
+                    font-family: $secondaryFont;
+                    @include w100;
+                }
+            }
+        }
+    }
+}
 
 /**=====================================================
                 CHECKOUT-PAGE-END

@@ -17,17 +17,13 @@ $gray-800: #2D3748;
 $textDark: #352424;
 $dark: #27272E;
 $textBodyLight: #425466;
-
 $border-thumb: #E7E7E7;
-
 $text-about: #393939;
-
 $textPlaceholder: #B5B5BD;
-$checkborder: #C9CED6;
-// $checkborder: #BCB3E2;
+$paymentLabelText: #4E5D78;
 
 /**=====================================================**
-                    BACKGROUND-COLORS
+BACKGROUND-COLORS
 =======================================================**/
 $card-background: #F5F5F5;
 $scrollBg: #C4C4C4;
@@ -35,8 +31,12 @@ $bodyBg: #FCFAFF;
 $bulletActiveBg: #888888;
 
 /**=====================================================**
-                    BORDER-COLORS
+BORDER-COLORS
 =======================================================**/
+$checkborder: #C9CED6;
+$checkoutborder: #EBEBEB;
+$radioborder: rgba(5, 16, 51, 0.0001);
+
 
 /**=====================================================**
                     NORMAL-COLORS
@@ -56,8 +56,9 @@ $shadow-5: rgba(50, 50, 71, 0.2);
 $shadow-6: rgba(12, 26, 75, 0.2);
 $shadow-7: rgba(50, 50, 71, 0.1);
 
-$error-shade: rgba($danger, 0.5);
 
+$coupon-shadow: rgba(76, 111, 255, 0.3);
+$error-shade: rgba($danger, 0.5);
 
 
 
@@ -74,6 +75,7 @@ $input-shadow: 0 .0625rem .125rem $shadow-4,
 0 0 .0625rem $shadow-5;
 $share-shadow: 0 0 .0625rem $shadow-6,
 0 .0625rem .1875rem $shadow-7;
+$coupon-shade: 0 0 0 .125rem $coupon-shadow;
 
 $error-shadow: 0 .0625rem .125rem $error-shade,
 0 0 .0625rem $error-shade;
