@@ -653,6 +653,105 @@ select {
   cursor: pointer;
 }
 
+.checkinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.checkinfo .checkfield:checked ~ .checklabel::before {
+  background: #7D56A5;
+  border-color: #7D56A5;
+}
+
+.checkinfo .checkfield:checked ~ .checklabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.checkinfo .checklabel {
+  position: relative;
+  padding-left: 1.875rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+  color: #425466;
+  cursor: pointer;
+}
+
+.checkinfo .checklabel::-moz-selection {
+  background: #ffffff;
+  color: #425466;
+}
+
+.checkinfo .checklabel::selection {
+  background: #ffffff;
+  color: #425466;
+}
+
+.checkinfo .checklabel .link {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.66667;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  color: #425466;
+}
+
+.checkinfo .checklabel .link:not([disabled]):hover {
+  color: #F78B64;
+}
+
+.checkinfo .checklabel .link::-moz-selection {
+  background: #ffffff;
+  color: #425466;
+}
+
+.checkinfo .checklabel .link::selection {
+  background: #ffffff;
+  color: #425466;
+}
+
+.checkinfo .checklabel::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 1.25rem;
+  width: 1.25rem;
+  border: solid 0.125rem #C9CED6;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  background: #ffffff;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.checkinfo .checklabel::after {
+  content: '';
+  position: absolute;
+  top: 32%;
+  left: 0.4375rem;
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid 0.125rem #ffffff;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+  border-top: 0;
+  border-left: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
 .decories-container {
   max-width: 107.5rem;
   margin-inline: auto;
@@ -2042,6 +2141,7 @@ select {
 }
 
 .cardcourse-body {
+  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3482,6 +3582,17 @@ select {
 /**=====================================================
                 COURSE-DETAILS PAGE START
 =====================================================**/
+.course-details {
+  padding: 5.625rem 1.25rem;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 62rem) {
+  .course-details {
+    padding: 7.5rem 0rem;
+  }
+}
+
 /**=====================================================
                 COURSE-DETAILS PAGE END
 =====================================================**/
@@ -3795,105 +3906,6 @@ select {
 
 .checkout-body .checkout-info .checkrequire {
   padding-bottom: 1.5rem;
-}
-
-.checkout-body .checkout-info .checkrequire .checkinfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.checkout-body .checkout-info .checkrequire .checkinfo .checkfield:checked ~ .checklabel::before {
-  background: #7D56A5;
-  border-color: #7D56A5;
-}
-
-.checkout-body .checkout-info .checkrequire .checkinfo .checkfield:checked ~ .checklabel::after {
-  opacity: 1;
-  visibility: visible;
-}
-
-.checkout-body .checkout-info .checkrequire .checkinfo .checklabel {
-  position: relative;
-  padding-left: 1.875rem;
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: normal;
-  line-height: 1.66667;
-  color: #425466;
-  cursor: pointer;
-}
-
-.checkout-body .checkout-info .checkrequire .checkinfo .checklabel::-moz-selection {
-  background: #ffffff;
-  color: #425466;
-}
-
-.checkout-body .checkout-info .checkrequire .checkinfo .checklabel::selection {
-  background: #ffffff;
-  color: #425466;
-}
-
-.checkout-body .checkout-info .checkrequire .checkinfo .checklabel .link {
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: 700;
-  line-height: 1.66667;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-  color: #425466;
-}
-
-.checkout-body .checkout-info .checkrequire .checkinfo .checklabel .link:not([disabled]):hover {
-  color: #F78B64;
-}
-
-.checkout-body .checkout-info .checkrequire .checkinfo .checklabel .link::-moz-selection {
-  background: #ffffff;
-  color: #425466;
-}
-
-.checkout-body .checkout-info .checkrequire .checkinfo .checklabel .link::selection {
-  background: #ffffff;
-  color: #425466;
-}
-
-.checkout-body .checkout-info .checkrequire .checkinfo .checklabel::before {
-  content: '';
-  position: absolute;
-  top: 35%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 1.25rem;
-  width: 1.25rem;
-  border: solid 0.125rem #C9CED6;
-  border-radius: 0.25rem;
-  border-radius: 0.25rem;
-  background: #ffffff;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-.checkout-body .checkout-info .checkrequire .checkinfo .checklabel::after {
-  content: '';
-  position: absolute;
-  top: 32%;
-  left: 0.4375rem;
-  width: 0.3125rem;
-  height: 0.625rem;
-  border: solid 0.125rem #ffffff;
-  -webkit-transform: translateY(-50%) rotate(45deg);
-  transform: translateY(-50%) rotate(45deg);
-  border-top: 0;
-  border-left: 0;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
 }
 
 .checkout-body .checkout-info .payment-submit .btn-payment {
@@ -4478,6 +4490,13 @@ select {
 .cart {
   padding: 2.5rem 1.25rem 5.875rem;
   position: relative;
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .cart {
+    margin-top: 6.25rem;
+  }
 }
 
 .cart-content {
@@ -4742,6 +4761,13 @@ select {
 **=======================================================**/
 .wishlist {
   padding: 2.5rem 1.25rem 5.875rem;
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .wishlist {
+    margin-top: 6.25rem;
+  }
 }
 
 .wishlist-content {
@@ -4844,6 +4870,17 @@ select {
 /**=====================================================
                 SEARCH-RESULT PAGE START
 =====================================================**/
+.searchresult {
+  padding: 5.625rem 1.25rem;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 62rem) {
+  .searchresult {
+    padding: 7.5rem 0rem;
+  }
+}
+
 /**=====================================================
                 SEARCH-RESULT PAGE END
 =====================================================**/

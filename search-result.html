@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course-71</title>
+    <title>Course-71 | Search Results</title>
     <!-- COURSE-71 FAFICON -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
-    <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- COURSE-71 STYLES -->
@@ -16,7 +14,7 @@
 </head>
 <body class="p-0 m-0">
     <!-- HEADER SECTION START -->
-    <header class="header sticky-top">
+    <header class="header fixed-top">
         <div class="container-fluid container-lg p-0">
             <div class="header-content">
                 <!-- HAMBURGER START -->
@@ -1255,7 +1253,193 @@
     </div>
     <!-- APP-MENU END -->
 
-    
+    <!-- SEARCH-RESULT SECTION START -->
+    <section class="searchresult">
+        <div class="container-fluid container-lg p-0">
+            <div class="row">
+                <!-- DESKTOP-FILTER START -->
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="desktopsearch">
+                        <div class="searchinfos">
+                            <div class="search-head">
+                                <h4 class="search-head-title">ক্যাটেগরি</h4>
+                            </div>
+                            
+                            <div class="search-body">
+                                <div class="checkinfo">
+                                    <input type="checkbox" id="category-1" class="checkfield" hidden checked>
+                                    <label for="category-1" class="checklabel">ওয়েব প্রোগ্রামিং</label>
+                                </div>
+
+                                <div class="checkinfo">
+                                    <input type="checkbox" id="category-2" class="checkfield" hidden>
+                                    <label for="category-2" class="checklabel">গ্রাফিক ডিজাইন</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="searchinfos">
+                            <div class="search-head">
+                                <h4 class="search-head-title">প্রাইস</h4>
+                            </div>
+
+                            <div class="search-body">
+                                <div class="checkinfo">
+                                    <input type="checkbox" id="price-1" class="checkfield" hidden checked>
+                                    <label for="price-1" class="checklabel">পেইড কোর্সেস</label>
+                                </div>
+
+                                <div class="checkinfo">
+                                    <input type="checkbox" id="price-2" class="checkfield" hidden>
+                                    <label for="price-2" class="checklabel">স্পেশাল অফার কোর্সেস</label>
+                                </div>
+
+                                <div class="checkinfo">
+                                    <input type="checkbox" id="price-3" class="checkfield" hidden>
+                                    <label for="price-3" class="checklabel">ফ্রি কোর্সেস</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="searchinfos">
+                            <div class="search-head">
+                                <h4 class="search-head-title">সময় সীমা</h4>
+                            </div>
+
+                            <div class="search-body">
+                                <div class="checkinfo">
+                                    <input type="checkbox" id="time-1" class="checkfield" hidden checked>
+                                    <label for="time-1" class="checklabel">শর্ট (৩০ মিন+)</label>
+                                </div>
+
+                                <div class="checkinfo">
+                                    <input type="checkbox" id="time-2" class="checkfield" hidden>
+                                    <label for="time-2" class="checklabel">মিডিয়াম (১ ঘন্টা+)</label>
+                                </div>
+
+                                <div class="checkinfo">
+                                    <input type="checkbox" id="time-3" class="checkfield" hidden>
+                                    <label for="time-3" class="checklabel">লং (২ ঘন্টা+)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- DESKTOP-FILTER END -->
+
+                <!-- MOBILE-FILTER START -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileSearch" aria-labelledby="mobileSearch">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">পছন্দের কোর্স খুঁজুন</h5>
+
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 33C9.7155 33 3 26.2845 3 18C3 9.7155 9.7155 3 18 3C26.2845 3 33 9.7155 33 18C33 26.2845 26.2845 33 18 33ZM18 30C21.1826 30 24.2348 28.7357 26.4853 26.4853C28.7357 24.2348 30 21.1826 30 18C30 14.8174 28.7357 11.7652 26.4853 9.51472C24.2348 7.26428 21.1826 6 18 6C14.8174 6 11.7652 7.26428 9.51472 9.51472C7.26428 11.7652 6 14.8174 6 18C6 21.1826 7.26428 24.2348 9.51472 26.4853C11.7652 28.7357 14.8174 30 18 30ZM18 15.879L22.242 11.6355L24.3645 13.758L20.121 18L24.3645 22.242L22.242 24.3645L18 20.121L13.758 24.3645L11.6355 22.242L15.879 18L11.6355 13.758L13.758 11.6355L18 15.879Z" fill="#718096"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <div class="mobilesearch">
+                            <div class="searchinfos">
+                                <div class="search-head">
+                                    <h4 class="search-head-title">ক্যাটেগরি</h4>
+                                </div>
+                                
+                                <div class="search-body">
+                                    <div class="checkinfo">
+                                        <input type="checkbox" id="mobile-category-1" class="checkfield" hidden checked>
+                                        <label for="mobile-category-1" class="checklabel">ওয়েব প্রোগ্রামিং</label>
+                                    </div>
+
+                                    <div class="checkinfo">
+                                        <input type="checkbox" id="mobile-category-2" class="checkfield" hidden>
+                                        <label for="mobile-category-2" class="checklabel">গ্রাফিক ডিজাইন</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="searchinfos">
+                                <div class="search-head">
+                                    <h4 class="search-head-title">প্রাইস</h4>
+                                </div>
+
+                                <div class="search-body">
+                                    <div class="checkinfo">
+                                        <input type="checkbox" id="mobile-price-1" class="checkfield" hidden>
+                                        <label for="price-1" class="checklabel">পেইড কোর্সেস</label>
+                                    </div>
+
+                                    <div class="checkinfo">
+                                        <input type="checkbox" id="mobile-price-2" class="checkfield" hidden>
+                                        <label for="mobile-price-2" class="checklabel">স্পেশাল অফার কোর্সেস</label>
+                                    </div>
+
+                                    <div class="checkinfo">
+                                        <input type="checkbox" id="mobile-price-3" class="checkfield" hidden>
+                                        <label for="mobile-price-3" class="checklabel">ফ্রি কোর্সেস</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="searchinfos">
+                                <div class="search-head">
+                                    <h4 class="search-head-title">সময় সীমা</h4>
+                                </div>
+
+                                <div class="search-body">
+                                    <div class="checkinfo">
+                                        <input type="checkbox" id="mobile-time-1" class="checkfield" hidden>
+                                        <label for="mobile-time-1" class="checklabel">শর্ট (৩০ মিন+)</label>
+                                    </div>
+
+                                    <div class="checkinfo">
+                                        <input type="checkbox" id="mobile-time-2" class="checkfield" hidden>
+                                        <label for="mobile-time-2" class="checklabel">মিডিয়াম (১ ঘন্টা+)</label>
+                                    </div>
+
+                                    <div class="checkinfo">
+                                        <input type="checkbox" id="mobile-time-3" class="checkfield" hidden>
+                                        <label for="mobile-time-3" class="checklabel">লং (২ ঘন্টা+)</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- MOBILE-FILTER END -->
+
+                <div class="col-lg-9 col-12">
+                    <!-- SEARCH-RESULT START -->
+                    <div class="searchresults">
+                        <!-- SEARCH-RESULT HEADER START -->
+                        <div class="searchresults-header">
+                            <div class="titlebox">
+                                <h2 class="search-title">এই সার্চ এর জন্য ৬ টা কোর্স পাওয়া গেছে</h2>
+                            </div>
+
+                            <div class="filtermobile">
+                                <button class="btn-filter" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSearch" aria-controls="mobileSearch">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+                                        <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- SEARCH-RESULT HEADER END -->
+
+                        <!-- SEARCH-RESULT BODY START -->
+                        <div class="searchresults-body">
+                            
+                        </div>
+                        <!-- SEARCH-RESULT BODY END -->
+                    </div>
+                    <!-- SEARCH-RESULT END -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SEARCH-RESULT SECTION END -->
 
     <!-- FOOTER-SECTION START -->
     <footer class="footer">
@@ -1783,12 +1967,5 @@
     <script src="assets/js/sitetooltip.js"></script>
     <!-- MODAL JS -->
     <script src="assets/js/modal.js"></script>
-    <!-- OFFSCREEN JS -->
-    <script src="assets/js/offscreen.js"></script>
-    <script src="assets/js/scrollcontent.js"></script>
-    <!-- SWIPER JS -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- CAROUSEL JS -->
-    <script src="assets/js/carousel.js"></script>
 </body>
 </html>

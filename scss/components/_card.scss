@@ -111,6 +111,7 @@
     }
 
     &-body {
+        background: $white;
         @include flex-column;
         gap: length(4);
         padding: length(8);
@@ -243,19 +244,19 @@
         overflow: hidden;
         margin-right: length(-10);
         margin-top: length(20);
-        
+
         img {
             @include wh100;
             object-fit: cover;
         }
     }
-    
+
     &-details {
         width: calc(100% - 3.375rem);
         @include flex-center-vert;
         gap: length(18);
     }
-    
+
     &-header {
         @include square(length(51));
         @include flex-center;
@@ -270,6 +271,7 @@
 
     &-body {
         width: calc(100% - 4.3125rem);
+
         .testimonial-text {
             @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
             color: $black;

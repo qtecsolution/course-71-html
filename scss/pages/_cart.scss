@@ -5,6 +5,11 @@
 .cart {
     padding: length(40) length(20) length(94);
     position: relative;
+    margin-top: length(48);
+
+    @include breakpoint(tab992) {
+        margin-top: length(100);
+    }
 
     &-content {
         @include flex-column;
