@@ -943,15 +943,16 @@ select {
 .header-content .wol-mobilemenu .btn-cart svg {
   height: 1.5rem;
   width: 1.5rem;
-}
-
-.header-content .wol-mobilemenu .btn-cart svg path {
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
 
+.header-content .wol-mobilemenu .btn-cart:not([disabled]):hover {
+  background: #7D56A5;
+}
+
 .header-content .wol-mobilemenu .btn-cart:not([disabled]):hover svg path {
-  fill: #7D56A5;
+  fill: #ffffff;
 }
 
 .header-content .wol-mobilemenu .btn-cart.active {

@@ -103,16 +103,15 @@
 
                 svg {
                     @include square(length(24));
-
-                    path {
-                        @include transitions;
-                    }
+                    @include transitions;
                 }
 
                 @include hover {
+                    background: $primary;
+
                     svg {
                         path {
-                            fill: $primary;
+                            fill: $white;
                         }
                     }
                 }
