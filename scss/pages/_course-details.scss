@@ -22,14 +22,538 @@
 
         @include breakpoint(tab992) {
             order: 1;
-            position: sticky;
-            top: length(100);
         }
     }
 
+    // COURSE-DETAILS INFO START
+    .coursesinfo {
+        @include flex-column;
+        gap: length(16);
+
+        .learninfo {
+            @include flex-column;
+            gap: length(24);
+            margin-bottom: length(32);
+
+            @include breakpoint(tab992) {
+                aspect-ratio: 1.77;
+                gap: length(80);
+                margin-bottom: length(0);
+            }
+
+            &-title {
+                @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                color: $textDark;
+
+                @include breakpoint(tab992) {
+                    @include font-face($primaryFont, style('normal'), size(48), weight('bold'), line-height(58.09, 48));
+                }
+            }
+
+            &-text {
+                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                color: $gray-700;
+            }
+        }
+
+        .courseinfo {
+            @include flex-column;
+            gap: length(60);
+
+            @include breakpoint(tab992) {
+                gap: length(120);
+            }
+
+            .course-features {
+                @include flex-column;
+                gap: length(36);
+
+                .feature-title {
+                    @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                    color: $textDark;
+                }
+
+                .featurelist {
+                    @include list-vertical;
+                    gap: length(16);
+
+                    &-item {
+                        @include flex-center-vert;
+                        gap: length(8);
+
+                        .icon {
+                            @include square(length(16));
+                            @include flex-center;
+                            overflow: hidden;
+                            margin-top: length(-4);
+                        }
+
+                        .text {
+                            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                            color: $gray-700;
+                        }
+                    }
+                }
+            }
+
+            .course-requirements {
+                @include flex-column;
+                gap: length(36);
+
+                .requirement-title {
+                    @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                    color: $textDark;
+                }
+
+                .requirement-text {
+                    @include font-face($secondaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                    color: $gray-700;
+                }
+            }
+
+            .course-describe {
+                @include flex-column;
+                gap: length(36);
+
+                .describe-title {
+                    @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                    color: $textDark;
+                }
+
+                .describe-text {
+                    @include font-face($secondaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                    color: $gray-700;
+                }
+            }
+
+            .course-content {
+                @include flex-column;
+                gap: length(24);
+
+                &-header {
+                    @include flex-column;
+                    gap: length(36);
+
+                    .course-content-title {
+                        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                        color: $textDark;
+                    }
+
+                    .contentlist {
+                        @include list-horizontal;
+                        flex-wrap: wrap;
+                        gap: length(14);
+
+                        @include breakpoint(mobile576) {
+                            gap: length(36);
+                        }
+
+                        &-item {
+                            @include flex-center-vert;
+                            gap: length(8);
+
+                            .icon {
+                                @include square(length(16));
+                                @include flex-center;
+                                overflow: hidden;
+                                margin-top: length(-4);
+                            }
+
+                            .text {
+                                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                                color: $gray-700;
+
+                                @include breakpoint(mobile576) {}
+                            }
+                        }
+                    }
+                }
+
+                &-body {
+                    .accordion {
+                        &-item {
+                            background: transparent;
+                            border: none;
+
+                            &:first-of-type {
+                                @include radius(0);
+
+                                .accordion-button {
+                                    @include radius(0);
+                                }
+                            }
+
+                            &:last-of-type {
+                                @include radius(0);
+
+                                .accordion-button {
+                                    @include radius(0);
+                                }
+                            }
+                        }
+
+                        &-button {
+                            @include flex-center-vert;
+                            gap: length(14);
+                            background: transparent;
+                            @include border(solid, 1, $accordionborder);
+
+                            .icon {
+                                @include square(length(12));
+                                @include circle;
+                                @include flex-center;
+                                overflow: hidden;
+                                margin-top: length(-4);
+
+                                svg {
+                                    @include wh100;
+                                }
+                            }
+
+                            .text {
+                                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                                color: $gray-700;
+                                font-feature-settings: 'salt'on;
+                            }
+
+                            &:not(.collapsed) {
+                                box-shadow: none;
+                                background: $white;
+                            }
+
+                            &:focus {
+                                outline: none;
+                                box-shadow: none;
+                            }
+
+                            &::after {
+                                background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4487 13.335L17.3987 8.38501L18.8127 9.79901L12.4487 16.163L6.08466 9.79901L7.49866 8.38501L12.4487 13.335Z' fill='%234A5568'/%3E%3C/svg%3E%0A");
+                            }
+                        }
+
+                        &-body {
+                            padding: length(16);
+                            background: $white;
+                            @include border(solid, 1, $accordionborder);
+
+                            @include breakpoint(mobile576) {
+                                padding: length(22) length(34);
+                            }
+
+                            .contentlist {
+                                @include list-vertical;
+                                gap: length(24);
+
+                                &-item {
+                                    @include flex-center-vert;
+                                    gap: length(12);
+
+                                    .icon {
+                                        @include square(length(27));
+                                        @include flex-center;
+                                        overflow: hidden;
+                                        margin-top: length(-4);
+
+                                        svg {
+                                            @include wh100;
+                                        }
+                                    }
+
+                                    .text {
+                                        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                                        color: $gray-700;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .course-instructor {
+                @include flex-column;
+                gap: length(36);
+                background: $white;
+                padding: length(24);
+
+                &-header {
+                    .instructor-title {
+                        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                        color: $textDark;
+                    }
+                }
+
+                &-details {
+                    @include flex-column;
+                    gap: length(36);
+
+                    .instructor {
+                        @include flex-center-vert;
+                        gap: length(16);
+
+                        &-thumbnail {
+                            @include square(length(48));
+                            @include circle;
+                            @include flex-center;
+                            overflow: hidden;
+
+                            img {
+                                @include wh100;
+                            }
+                        }
+
+                        &-details {
+                            .name {
+                                @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+                                color: $black;
+                            }
+
+                            .designation {
+                                @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(22.68, 14));
+                                color: $textBodyLight;
+                            }
+                        }
+                    }
+
+                    .instructorlist {
+                        @include list-vertical;
+                        gap: length(16);
+
+                        &-item {
+                            @include flex-center-vert;
+                            gap: length(12);
+
+                            .icon {
+                                @include square(length(26));
+                                @include flex-center;
+                                overflow: hidden;
+                                margin-top: length(-4);
+                            }
+
+                            .text {
+                                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                                color: $gray-700;
+                            }
+                        }
+                    }
+
+                    .instructor-quote {
+                        .text {
+                            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                            color: $gray-700;
+                            font-feature-settings: 'salt'on;
+                        }
+                    }
+                }
+            }
+
+            .coursefeedback {
+                @include flex-column;
+                gap: length(56);
+
+                &-header {
+                    .feedback-title {
+                        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                        color: $textDark;
+                    }
+                }
+
+                &-body {
+                    @include flex-column;
+                    gap: length(56);
+
+                    .feedbackinfo {
+                        @include flex-column;
+                        gap: length(24);
+
+                        .ratingbox {
+                            @include flex-column;
+                            gap: length(12);
+
+                            .rating {
+                                .rateget {
+                                    @include font-face($secondaryFont, style('normal'), size(36), weight('bold'), line-height(48.97, 36));
+                                    color: $ratingText;
+                                }
+
+                                .ratingfrom {
+                                    @include font-face($secondaryFont, style('normal'), size(28), weight('bold'), line-height(38.09, 28));
+                                    color: $ratingLight;
+                                }
+                            }
+
+                            .ratinglist {
+                                @include list-horizontal;
+                                gap: length(2);
+
+                                &-item {
+                                    @include square(length(32));
+                                    @include flex-center;
+                                    overflow: hidden;
+                                }
+                            }
+
+                            .ratecount {
+                                .counter {
+                                    @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+                                    color: $black;
+                                }
+                            }
+                        }
+
+                        .ratedetails {
+                            @include flex-column;
+                            gap: length(14);
+
+                            &-item {
+                                @include flex-center-vert;
+                                gap: length(14);
+
+                                .ratelist {
+                                    @include list-horizontal;
+
+                                    &-item {
+                                        @include square(length(15));
+                                        @include flex-center;
+                                        overflow: hidden;
+
+                                        svg {
+                                            @include wh100;
+                                        }
+                                    }
+                                }
+
+                                .reteprogress {
+                                    flex: 1;
+
+                                    .progress {
+                                        @include radius(0);
+                                        background: $gray-200;
+                                        height: length(14);
+
+                                        &-bar {
+                                            background: $ratingText;
+                                        }
+                                    }
+                                }
+
+                                .ratecount {
+                                    .counter {
+                                        @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+                                        color: $gray-700;
+                                        font-feature-settings: 'salt'on;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .feedbackview {
+                        @include flex-column;
+                        gap: length(20);
+
+                        .viewhead {
+                            @include flex-column;
+                            gap: length(8);
+
+                            .ratinglist {
+                                @include list-horizontal;
+                                gap: length(2);
+
+                                &-item {
+                                    @include square(length(16));
+                                    @include flex-center;
+                                    overflow: hidden;
+                                }
+                            }
+
+                            .feedbacker {
+                                @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                                color: $gray-900;
+                            }
+                        }
+
+                        .feedbacktext {
+                            @include font-face($secondaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+                            color: $gray-600;
+                        }
+                    }
+                }
+
+                &-footer {
+                    @include flex-column;
+                    gap: length(16);
+
+                    .coursefeedbackhead {
+                        &-title {
+                            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                            color: $textDark;
+                        }
+                    }
+
+                    .coursefeedbackbody {
+                        @include flex-column;
+                        gap: length(16);
+
+                        .feedbacklist {
+                            @include list-horizontal;
+                            gap: length(6);
+
+                            &-item {
+                                cursor: pointer;
+                                @include square(length(32));
+                                @include flex-center;
+                                overflow: hidden;
+
+                                svg {
+                                    @include wh100;
+                                }
+                            }
+                        }
+
+                        .feedbackbox {
+                            @include w100;
+
+                            .feedbackinput {
+                                @include font-face($secondaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+                                @include setBgColor(transparent, $gray-900);
+                                @include border(solid, 1, $gray-500);
+                                @include w100;
+                                padding: length(16);
+                                resize: none;
+                                @include transitions;
+
+                                &::-webkit-scrollbar {
+                                    background: transparent;
+                                    width: length(8);
+                                }
+
+                                &::-webkit-scrollbar-thumb {
+                                    background: $gray-200;
+                                    @include radius(8);
+                                }
+
+                                &:focus {
+                                    outline: none;
+                                    border-color: $primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // COURSE-DETAILS VIDEO START
     .course-video-details {
         @include flex-column;
         gap: length(16);
+
+        @include breakpoint(tab992) {
+            position: sticky;
+            top: length(100);
+        }
 
         .videobox {
             background: $videoboxBg;
@@ -81,6 +605,7 @@
                             @include square(length(16));
                             @include flex-center;
                             overflow: hidden;
+                            margin-top: length(-4);
 
                             svg {
                                 @include wh100;

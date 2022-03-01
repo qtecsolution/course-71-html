@@ -10,9 +10,12 @@ $danger: #F16063;
 /**=====================================================**
                     TEXT-COLORS
 =======================================================**/
+$gray-200: #EDF2F7;
+$gray-500: #A0AEC0;
 $gray-600: #718096;
 $gray-700: #4A5568;
 $gray-800: #2D3748;
+$gray-900: #1A202C;
 
 $textDark: #352424;
 $dark: #27272E;
@@ -21,6 +24,8 @@ $border-thumb: #E7E7E7;
 $text-about: #393939;
 $textPlaceholder: #B5B5BD;
 $paymentLabelText: #4E5D78;
+$ratingLight: #D5D5DC;
+$ratingText: #F2B807;
 
 /**=====================================================**
 BACKGROUND-COLORS
@@ -37,7 +42,7 @@ BORDER-COLORS
 $checkborder: #C9CED6;
 $checkoutborder: #EBEBEB;
 $radioborder: rgba(5, 16, 51, 0.0001);
-
+$accordionborder: #DCDCDC;
 
 /**=====================================================**
                     NORMAL-COLORS

@@ -3613,10 +3613,949 @@ select {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 6.25rem;
   }
+}
+
+.course-details .coursesinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.course-details .coursesinfo .learninfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .course-details .coursesinfo .learninfo {
+    aspect-ratio: 1.77;
+    gap: 5rem;
+    margin-bottom: 0rem;
+  }
+}
+
+.course-details .coursesinfo .learninfo-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36036;
+  color: #352424;
+}
+
+@media screen and (min-width: 62rem) {
+  .course-details .coursesinfo .learninfo-title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.21021;
+  }
+}
+
+.course-details .coursesinfo .learninfo-text {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #4A5568;
+}
+
+.course-details .coursesinfo .courseinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.75rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .course-details .coursesinfo .courseinfo {
+    gap: 7.5rem;
+  }
+}
+
+.course-details .coursesinfo .courseinfo .course-features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.25rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-features .feature-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36036;
+  color: #352424;
+}
+
+.course-details .coursesinfo .courseinfo .course-features .featurelist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-features .featurelist-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-features .featurelist-item .icon {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  margin-top: -0.25rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-features .featurelist-item .text {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #4A5568;
+}
+
+.course-details .coursesinfo .courseinfo .course-requirements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.25rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-requirements .requirement-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36036;
+  color: #352424;
+}
+
+.course-details .coursesinfo .courseinfo .course-requirements .requirement-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #4A5568;
+}
+
+.course-details .coursesinfo .courseinfo .course-describe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.25rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-describe .describe-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36036;
+  color: #352424;
+}
+
+.course-details .coursesinfo .courseinfo .course-describe .describe-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #4A5568;
+}
+
+.course-details .coursesinfo .courseinfo .course-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.25rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-header .course-content-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36036;
+  color: #352424;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-header .contentlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.875rem;
+}
+
+@media screen and (min-width: 36rem) {
+  .course-details .coursesinfo .courseinfo .course-content-header .contentlist {
+    gap: 2.25rem;
+  }
+}
+
+.course-details .coursesinfo .courseinfo .course-content-header .contentlist-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-header .contentlist-item .icon {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  margin-top: -0.25rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-header .contentlist-item .text {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #4A5568;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-item {
+  background: transparent;
+  border: none;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-item:first-of-type {
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-item:first-of-type .accordion-button {
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-item:last-of-type {
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-item:last-of-type .accordion-button {
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.875rem;
+  background: transparent;
+  border: solid 0.0625rem #DCDCDC;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-button .icon {
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  margin-top: -0.25rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-button .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-button .text {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #4A5568;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-button:not(.collapsed) {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #ffffff;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-button:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4487 13.335L17.3987 8.38501L18.8127 9.79901L12.4487 16.163L6.08466 9.79901L7.49866 8.38501L12.4487 13.335Z' fill='%234A5568'/%3E%3C/svg%3E%0A");
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-body {
+  padding: 1rem;
+  background: #ffffff;
+  border: solid 0.0625rem #DCDCDC;
+}
+
+@media screen and (min-width: 36rem) {
+  .course-details .coursesinfo .courseinfo .course-content-body .accordion-body {
+    padding: 1.375rem 2.125rem;
+  }
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-body .contentlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-body .contentlist-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.75rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-body .contentlist-item .icon {
+  height: 1.6875rem;
+  width: 1.6875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  margin-top: -0.25rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-body .contentlist-item .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.course-details .coursesinfo .courseinfo .course-content-body .accordion-body .contentlist-item .text {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #4A5568;
+}
+
+.course-details .coursesinfo .courseinfo .course-instructor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.25rem;
+  background: #ffffff;
+  padding: 1.5rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-instructor-header .instructor-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36036;
+  color: #352424;
+}
+
+.course-details .coursesinfo .courseinfo .course-instructor-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.25rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-instructor-details .instructor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-instructor-details .instructor-thumbnail {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.course-details .coursesinfo .courseinfo .course-instructor-details .instructor-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+.course-details .coursesinfo .courseinfo .course-instructor-details .instructor-details .name {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #000000;
+}
+
+.course-details .coursesinfo .courseinfo .course-instructor-details .instructor-details .designation {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.62;
+  color: #425466;
+}
+
+.course-details .coursesinfo .courseinfo .course-instructor-details .instructorlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-instructor-details .instructorlist-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.75rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-instructor-details .instructorlist-item .icon {
+  height: 1.625rem;
+  width: 1.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  margin-top: -0.25rem;
+}
+
+.course-details .coursesinfo .courseinfo .course-instructor-details .instructorlist-item .text {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #4A5568;
+}
+
+.course-details .coursesinfo .courseinfo .course-instructor-details .instructor-quote .text {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #4A5568;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.5rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-header .feedback-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36036;
+  color: #352424;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.5rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratingbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratingbox .rating .rateget {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.36028;
+  color: #F2B807;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratingbox .rating .ratingfrom {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.36036;
+  color: #D5D5DC;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratingbox .ratinglist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.125rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratingbox .ratinglist-item {
+  height: 2rem;
+  width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratingbox .ratecount .counter {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  color: #000000;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratedetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratedetails-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.875rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratedetails-item .ratelist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratedetails-item .ratelist-item {
+  height: 0.9375rem;
+  width: 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratedetails-item .ratelist-item svg {
+  width: 100%;
+  height: 100%;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratedetails-item .reteprogress {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratedetails-item .reteprogress .progress {
+  border-radius: 0rem;
+  border-radius: 0rem;
+  background: #EDF2F7;
+  height: 0.875rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratedetails-item .reteprogress .progress-bar {
+  background: #F2B807;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackinfo .ratedetails-item .ratecount .counter {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+  color: #4A5568;
+  -webkit-font-feature-settings: 'salt'on;
+          font-feature-settings: 'salt'on;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackview .viewhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackview .viewhead .ratinglist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.125rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackview .viewhead .ratinglist-item {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackview .viewhead .feedbacker {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #1A202C;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-body .feedbackview .feedbacktext {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.62;
+  color: #718096;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-footer .coursefeedbackhead-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36036;
+  color: #352424;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-footer .coursefeedbackbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-footer .coursefeedbackbody .feedbacklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.375rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-footer .coursefeedbackbody .feedbacklist-item {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-footer .coursefeedbackbody .feedbacklist-item svg {
+  width: 100%;
+  height: 100%;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-footer .coursefeedbackbody .feedbackbox {
+  width: 100%;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-footer .coursefeedbackbody .feedbackbox .feedbackinput {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.62;
+  background: transparent;
+  color: #1A202C;
+  border: solid 0.0625rem #A0AEC0;
+  width: 100%;
+  padding: 1rem;
+  resize: none;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-footer .coursefeedbackbody .feedbackbox .feedbackinput::-webkit-scrollbar {
+  background: transparent;
+  width: 0.5rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-footer .coursefeedbackbody .feedbackbox .feedbackinput::-webkit-scrollbar-thumb {
+  background: #EDF2F7;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.course-details .coursesinfo .courseinfo .coursefeedback-footer .coursefeedbackbody .feedbackbox .feedbackinput:focus {
+  outline: none;
+  border-color: #7D56A5;
 }
 
 .course-details .course-video-details {
@@ -3628,6 +4567,14 @@ select {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .course-details .course-video-details {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 6.25rem;
+  }
 }
 
 .course-details .course-video-details .videobox {
@@ -3749,6 +4696,7 @@ select {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
+  margin-top: -0.25rem;
 }
 
 .course-details .course-video-details .detailsbox .detailsinfo .detailslist-item .icon svg {
