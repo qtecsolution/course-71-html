@@ -4,10 +4,153 @@
 
 .course-details {
     padding: length(90) length(20);
-    overflow: hidden;
 
     @include breakpoint(tab992) {
         padding: length(120) length(0);
+    }
+
+    .details {
+        order: 1;
+
+        @include breakpoint(tab992) {
+            order: 0;
+        }
+    }
+
+    .coursevideo {
+        order: 0;
+
+        @include breakpoint(tab992) {
+            order: 1;
+            position: sticky;
+            top: length(100);
+        }
+    }
+
+    .course-video-details {
+        @include flex-column;
+        gap: length(16);
+
+        .videobox {
+            background: $videoboxBg;
+            @include w100;
+            // height: length(316);
+            @include flex-center;
+            overflow: hidden;
+            aspect-ratio: 1.77;
+
+            .btn-playpause {
+                @include square(length(60));
+                @include circle;
+                @include transparent-button;
+                @include flex-center;
+
+                @include breakpoint(mobile500) {
+                    @include square(length(80));
+                }
+
+                @include breakpoint(mobile768) {
+                    @include square(length(120));
+                }
+
+                svg {
+                    @include wh100;
+                }
+            }
+        }
+
+        .detailsbox {
+            @include flex-center-column;
+            gap: length(36);
+            background: $white;
+            padding: length(48) length(20) length(54);
+
+            .detailsinfo {
+                @include flex-column;
+                gap: length(16);
+
+                .detailslist {
+                    @include list-vertical;
+                    gap: length(16);
+
+                    &-item {
+                        @include flex-center-vert;
+                        gap: length(8);
+
+                        .icon {
+                            @include square(length(16));
+                            @include flex-center;
+                            overflow: hidden;
+
+                            svg {
+                                @include wh100;
+                            }
+                        }
+
+                        .detailstext {
+                            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                            color: $gray-700;
+
+                            @include breakpoint(mobile500) {
+                                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+                            }
+                        }
+                    }
+                }
+
+                .courseprices {
+                    @include flex-center-vert;
+                    gap: length(24);
+
+                    .current-price {
+                        @include font-face($primaryFont, style('normal'), size(36), weight('bold'), line-height(48.97, 36));
+                        color: $gray-800;
+
+                        .btdsign {
+                            font: inherit;
+                            color: inherit;
+                        }
+
+                        .price {
+                            font: inherit;
+                            color: inherit;
+                        }
+                    }
+
+                    .previous-price {
+                        text-decoration-line: line-through;
+                        font-feature-settings: 'salt'on;
+                        @include font-face($primaryFont, style('normal'), size(28), weight('normal'), line-height(45.37, 28));
+                        color: $gray-700;
+
+                        .btdsign {
+                            font: inherit;
+                            color: inherit;
+                        }
+
+                        .price {
+                            font: inherit;
+                            color: inherit;
+                        }
+                    }
+                }
+            }
+
+            .courseaddinfo {
+                @include flex-center;
+                gap: length(14);
+
+                .btn71 {
+                    padding: length(16);
+                    @include font-face($primaryFont, style('normal'), size(12), weight('semibold'), line-height(12, 12));
+
+                    @include breakpoint(mobile480) {
+                        padding: length(16) length(24);
+                        @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+                    }
+                }
+            }
+        }
     }
 }
 
