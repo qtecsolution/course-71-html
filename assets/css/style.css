@@ -3573,15 +3573,15 @@ select {
 }
 
 /**=====================================================
-                CLASSROOM-PAGE START
+                CLASSROOM-SECTION START
 =====================================================**/
 .classroom {
-  padding: 3.75rem 0rem 4rem;
+  padding: 3.75rem 0rem 3rem;
 }
 
 @media screen and (min-width: 62rem) {
   .classroom {
-    padding: 6.875rem 0rem 4rem;
+    padding: 6.875rem 0rem 3rem;
   }
 }
 
@@ -3672,13 +3672,16 @@ select {
   }
 }
 
-.classroom .courseplaylist .accordion {
-  aspect-ratio: 1.77;
+@media screen and (min-width: 62rem) {
+  .classroom .courseplaylist .accordion {
+    aspect-ratio: 1.77;
+  }
 }
 
 .classroom .courseplaylist .accordion-item {
   border-color: #EDF2F7;
   border: 0;
+  border-radius: 0;
 }
 
 .classroom .courseplaylist .accordion-item.active .accordion-button {
@@ -3912,7 +3915,163 @@ select {
 }
 
 /**=====================================================
-                CLASSROOM-PAGE END
+                CLASSROOM-SECTION END
+=====================================================**/
+/**=====================================================
+                COURSE-INSTRUCTOR START
+=====================================================**/
+.course-instructor {
+  padding: 0rem 1.25rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .course-instructor {
+    padding: 0rem;
+  }
+}
+
+.course-instructor .classroomcourse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 62rem) {
+  .course-instructor .classroomcourse {
+    max-width: 75%;
+    gap: 2rem;
+  }
+}
+
+.course-instructor .classroomcourse .course-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.36036;
+  color: #352424;
+}
+
+@media screen and (min-width: 62rem) {
+  .course-instructor .classroomcourse .course-title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.21021;
+  }
+}
+
+.course-instructor .classroomcourse .course-text {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #4A5568;
+}
+
+.course-instructor .courseinstructor {
+  background: #ffffff;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.course-instructor .courseinstructor-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.course-instructor .courseinstructor-header .instructor-thumbnail {
+  height: 3rem;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.course-instructor .courseinstructor-header .instructor-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.course-instructor .courseinstructor-header .instructor-detail {
+  width: calc(100% - 4rem);
+}
+
+.course-instructor .courseinstructor-header .instructor-detail .instructorname {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.71429;
+  color: #000000;
+}
+
+.course-instructor .courseinstructor-header .instructor-detail .instructordesignation {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.62;
+  color: #425466;
+}
+
+.course-instructor .courseinstructor-body .instructor-text {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #4A5568;
+}
+
+/**=====================================================
+                COURSE-INSTRUCTOR END
+=====================================================**/
+.classroominfo {
+  padding: 4rem 0rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .classroominfo {
+    padding: 7.5rem 0rem;
+  }
+}
+
+/**=====================================================
+                CLASSROOM-INFO START
+=====================================================**/
+/**=====================================================
+                CLASSROOM-INFO END
 =====================================================**/
 /**=====================================================
                 COURSE-DETAILS PAGE START

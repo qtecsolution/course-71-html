@@ -1,12 +1,12 @@
 /**=====================================================
-                CLASSROOM-PAGE START
+                CLASSROOM-SECTION START
 =====================================================**/
 
 .classroom {
-    padding: length(60) length(0) length(64);
+    padding: length(60) length(0) length(48);
 
     @include breakpoint(tab992) {
-        padding: length(110) length(0) length(64);
+        padding: length(110) length(0) length(48);
     }
 
     // COURSE-VIDEOS START
@@ -69,11 +69,14 @@
         }
 
         .accordion {
-            aspect-ratio: 1.77;
+            @include breakpoint(tab992) {
+                aspect-ratio: 1.77;
+            }
 
             &-item {
                 border-color: $gray-200;
                 border: 0;
+                border-radius: 0;
 
                 &.active {
                     .accordion-button {
@@ -86,8 +89,6 @@
 
                         .courselist {
                             @include list-vertical;
-
-                            &-item {}
 
                             &-link {
                                 @include w100;
@@ -225,5 +226,107 @@
 }
 
 /**=====================================================
-                CLASSROOM-PAGE END
+                CLASSROOM-SECTION END
+=====================================================**/
+
+/**=====================================================
+                COURSE-INSTRUCTOR START
+=====================================================**/
+
+.course-instructor {
+    padding: length(0) length(20);
+
+    @include breakpoint(tab992) {
+        padding: length(0);
+    }
+
+    .classroomcourse {
+        @include flex-column;
+        gap: length(20);
+        max-width: 100%;
+
+        @include breakpoint(tab992) {
+            max-width: 75%;
+            gap: length(32);
+        }
+
+        .course-title {
+            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            color: $textDark;
+
+            @include breakpoint(tab992) {
+                @include font-face($primaryFont, style('normal'), size(48), weight('bold'), line-height(58.09, 48));
+            }
+        }
+
+        .course-text {
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+            color: $gray-700;
+        }
+    }
+
+    .courseinstructor {
+        background: $white;
+        padding: length(24);
+        @include flex-column;
+        gap: length(24);
+
+        &-header {
+            @include flex-center-vert;
+            gap: length(16);
+
+            .instructor-thumbnail {
+                @include square(length(48));
+                @include flex-center;
+                @include circle;
+                overflow: hidden;
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+                }
+            }
+
+            .instructor-detail {
+                width: calc(100% - 4rem);
+
+                .instructorname {
+                    @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
+                    color: $black;
+                }
+
+                .instructordesignation {
+                    @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(22.68, 14));
+                    color: $textBodyLight;
+                }
+            }
+        }
+
+        &-body {
+            .instructor-text {
+                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                color: $gray-700;
+            }
+        }
+    }
+}
+
+/**=====================================================
+                COURSE-INSTRUCTOR END
+=====================================================**/
+
+.classroominfo {
+    padding: length(64) length(0);
+
+    @include breakpoint(tab992) {
+        padding: length(120) length(0);
+    }
+}
+
+/**=====================================================
+                CLASSROOM-INFO START
+=====================================================**/
+
+/**=====================================================
+                CLASSROOM-INFO END
 =====================================================**/
