@@ -149,11 +149,11 @@
         }
 
         .desktopmenu {
-            padding-left: length(0);
+            padding: length(0);
             display: none;
 
             @include breakpoint(tab992) {
-                padding-left: length(40);
+                padding: length(0) length(40);
                 flex: 1;
                 @include flex-center-vert;
                 gap: length(40);

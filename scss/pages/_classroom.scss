@@ -2,7 +2,227 @@
                 CLASSROOM-PAGE START
 =====================================================**/
 
+.classroom {
+    padding: length(60) length(0) length(64);
 
+    @include breakpoint(tab992) {
+        padding: length(110) length(0) length(64);
+    }
+
+    // COURSE-VIDEOS START
+    .course-videos {
+        @include h100;
+
+        .videobox {
+            background: $videoboxBg;
+            @include w100;
+            @include flex-center;
+            overflow: hidden;
+            aspect-ratio: 1.77;
+
+            .btn-playpause {
+                @include square(length(60));
+                @include circle;
+                @include transparent-button;
+                @include flex-center;
+
+                @include breakpoint(mobile500) {
+                    @include square(length(80));
+                }
+
+                @include breakpoint(mobile768) {
+                    @include square(length(120));
+                }
+
+                svg {
+                    @include wh100;
+                }
+            }
+        }
+    }
+
+    .courseplaylist {
+        @include h100;
+        max-height: 100%;
+
+        @include breakpoint(tab992) {
+            overflow: hidden;
+            overflow-y: scroll;
+            max-height: length(317);
+
+            &::-webkit-scrollbar {
+                // background: $playerScrollBg;
+                width: length(12);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $primary;
+            }
+        }
+
+        @include breakpoint(desktop1200) {
+            max-height: length(377);
+        }
+
+        @include breakpoint(desktop1400) {
+            max-height: length(437);
+        }
+
+        .accordion {
+            aspect-ratio: 1.77;
+
+            &-item {
+                border-color: $gray-200;
+                border: 0;
+
+                &.active {
+                    .accordion-button {
+                        background: $primary-light;
+                    }
+
+                    .accordion-body {
+                        padding: 0;
+                        padding-left: length(10);
+
+                        .courselist {
+                            @include list-vertical;
+
+                            &-item {}
+
+                            &-link {
+                                @include w100;
+                                background: $primary-light;
+                                @include flex-center-vert;
+                                gap: length(16);
+                                padding: length(16);
+
+                                &.playing {
+                                    background: $playingBg;
+                                }
+
+                                .titleinfo {
+                                    @include flex-column;
+                                    text-align: left;
+
+                                    .title {
+                                        @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+                                        color: $gray-700;
+                                        @include line-clamp;
+                                    }
+
+                                    .durations {
+                                        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+                                        color: $gray-700;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-header {}
+
+            &-button {
+                @include flex-center-vert;
+                gap: length(16);
+                padding: length(16);
+
+                .icon {
+                    @include square(length(24));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+
+                &:not(.collapsed) {
+                    background-color: transparent;
+                    border-radius: 0;
+                    box-shadow: none;
+
+                    &::after {
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                    }
+                }
+
+                .titleinfo {
+                    @include flex-column;
+                    text-align: left;
+                    width: calc(100% - 2.5rem);
+
+                    .title {
+                        @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+                        color: $gray-700;
+                        @include line-clamp;
+                    }
+
+                    .durations {
+                        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+                        color: $gray-700;
+                    }
+                }
+
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+
+            &-collapse {}
+
+            &-body {
+                padding: 0;
+                padding-left: length(10);
+
+                .courselist {
+                    @include list-vertical;
+
+                    &-item {
+                        &:first-child {
+                            .courselist-link {
+                                @include border-single(top, solid, 1, $gray-200);
+                            }
+                        }
+
+                        &:last-child {
+                            .courselist-link {
+                                border-bottom: 0;
+                            }
+                        }
+                    }
+
+                    &-link {
+                        @include w100;
+                        @include flex-center-vert;
+                        gap: length(16);
+                        padding: length(16);
+                        background: $white;
+                        @include border-single(bottom, solid, 1, $gray-200);
+
+                        .titleinfo {
+                            @include flex-column;
+                            text-align: left;
+
+                            .title {
+                                @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+                                color: $gray-700;
+                                @include line-clamp;
+                            }
+
+                            .durations {
+                                @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+                                color: $gray-700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 /**=====================================================
                 CLASSROOM-PAGE END
