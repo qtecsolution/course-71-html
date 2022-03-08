@@ -247,7 +247,7 @@
 
         @include breakpoint(tab992) {
             max-width: 75%;
-            gap: length(32);
+            gap: length(36);
         }
 
         .course-title {
@@ -315,17 +315,139 @@
                 COURSE-INSTRUCTOR END
 =====================================================**/
 
+/**=====================================================
+                CLASSROOM-INFO START
+=====================================================**/
+
 .classroominfo {
-    padding: length(64) length(0);
+    padding: length(64) length(20);
 
     @include breakpoint(tab992) {
         padding: length(120) length(0);
     }
-}
 
-/**=====================================================
-                CLASSROOM-INFO START
-=====================================================**/
+    &-content {
+        @include flex-column;
+        gap: length(48);
+
+        @include breakpoint(tab992) {
+            gap: length(120);
+        }
+    }
+
+    .classroomcourseinfo {
+        @include flex-column;
+        gap: length(36);
+
+        .courseinfo-title {
+            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            color: $textDark;
+        }
+
+        .courseinfo-text {
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+            color: $gray-700;
+        }
+    }
+
+    .courselearn {
+        @include flex-column;
+        gap: length(36);
+
+        .courselearn-title {
+            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            color: $textDark;
+        }
+
+        .learnlist {
+            @include list-vertical;
+            gap: length(16);
+
+            &-item {
+                @include flex-center-vert;
+                gap: length(8);
+
+                .icon {
+                    @include square(length(16));
+                    @include flex-center;
+                    overflow: hidden;
+                    margin-top: length(-4);
+                }
+
+                .text {
+                    @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                    color: $gray-700;
+                }
+            }
+        }
+    }
+
+    .prerequired {
+        &-info {
+            @include flex-column;
+            gap: length(36);
+        }
+
+        &-title {
+            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            color: $textDark;
+        }
+
+        &-text {
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+            color: $gray-700;
+        }
+    }
+
+    .toolsinfo {
+        .coursetools {
+            @include flex-column;
+            gap: length(36);
+
+            .coursetools-title {
+                @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                color: $textDark;
+            }
+
+            .learnlist {
+                @include list-vertical;
+                gap: length(16);
+
+                &-item {
+                    @include flex-center-vert;
+                    gap: length(8);
+
+                    .icon {
+                        @include square(length(16));
+                        @include flex-center;
+                        overflow: hidden;
+                        margin-top: length(-4);
+                    }
+
+                    .text {
+                        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                        color: $gray-700;
+                    }
+                }
+            }
+        }
+    }
+
+    .classroomdescript {
+        @include flex-column;
+        gap: length(36);
+
+        .desctipt-title {
+            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            color: $textDark;
+        }
+
+        .descript-text {
+            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+            color: $gray-700;
+        }
+    }
+}
 
 /**=====================================================
                 CLASSROOM-INFO END
