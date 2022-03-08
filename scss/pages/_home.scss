@@ -250,8 +250,12 @@
 
     &-header {
         .carousel-title {
-            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(28.09, 18));
             color: $textDark;
+
+            @include breakpoint(mobile576) {
+                @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            }
         }
     }
 

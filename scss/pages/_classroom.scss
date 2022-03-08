@@ -122,8 +122,6 @@
                 }
             }
 
-            &-header {}
-
             &-button {
                 @include flex-center-vert;
                 gap: length(16);
@@ -155,14 +153,22 @@
                     width: calc(100% - 2.5rem);
 
                     .title {
-                        @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+                        @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
                         color: $gray-700;
                         @include line-clamp;
+
+                        @include breakpoint(mobile480) {
+                            @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+                        }
                     }
 
                     .durations {
-                        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+                        @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
                         color: $gray-700;
+
+                        @include breakpoint(mobile480) {
+                            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+                        }
                     }
                 }
 
@@ -171,8 +177,6 @@
                     outline: none;
                 }
             }
-
-            &-collapse {}
 
             &-body {
                 padding: 0;
@@ -208,14 +212,22 @@
                             text-align: left;
 
                             .title {
-                                @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+                                @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(24, 14));
                                 color: $gray-700;
                                 @include line-clamp;
+
+                                @include breakpoint(mobile480) {
+                                    @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+                                }
                             }
 
                             .durations {
-                                @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+                                @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
                                 color: $gray-700;
+
+                                @include breakpoint(mobile480) {
+                                    @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
+                                }
                             }
                         }
                     }
@@ -251,8 +263,12 @@
         }
 
         .course-title {
-            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(28.09, 18));
             color: $textDark;
+
+            @include breakpoint(mobile576) {
+                @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            }
 
             @include breakpoint(tab992) {
                 @include font-face($primaryFont, style('normal'), size(48), weight('bold'), line-height(58.09, 48));
@@ -260,8 +276,12 @@
         }
 
         .course-text {
-            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
             color: $gray-700;
+
+            @include breakpoint(mobile480) {
+                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25, 16));
+            }
         }
     }
 
@@ -304,8 +324,12 @@
 
         &-body {
             .instructor-text {
-                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
                 color: $gray-700;
+
+                @include breakpoint(mobile480) {
+                    @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25, 16));
+                }
             }
         }
     }
@@ -340,13 +364,21 @@
         gap: length(36);
 
         .courseinfo-title {
-            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(28.09, 18));
             color: $textDark;
+
+            @include breakpoint(mobile576) {
+                @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            }
         }
 
         .courseinfo-text {
-            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
             color: $gray-700;
+
+            @include breakpoint(mobile480) {
+                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+            }
         }
     }
 
@@ -355,8 +387,12 @@
         gap: length(36);
 
         .courselearn-title {
-            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(28.09, 18));
             color: $textDark;
+
+            @include breakpoint(mobile576) {
+                @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            }
         }
 
         .learnlist {
@@ -375,8 +411,12 @@
                 }
 
                 .text {
-                    @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                    @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
                     color: $gray-700;
+
+                    @include breakpoint(mobile480) {
+                        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25, 16));
+                    }
                 }
             }
         }
@@ -389,13 +429,21 @@
         }
 
         &-title {
-            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(28.09, 18));
             color: $textDark;
+
+            @include breakpoint(mobile576) {
+                @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            }
         }
 
         &-text {
-            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
             color: $gray-700;
+
+            @include breakpoint(mobile480) {
+                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25, 16));
+            }
         }
     }
 
@@ -405,8 +453,12 @@
             gap: length(36);
 
             .coursetools-title {
-                @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(28.09, 18));
                 color: $textDark;
+
+                @include breakpoint(mobile576) {
+                    @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                }
             }
 
             .learnlist {
@@ -425,8 +477,12 @@
                     }
 
                     .text {
-                        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
                         color: $gray-700;
+
+                        @include breakpoint(mobile480) {
+                            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25, 16));
+                        }
                     }
                 }
             }
@@ -438,13 +494,21 @@
         gap: length(36);
 
         .desctipt-title {
-            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(28.09, 18));
             color: $textDark;
+
+            @include breakpoint(mobile576) {
+                @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+            }
         }
 
         .descript-text {
-            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
             color: $gray-700;
+
+            @include breakpoint(mobile480) {
+                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(28, 16));
+            }
         }
     }
 }

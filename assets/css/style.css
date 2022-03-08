@@ -3814,9 +3814,9 @@ select {
 .classroom .courseplaylist .accordion-button .titleinfo .title {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  line-height: 1.5625;
+  line-height: 1.71429;
   color: #4A5568;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -3825,13 +3825,33 @@ select {
   -webkit-line-clamp: 2;
 }
 
+@media screen and (min-width: 30rem) {
+  .classroom .courseplaylist .accordion-button .titleinfo .title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5625;
+  }
+}
+
 .classroom .courseplaylist .accordion-button .titleinfo .durations {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: normal;
-  line-height: 1.71429;
+  line-height: 1.66667;
   color: #4A5568;
+}
+
+@media screen and (min-width: 30rem) {
+  .classroom .courseplaylist .accordion-button .titleinfo .durations {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
 }
 
 .classroom .courseplaylist .accordion-button:focus {
@@ -3894,9 +3914,9 @@ select {
 .classroom .courseplaylist .accordion-body .courselist-link .titleinfo .title {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  line-height: 1.5625;
+  line-height: 1.71429;
   color: #4A5568;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -3905,13 +3925,33 @@ select {
   -webkit-line-clamp: 2;
 }
 
+@media screen and (min-width: 30rem) {
+  .classroom .courseplaylist .accordion-body .courselist-link .titleinfo .title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5625;
+  }
+}
+
 .classroom .courseplaylist .accordion-body .courselist-link .titleinfo .durations {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: normal;
-  line-height: 1.71429;
+  line-height: 1.66667;
   color: #4A5568;
+}
+
+@media screen and (min-width: 30rem) {
+  .classroom .courseplaylist .accordion-body .courselist-link .titleinfo .durations {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.71429;
+  }
 }
 
 /**=====================================================
@@ -3952,10 +3992,20 @@ select {
 .course-instructor .classroomcourse .course-title {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1.75rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.36036;
+  line-height: 1.56056;
   color: #352424;
+}
+
+@media screen and (min-width: 36rem) {
+  .course-instructor .classroomcourse .course-title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
 }
 
 @media screen and (min-width: 62rem) {
@@ -3971,10 +4021,20 @@ select {
 .course-instructor .classroomcourse .course-text {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.71429;
   color: #4A5568;
+}
+
+@media screen and (min-width: 30rem) {
+  .course-instructor .classroomcourse .course-text {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5625;
+  }
 }
 
 .course-instructor .courseinstructor {
@@ -4048,10 +4108,20 @@ select {
 .course-instructor .courseinstructor-body .instructor-text {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.71429;
   color: #4A5568;
+}
+
+@media screen and (min-width: 30rem) {
+  .course-instructor .courseinstructor-body .instructor-text {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5625;
+  }
 }
 
 /**=====================================================
@@ -4101,19 +4171,39 @@ select {
 .classroominfo .classroomcourseinfo .courseinfo-title {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1.75rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.36036;
+  line-height: 1.56056;
   color: #352424;
+}
+
+@media screen and (min-width: 36rem) {
+  .classroominfo .classroomcourseinfo .courseinfo-title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
 }
 
 .classroominfo .classroomcourseinfo .courseinfo-text {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.71429;
   color: #4A5568;
+}
+
+@media screen and (min-width: 30rem) {
+  .classroominfo .classroomcourseinfo .courseinfo-text {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.75;
+  }
 }
 
 .classroominfo .courselearn {
@@ -4130,10 +4220,20 @@ select {
 .classroominfo .courselearn .courselearn-title {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1.75rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.36036;
+  line-height: 1.56056;
   color: #352424;
+}
+
+@media screen and (min-width: 36rem) {
+  .classroominfo .courselearn .courselearn-title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
 }
 
 .classroominfo .courselearn .learnlist {
@@ -4179,10 +4279,20 @@ select {
 .classroominfo .courselearn .learnlist-item .text {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.71429;
   color: #4A5568;
+}
+
+@media screen and (min-width: 30rem) {
+  .classroominfo .courselearn .learnlist-item .text {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5625;
+  }
 }
 
 .classroominfo .prerequired-info {
@@ -4199,19 +4309,39 @@ select {
 .classroominfo .prerequired-title {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1.75rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.36036;
+  line-height: 1.56056;
   color: #352424;
+}
+
+@media screen and (min-width: 36rem) {
+  .classroominfo .prerequired-title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
 }
 
 .classroominfo .prerequired-text {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.71429;
   color: #4A5568;
+}
+
+@media screen and (min-width: 30rem) {
+  .classroominfo .prerequired-text {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5625;
+  }
 }
 
 .classroominfo .toolsinfo .coursetools {
@@ -4228,10 +4358,20 @@ select {
 .classroominfo .toolsinfo .coursetools .coursetools-title {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1.75rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.36036;
+  line-height: 1.56056;
   color: #352424;
+}
+
+@media screen and (min-width: 36rem) {
+  .classroominfo .toolsinfo .coursetools .coursetools-title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
 }
 
 .classroominfo .toolsinfo .coursetools .learnlist {
@@ -4277,10 +4417,20 @@ select {
 .classroominfo .toolsinfo .coursetools .learnlist-item .text {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.71429;
   color: #4A5568;
+}
+
+@media screen and (min-width: 30rem) {
+  .classroominfo .toolsinfo .coursetools .learnlist-item .text {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5625;
+  }
 }
 
 .classroominfo .classroomdescript {
@@ -4297,19 +4447,39 @@ select {
 .classroominfo .classroomdescript .desctipt-title {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1.75rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.36036;
+  line-height: 1.56056;
   color: #352424;
+}
+
+@media screen and (min-width: 36rem) {
+  .classroominfo .classroomdescript .desctipt-title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
 }
 
 .classroominfo .classroomdescript .descript-text {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.71429;
   color: #4A5568;
+}
+
+@media screen and (min-width: 30rem) {
+  .classroominfo .classroomdescript .descript-text {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.75;
+  }
 }
 
 /**=====================================================
@@ -4390,10 +4560,20 @@ select {
 .course-details .coursesinfo .learninfo-title {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1.75rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.36036;
+  line-height: 1.56056;
   color: #352424;
+}
+
+@media screen and (min-width: 36rem) {
+  .course-details .coursesinfo .learninfo-title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
 }
 
 @media screen and (min-width: 62rem) {
@@ -4409,10 +4589,20 @@ select {
 .course-details .coursesinfo .learninfo-text {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.71429;
   color: #4A5568;
+}
+
+@media screen and (min-width: 30rem) {
+  .course-details .coursesinfo .learninfo-text {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5625;
+  }
 }
 
 .course-details .coursesinfo .courseinfo {
@@ -4446,10 +4636,20 @@ select {
 .course-details .coursesinfo .courseinfo .course-features .feature-title {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1.75rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.36036;
+  line-height: 1.56056;
   color: #352424;
+}
+
+@media screen and (min-width: 36rem) {
+  .course-details .coursesinfo .courseinfo .course-features .feature-title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
 }
 
 .course-details .coursesinfo .courseinfo .course-features .featurelist {
@@ -4495,10 +4695,20 @@ select {
 .course-details .coursesinfo .courseinfo .course-features .featurelist-item .text {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.71429;
   color: #4A5568;
+}
+
+@media screen and (min-width: 30rem) {
+  .course-details .coursesinfo .courseinfo .course-features .featurelist-item .text {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5625;
+  }
 }
 
 .course-details .coursesinfo .courseinfo .course-requirements {
@@ -4954,10 +5164,20 @@ select {
 .course-details .coursesinfo .courseinfo .coursefeedback-header .feedback-title {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1.75rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.36036;
+  line-height: 1.56056;
   color: #352424;
+}
+
+@media screen and (min-width: 36rem) {
+  .course-details .coursesinfo .courseinfo .coursefeedback-header .feedback-title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
 }
 
 .course-details .coursesinfo .courseinfo .coursefeedback-body {
@@ -5211,10 +5431,20 @@ select {
 .course-details .coursesinfo .courseinfo .coursefeedback-footer .coursefeedbackhead-title {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1.75rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.36036;
+  line-height: 1.56056;
   color: #352424;
+}
+
+@media screen and (min-width: 36rem) {
+  .course-details .coursesinfo .courseinfo .coursefeedback-footer .coursefeedbackhead-title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
 }
 
 .course-details .coursesinfo .courseinfo .coursefeedback-footer .coursefeedbackbody {
@@ -6272,10 +6502,20 @@ select {
 .carouselsection-header .carousel-title {
   font-family: "Noto Sans Bengali";
   font-style: normal;
-  font-size: 1.75rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.36036;
+  line-height: 1.56056;
   color: #352424;
+}
+
+@media screen and (min-width: 36rem) {
+  .carouselsection-header .carousel-title {
+    font-family: "Noto Sans Bengali";
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.36036;
+  }
 }
 
 .carouselsection-body .swiper-slide {

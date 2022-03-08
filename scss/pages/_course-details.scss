@@ -42,8 +42,12 @@
             }
 
             &-title {
-                @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(28.09, 18));
                 color: $textDark;
+
+                @include breakpoint(mobile576) {
+                    @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                }
 
                 @include breakpoint(tab992) {
                     @include font-face($primaryFont, style('normal'), size(48), weight('bold'), line-height(58.09, 48));
@@ -51,8 +55,12 @@
             }
 
             &-text {
-                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
                 color: $gray-700;
+
+                @include breakpoint(mobile480) {
+                    @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+                }
             }
         }
 
@@ -69,8 +77,12 @@
                 gap: length(36);
 
                 .feature-title {
-                    @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                    @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(28.09, 18));
                     color: $textDark;
+
+                    @include breakpoint(mobile576) {
+                        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                    }
                 }
 
                 .featurelist {
@@ -89,8 +101,12 @@
                         }
 
                         .text {
-                            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(24, 14));
                             color: $gray-700;
+
+                            @include breakpoint(mobile480) {
+                                @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+                            }
                         }
                     }
                 }
@@ -353,8 +369,12 @@
 
                 &-header {
                     .feedback-title {
-                        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                        @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(28.09, 18));
                         color: $textDark;
+
+                        @include breakpoint(mobile576) {
+                            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                        }
                     }
                 }
 
@@ -486,8 +506,12 @@
 
                     .coursefeedbackhead {
                         &-title {
-                            @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                            @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(28.09, 18));
                             color: $textDark;
+
+                            @include breakpoint(mobile576) {
+                                @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                            }
                         }
                     }
 
