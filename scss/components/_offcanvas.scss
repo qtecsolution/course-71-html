@@ -129,6 +129,62 @@
             }
         }
 
+        .allcourses {
+            .accordion {
+                border: none;
+
+                &-item {
+                    // border: none;
+                    border-radius: 0;
+                }
+
+                &-collapse {
+                    border-radius: 0;
+                }
+
+                &-link {
+                    @include flex-center-vert;
+
+                    .all-link {
+                        width: calc(100% - 2.5rem);
+                        height: length(40);
+                        @include flex-center-vert;
+                        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.58, 16));
+                        color: $gray-800;
+                    }
+
+                    .accordion-header {
+                        @include square(length(40));
+
+                        .accordion-button {
+                            @include wh100;
+                            @include flex-center;
+                            border: none;
+
+                            &:not(.collapsed) {
+                                background: transparent;
+                                box-shadow: none;
+                                outline: none;
+
+                                &::after {
+                                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                                }
+                            }
+
+                            &:focus {
+                                box-shadow: none;
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+
+                &-body {
+                    padding: 0;
+                }
+            }
+        }
+
         &::-webkit-scrollbar {
             background: transparent;
             width: length(12);
