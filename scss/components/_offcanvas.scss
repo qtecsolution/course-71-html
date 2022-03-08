@@ -54,6 +54,7 @@
             left: calc(100% + .5rem);
 
             svg {
+                @include wh100;
                 @include transitiontransform;
 
                 path {
@@ -81,6 +82,7 @@
     &-body {
         overflow-x: hidden;
         padding-top: length(0);
+        padding-bottom: length(76);
 
         .authmenu {
             @include flex-column;
@@ -96,14 +98,44 @@
             }
         }
 
+        .mobilesearch {
+            @include flex-column;
+            gap: length(16);
+            background: $white;
+            max-width: length(300);
+            padding: length(24) length(12);
+
+            .searchinfos {
+                @include flex-column;
+                gap: length(16);
+
+                .search-head {
+                    &-title {
+                        @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(24, 16));
+                        color: $gray-800;
+                    }
+                }
+
+                .search-body {
+                    @include flex-column;
+                    gap: length(16);
+                }
+            }
+
+            .divider {
+                height: length(1);
+                background: $gray-200;
+                margin: 0 length(-12);
+            }
+        }
+
         &::-webkit-scrollbar {
             background: transparent;
-            width: length(8);
+            width: length(12);
         }
 
         &::-webkit-scrollbar-thumb {
-            // background: $primary;
-            @include radius(8);
+            background: $primary;
         }
     }
 }
@@ -252,6 +284,66 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+.searchmobile {
+    padding-bottom: length(60);
+
+    .offcanvas-header {
+        @include flex-center-vert;
+        position: relative;
+        padding: 0;
+
+        .btn-close {
+            @include square(length(30));
+            background: $white;
+            box-shadow: $close-shadow;
+            margin: 0;
+            padding: length(8);
+            @include flex-center;
+            @include circle;
+            opacity: 1;
+            position: absolute;
+            top: length(8);
+            left: length(-54);
+            overflow: hidden;
+
+            svg {
+                @include wh100;
+                @include transitiontransform;
+
+                path {
+                    @include transitions;
+                }
+            }
+
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+
+            @include hover {
+                svg {
+                    @include transform(rotate(90deg));
+
+                    path {
+                        fill: $danger;
+                    }
+                }
+            }
+        }
+
+        .titlebox {
+            @include w100;
+            @include flex-center;
+            text-align: center;
+
+            .search-title {
+                @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(28.09, 18));
+                color: $textDark;
             }
         }
     }

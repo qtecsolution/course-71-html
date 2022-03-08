@@ -225,9 +225,10 @@ select {
     .checklabel {
         position: relative;
         padding-left: length(30);
-        @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
+        @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
         color: $textBodyLight;
         cursor: pointer;
+        @include flex-center-vert;
 
         &::selection {
             background: $white;
@@ -235,7 +236,7 @@ select {
         }
 
         .link {
-            @include font-face($secondaryFont, style('normal'), size(12), weight('bold'), line-height(20, 12));
+            @include font-face($primaryFont, style('normal'), size(12), weight('bold'), line-height(20, 12));
             @include transitions;
             color: $textBodyLight;
 

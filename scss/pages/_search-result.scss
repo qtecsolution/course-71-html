@@ -9,6 +9,90 @@
     @include breakpoint(tab992) {
         padding: length(120) length(0);
     }
+
+    .desktopsearch {
+        @include flex-column;
+        gap: length(16);
+        background: $white;
+        max-width: length(300);
+        @include h100;
+        padding: length(24) length(12);
+
+        .searchinfos {
+            @include flex-column;
+            gap: length(16);
+
+            .search-head {
+                &-title {
+                    @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(24, 16));
+                    color: $gray-800;
+                }
+            }
+
+            .search-body {
+                @include flex-column;
+                gap: length(16);
+            }
+        }
+
+        .divider {
+            height: length(1);
+            background: $gray-200;
+            margin: 0 length(-12);
+        }
+    }
+
+    .searchresults {
+        @include flex-column;
+        gap: length(28);
+
+        &-header {
+            @include flex-center-vert;
+
+            .titlebox {
+                width: 90%;
+
+                .search-title {
+                    @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(26.09, 16));
+                    color: $gray-700;
+
+                    @include breakpoint(mobile576) {
+                        @include font-face($primaryFont, style('normal'), size(28), weight('semibold'), line-height(38.09, 28));
+                    }
+                }
+            }
+
+            .filtermobile {
+                width: 10%;
+                @include flex-center;
+
+                @include breakpoint(tab992) {
+                    display: none;
+                }
+
+                .btn-filter {
+                    @include transparent-button;
+                    @include square(length(30));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+            }
+        }
+    }
+
+    .searchresultitems {
+        .cardlink {
+            @include w100;
+
+            .cardcourse {
+                @include w100;
+            }
+        }
+    }
 }
 
 /**=====================================================
