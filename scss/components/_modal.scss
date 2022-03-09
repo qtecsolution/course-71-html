@@ -60,6 +60,7 @@
         @include flex-center-column;
         gap: length(12);
         text-align: center;
+        position: relative;
 
         .authentication-title {
             @include font-face($secondaryFont, style('normal'), size(20), weight('semibold'), line-height(32, 20));
@@ -114,6 +115,33 @@
             }
 
         }
+
+        .btn-close {
+            background: transparent;
+            margin: length(0);
+            padding: length(0);
+            position: absolute;
+            top: length(0);
+            right: length(0);
+            @include square(length(36));
+            @include flex-center;
+            overflow: hidden;
+            opacity: 1;
+
+            svg {
+                @include transitiontransform;
+            }
+
+            @include hover {
+                svg {
+                    @include transform(rotate(90deg));
+
+                    path {
+                        fill: $danger;
+                    }
+                }
+            }
+        }
     }
 
     &-info {
@@ -155,6 +183,7 @@
                         @include font-face($secondaryFont, style('normal'), size(12), weight('normal'), line-height(20, 12));
                         color: $textBodyLight;
                         cursor: pointer;
+                        display: inline-block;
 
                         &::selection {
                             background: $white;

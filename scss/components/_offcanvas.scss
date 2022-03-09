@@ -91,6 +91,13 @@
         .authmenu {
             @include flex-column;
             gap: length(14);
+            @include w100;
+            position: absolute;
+            bottom: length(70);
+            left: 0;
+            padding: length(16);
+            background: $white;
+            z-index: 100;
 
             .withoutauth {
                 @include flex-column;
@@ -135,28 +142,55 @@
 
         .allcourses {
             margin-bottom: length(24);
+            @include flex-column;
+            gap: length(8);
 
             .accordion {
-                border: none;
-
                 &-item {
                     border: 0;
-                    border-radius: 0;
-                }
-
-                &-collapse {
                     border-radius: 0;
                 }
 
                 &-link {
                     @include flex-center-vert;
 
-                    .all-link {
+                    .categoryitem {
                         width: calc(100% - 2.5rem);
                         height: length(40);
-                        @include flex-center-vert;
-                        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.58, 16));
-                        color: $gray-800;
+
+                        .all-link {
+                            @include flex-center-vert;
+                            gap: length(8);
+                            @include w100;
+
+                            .iconbox {
+                                @include square(length(40));
+                                @include radius(8);
+                            }
+
+                            .development {
+                                background: $primary-light;
+                            }
+
+                            .business {
+                                background: $businessBg;
+                            }
+
+                            .accounting {
+                                background: $accountingBg;
+                            }
+
+                            .it {
+                                background: $itBg;
+                            }
+
+                            .text {
+                                width: calc(100% - 2.5rem);
+                                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.58, 16));
+                                color: $gray-800;
+                                @include text-overflow;
+                            }
+                        }
                     }
 
                     .accordion-header {
@@ -166,6 +200,7 @@
                             @include wh100;
                             @include flex-center;
                             border: none;
+                            @include radius(0);
                             background: transparent;
 
                             &:not(.collapsed) {
@@ -188,54 +223,31 @@
 
                 &-body {
                     padding: 0;
-                    @include flex-column;
-                    gap: length(8);
+                    padding: length(8) length(0);
 
                     .accordion {
+                        @include flex-column;
+                        gap: length(8);
+
                         &-item {
                             border: 0;
                             border-radius: 0;
+                            background: transparent;
                         }
 
                         &-link {
                             @include flex-center-vert;
+                            @include radius(8);
+                            @include transitions;
+                            padding: length(8);
 
-                            .categoryitem {
+                            .subcategory-link {
                                 width: calc(100% - 2.5rem);
-                                height: length(40);
 
-                                .all-link {
-                                    @include flex-center-vert;
-                                    gap: length(8);
-                                    @include w100;
-
-                                    .iconbox {
-                                        @include square(length(40));
-                                        @include radius(8);
-                                    }
-
-                                    .development {
-                                        background: $primary-light;
-                                    }
-
-                                    .business {
-                                        background: $businessBg;
-                                    }
-
-                                    .accounting {
-                                        background: $accountingBg;
-                                    }
-
-                                    .it {
-                                        background: $itBg;
-                                    }
-
-                                    .text {
-                                        width: calc(100% - 2.5rem);
-                                        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.58, 16));
-                                        color: $gray-800;
-                                        @include text-overflow;
-                                    }
+                                .text {
+                                    @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.58, 16));
+                                    color: $gray-800;
+                                    @include text-overflow;
                                 }
                             }
 
@@ -265,108 +277,48 @@
                                     }
                                 }
                             }
+
+                            @include hover {
+                                background: $tertiary-light;
+                            }
                         }
 
                         &-body {
                             padding: 0;
-                            padding: length(8) length(0);
 
-                            .accordion {
+                            .categorytopic {
                                 @include flex-column;
-                                gap: length(8);
+                                gap: length(4);
+                                @include w100;
 
-                                &-item {
-                                    border: 0;
-                                    border-radius: 0;
-                                    background: transparent;
+                                .topiclist {
+                                    @include list-vertical;
+                                    gap: length(4);
+                                    @include w100;
+
+                                    &-link {
+                                        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
+                                        color: $gray-800;
+                                        padding: length(8) length(24);
+                                        @include transitions;
+                                        @include w100;
+                                        @include radius(8);
+
+                                        @include hover {
+                                            background: $tertiary-light;
+                                        }
+                                    }
                                 }
 
-                                &-link {
-                                    @include flex-center-vert;
+                                .seeall {
+                                    @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
+                                    color: $tertiary;
+                                    padding: length(8) length(24);
                                     @include radius(8);
                                     @include transitions;
-                                    padding: length(8);
-
-                                    .subcategory-link {
-                                        width: calc(100% - 2.5rem);
-
-                                        .text {
-                                            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.58, 16));
-                                            color: $gray-800;
-                                            @include text-overflow;
-                                        }
-                                    }
-
-                                    .accordion-header {
-                                        @include square(length(40));
-
-                                        .accordion-button {
-                                            @include wh100;
-                                            @include flex-center;
-                                            border: none;
-                                            @include radius(0);
-                                            background: transparent;
-
-                                            &:not(.collapsed) {
-                                                background: transparent;
-                                                box-shadow: none;
-                                                outline: none;
-
-                                                &::after {
-                                                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-                                                }
-                                            }
-
-                                            &:focus {
-                                                box-shadow: none;
-                                                outline: none;
-                                            }
-                                        }
-                                    }
 
                                     @include hover {
                                         background: $tertiary-light;
-                                    }
-                                }
-
-                                &-body {
-                                    padding: 0;
-
-                                    .categorytopic {
-                                        @include flex-column;
-                                        gap: length(4);
-                                        @include w100;
-
-                                        .topiclist {
-                                            @include list-vertical;
-                                            gap: length(4);
-                                            @include w100;
-
-                                            &-link {
-                                                @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
-                                                color: $gray-800;
-                                                padding: length(8) length(24);
-                                                @include transitions;
-                                                @include w100;
-                                                @include radius(8);
-
-                                                @include hover {
-                                                    background: $tertiary-light;
-                                                }
-                                            }
-                                        }
-
-                                        .seeall {
-                                            @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(25.58, 14));
-                                            color: $tertiary;
-                                            padding: length(8) length(24);
-                                            @include radius(8);
-                                            @include transitions;
-
-                                            @include hover {
-                                                background: $tertiary-light;
-                                            }
-                                        }
                                     }
                                 }
                             }

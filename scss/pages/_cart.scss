@@ -26,11 +26,6 @@
     &-body {
         @include flex-column;
         gap: length(8);
-        padding-bottom: length(64);
-
-        @include breakpoint(tab992) {
-            padding-bottom: length(0);
-        }
 
         &::-webkit-scrollbar {
             background: transparent;
@@ -163,6 +158,10 @@
             }
         }
     }
+}
+
+.cartfooter {
+    padding-bottom: length(134);
 }
 
 /**=======================================================**

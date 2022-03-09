@@ -188,6 +188,17 @@
 
             .checkrequire {
                 padding-bottom: length(24);
+
+                .checkinfo {
+                    .checklabel {
+                        display: inline-block;
+                        font-family: $secondaryFont;
+
+                        .link {
+                            font-family: $secondaryFont;
+                        }
+                    }
+                }
             }
 
             .payment-submit {
