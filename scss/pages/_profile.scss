@@ -106,8 +106,81 @@
                         }
                     }
 
-                    @include hover {
+                    &:hover:not(.active) {
                         background: rgba($playingBg, 0.04);
+                    }
+
+                    &.active {
+                        background: rgba($playingBg, 0.04);
+                    }
+                }
+            }
+        }
+    }
+
+    .profile-details {
+        @include flex-column;
+        gap: length(44);
+        background: $white;
+        padding: length(24);
+
+        .profile-title {
+            @include font-face($primaryFont, style('normal'), size(24), weight('normal'), line-height(36, 24));
+            color: $textUser;
+        }
+
+        .profileform {
+            @include flex-column;
+            gap: length(36);
+
+            .inputbox {
+                .inputinfo {
+                    @include flex-column;
+                    gap: length(8);
+                    @include w100;
+
+                    .inputlabel {
+                        @include font-face($primaryFont, style('normal'), size(14), weight('normal'), line-height(16, 14));
+                        color: $textBodyLight;
+                    }
+
+                    .inputfield {
+                        @include w100;
+                        @include font-face($primaryFont, style('normal'), size(15), weight('normal'), line-height(15, 15));
+                        @include radius(6);
+                        color: $textBodyLight;
+                        padding: length(14) length(16);
+                        box-shadow: $input-shadow;
+
+                        &::placeholder {
+                            color: $textPlaceholder;
+                        }
+
+                        &:disabled {
+                            background: transparent;
+                            color: $textPlaceholder;
+                            box-shadow: none;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+
+            .submitbox {
+                @include flex-end;
+
+                .buttons {
+                    @include flex-center-vert;
+                    gap: length(20);
+
+                    .btn-cancel {
+                        @include setBgColor(transparent, $primary);
+                        @include font-face($primaryFont, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+                        @include transitions;
+
+                        @include hover {
+                            color: $tertiary;
+                        }
                     }
                 }
             }

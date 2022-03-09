@@ -8016,8 +8016,140 @@ select {
   color: #352424;
 }
 
-.myprofile .profile-menu .profilelist-link:not([disabled]):hover {
+.myprofile .profile-menu .profilelist-link:hover:not(.active) {
   background: rgba(218, 196, 246, 0.04);
+}
+
+.myprofile .profile-menu .profilelist-link.active {
+  background: rgba(218, 196, 246, 0.04);
+}
+
+.myprofile .profile-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.75rem;
+  background: #ffffff;
+  padding: 1.5rem;
+}
+
+.myprofile .profile-details .profile-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #323232;
+}
+
+.myprofile .profile-details .profileform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.25rem;
+}
+
+.myprofile .profile-details .profileform .inputbox .inputinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.myprofile .profile-details .profileform .inputbox .inputinfo .inputlabel {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.14286;
+  color: #425466;
+}
+
+.myprofile .profile-details .profileform .inputbox .inputinfo .inputfield {
+  width: 100%;
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  color: #425466;
+  padding: 0.875rem 1rem;
+  -webkit-box-shadow: 0 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0 0 0.0625rem rgba(50, 50, 71, 0.2);
+          box-shadow: 0 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0 0 0.0625rem rgba(50, 50, 71, 0.2);
+}
+
+.myprofile .profile-details .profileform .inputbox .inputinfo .inputfield::-webkit-input-placeholder {
+  color: #B5B5BD;
+}
+
+.myprofile .profile-details .profileform .inputbox .inputinfo .inputfield:-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.myprofile .profile-details .profileform .inputbox .inputinfo .inputfield::-ms-input-placeholder {
+  color: #B5B5BD;
+}
+
+.myprofile .profile-details .profileform .inputbox .inputinfo .inputfield::placeholder {
+  color: #B5B5BD;
+}
+
+.myprofile .profile-details .profileform .inputbox .inputinfo .inputfield:disabled {
+  background: transparent;
+  color: #B5B5BD;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0;
+}
+
+.myprofile .profile-details .profileform .submitbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.myprofile .profile-details .profileform .submitbox .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.myprofile .profile-details .profileform .submitbox .buttons .btn-cancel {
+  background: transparent;
+  color: #7D56A5;
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.myprofile .profile-details .profileform .submitbox .buttons .btn-cancel:not([disabled]):hover {
+  color: #F78B64;
 }
 
 /**=====================================================
