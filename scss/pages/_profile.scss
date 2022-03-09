@@ -2,7 +2,118 @@
                     PROFILE PAGE START
 =====================================================**/
 
+.myprofile {
+    padding: length(76) length(20) length(80);
 
+    @include breakpoint(tab992) {
+        padding: length(116) length(0) length(80);
+    }
+
+    .profile {
+        @include flex-column;
+        gap: length(12);
+
+        &-info {
+            background: $white;
+            @include flex-center-column;
+            gap: length(16);
+            padding: length(24);
+
+            .profile-thumbnail {
+                position: relative;
+                @include square(length(100));
+                @include flex-center;
+                @include circle;
+
+                .upload {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+
+                    .input-group {
+                        &-text {
+                            margin: 0;
+                            padding: 0;
+                            border: 0;
+                            border-radius: 100% !important;
+                            @include square(length(20));
+                            background: $uploadBg;
+                            @include flex-center;
+                            cursor: pointer;
+
+                            @include hover {
+                                svg {
+                                    path {
+                                        stroke: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+                }
+            }
+
+            .userinfo {
+                @include flex-center-column;
+                gap: length(10);
+                text-align: center;
+
+                .username {
+                    @include font-face($primaryFont, style('normal'), size(18), weight('semibold'), line-height(18, 18));
+                    color: $textUser;
+                }
+
+                .usermail {
+                    @include font-face($secondaryFont, style('normal'), size(14), weight('normal'), line-height(14, 14));
+                    color: $textProfile;
+                }
+            }
+        }
+
+        &-menu {
+            .profilelist {
+                @include list-vertical;
+                gap: length(4);
+
+                &-link {
+                    background: $white;
+                    @include w100;
+                    @include flex-center-between;
+                    padding: length(8) length(16) length(8) length(8);
+                    @include radius(8);
+
+                    .icontext {
+                        @include flex-center-vert;
+                        gap: length(8);
+
+                        .icon {
+                            @include square(length(40));
+                            @include radius(8);
+                        }
+
+                        .icon-1 {
+                            background: $primary-light;
+                        }
+
+                        .text {
+                            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
+                            color: $textDark;
+                        }
+                    }
+
+                    @include hover {
+                        background: rgba($playingBg, 0.04);
+                    }
+                }
+            }
+        }
+    }
+}
 
 /**=====================================================
                     PROFILE PAGE END

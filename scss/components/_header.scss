@@ -4,11 +4,14 @@
 
 .header {
     background: $secondary;
+    height: length(60);
+    @include flex-center-vert;
+    padding: length(0) length(20);
 
     @include breakpoint(tab992) {
         background: $bodyBg;
         height: length(100);
-        @include flex-center-vert;
+        padding: length(0);
     }
 
     &-content {

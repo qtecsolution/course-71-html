@@ -16,7 +16,7 @@
 </head>
 <body class="p-0 m-0">
     <!-- HEADER SECTION START -->
-    <header class="header sticky-top">
+    <header class="header fixed-top">
         <div class="container-fluid container-lg p-0">
             <div class="header-content">
                 <!-- HAMBURGER START -->
@@ -2583,7 +2583,83 @@
     </div>
     <!-- APP-MENU END -->
 
-    
+    <!-- MY-PROFILE SECTION START -->
+    <section class="myprofile">
+        <div class="container-fluid container-lg p-0">
+            <div class="row g-4">
+                <div class="col-lg-4 col-12">
+                    <div class="profile">
+                        <!-- PROFILE-INFO START -->
+                        <div class="profile-info">
+                            <div class="profile-thumbnail">
+                                <img src="assets/images/avatars/avatar-3.svg" alt="profile-thumbnail">
+
+                                <div class="upload">
+                                    <div class="input-group">
+                                        <input type="file" class="form-control" id="profileupload" hidden>
+                                        <label class="input-group-text" for="profileupload">
+                                            <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.57367 1.87088L8.09272 3.25034L6.57367 1.87088ZM7.21806 1.2857C7.4195 1.10277 7.69271 1 7.97759 1C8.26247 1 8.53568 1.10277 8.73712 1.2857C8.93855 1.46862 9.05172 1.71673 9.05172 1.97543C9.05172 2.23413 8.93855 2.48223 8.73712 2.66516L2.82243 8.03633H1.31885V6.64282L7.21806 1.2857V1.2857Z" stroke="#12393C" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="userinfo">
+                                <h3 class="username">এ বি সি রাহমান</h3>
+                                <p class="usermail">info@gmail.com</p>
+                            </div>
+                        </div>
+                        <!-- PROFILE-INFO END -->
+
+                        <!-- PROFILE-MENU START -->
+                        <div class="profile-menu">
+                            <ul class="profilelist">
+                                <li class="profilelist-item">
+                                    <a href="my-course.html" class="profilelist-link">
+                                        <span class="icontext">
+                                            <span class="icon icon-1"></span>
+                                            <span class="text">আমার কোর্স</span>
+                                        </span>
+                                        
+                                        <span class="arrowicon">
+                                            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1L8 8L1 15" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="profilelist-item">
+                                    <a href="my-certificate.html" class="profilelist-link">
+                                        <span class="icontext">
+                                            <span class="icon icon-1"></span>
+                                            <span class="text">আমার সার্টিফিকেট</span>
+                                        </span>
+
+                                        <span class="arrowicon">
+                                            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1L8 8L1 15" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- PROFILE-MENU END -->
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-12">
+                    <!-- PROFILE-INFO START -->
+                    
+                    <!-- PROFILE-INFO END -->
+                </div>
+            </div>            
+        </div>
+    </section>
+    <!-- MY-PROFILE SECTION END -->
 
     <!-- FOOTER-SECTION START -->
     <footer class="footer">
@@ -3127,10 +3203,5 @@
     <script src="assets/js/modal.js"></script>
     <!-- OFFSCREEN JS -->
     <script src="assets/js/offscreen.js"></script>
-    <script src="assets/js/scrollcontent.js"></script>
-    <!-- SWIPER JS -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- CAROUSEL JS -->
-    <script src="assets/js/carousel.js"></script>
 </body>
 </html>

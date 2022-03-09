@@ -105,7 +105,7 @@
                             color: $gray-700;
 
                             @include breakpoint(mobile480) {
-                                @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25, 16));
+                                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25, 16));
                             }
                         }
                     }

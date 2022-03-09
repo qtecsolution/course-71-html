@@ -32,7 +32,8 @@ $textPlaceholder: #B5B5BD;
 $paymentLabelText: #4E5D78;
 $ratingLight: #D5D5DC;
 $ratingText: #F2B807;
-
+$textProfile: #616161;
+$textUser: #323232;
 
 /**=====================================================**
 BACKGROUND-COLORS
@@ -43,6 +44,8 @@ $bodyBg: #FCFAFF;
 $bulletActiveBg: #888888;
 $videoboxBg: #D1D1D1;
 $playerScrollBg: #F1F1F1;
+$uploadBg: #969696;
+
 
 /**=====================================================**
 BORDER-COLORS
@@ -94,6 +97,7 @@ $coupon-shade: 0 0 0 .125rem $coupon-shadow;
 
 $error-shadow: 0 .0625rem .125rem $error-shade,
 0 0 .0625rem $error-shade;
+
 /**=====================================================**
                     TIMING-VARIABLES
 =======================================================**/
