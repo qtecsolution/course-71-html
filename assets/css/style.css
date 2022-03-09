@@ -2394,8 +2394,8 @@ select {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 10.125rem;
   overflow: hidden;
+  aspect-ratio: 1.77;
 }
 
 .cardcourse-header .course-thumbnail img {
@@ -2568,6 +2568,312 @@ select {
   font-weight: normal;
   line-height: 1.62;
   color: #2D3748;
+}
+
+.mycardcourse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  gap: 0.5rem;
+}
+
+.mycardcourse-header .mycardcourse-thumbnail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 1.77;
+}
+
+.mycardcourse-header .mycardcourse-thumbnail img {
+  max-width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.mycardcourse-header .mycardcourse-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.mycardcourse-body {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem;
+}
+
+.mycardcourse-body .mycardcourse-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.62;
+  color: #2D3748;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  height: 3.25rem;
+}
+
+.mycardcourse-body .mycardcourse-title:not([disabled]):hover {
+  color: #F78B64;
+}
+
+.mycardcourse-body .mycardcoursedetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
+}
+
+@media screen and (min-width: 22.5rem) {
+  .mycardcourse-body .mycardcoursedetail {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2.25rem;
+  }
+}
+
+.mycardcourse-body .mycardcoursedetail .courseinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mycardcourse-body .mycardcoursedetail .courseinfo .course-category {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #718096;
+}
+
+.mycardcourse-body .mycardcoursedetail .courseinfo .course-teacher {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #2D3748;
+}
+
+.mycardcourse-body .course-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mycardcourse-body .course-progress .progress {
+  background: #CBD5E0;
+  height: 0.25rem;
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+
+.mycardcourse-body .course-progress .progress-bar {
+  background: #F78B64;
+}
+
+.mycardcourse-body .course-progress .progresstext {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #F78B64;
+}
+
+.cardcertificate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  gap: 0.5rem;
+}
+
+.cardcertificate-header .cardcertificate-thumbnail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 1.77;
+}
+
+.cardcertificate-header .cardcertificate-thumbnail img {
+  max-width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.cardcertificate-header .cardcertificate-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.cardcertificate-body {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem;
+}
+
+.cardcertificate-body .cardcertificate-title {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.62;
+  color: #2D3748;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  height: 3.25rem;
+}
+
+.cardcertificate-body .cardcertificate-title:not([disabled]):hover {
+  color: #F78B64;
+}
+
+.cardcertificate-body .cardcertificatedetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
+}
+
+@media screen and (min-width: 22.5rem) {
+  .cardcertificate-body .cardcertificatedetail {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2.25rem;
+  }
+}
+
+.cardcertificate-body .cardcertificatedetail .courseinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardcertificate-body .cardcertificatedetail .courseinfo .course-category {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #718096;
+}
+
+.cardcertificate-body .cardcertificatedetail .courseinfo .course-teacher {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #2D3748;
+}
+
+.cardcertificate-body .complete-date .date {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #F78B64;
 }
 
 .card-about {
@@ -8150,6 +8456,50 @@ select {
 
 .myprofile .profile-details .profileform .submitbox .buttons .btn-cancel:not([disabled]):hover {
   color: #F78B64;
+}
+
+.myprofile .mycourse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.myprofile .mycourse .mycardcourse {
+  width: 100%;
+}
+
+@media screen and (min-width: 36rem) {
+  .myprofile .mycourse .mycardcourse {
+    max-width: 16.6875rem;
+  }
+}
+
+.myprofile .mycertificate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.myprofile .mycertificate .cardcertificate {
+  width: 100%;
+}
+
+@media screen and (min-width: 36rem) {
+  .myprofile .mycertificate .cardcertificate {
+    max-width: 16.6875rem;
+  }
 }
 
 /**=====================================================

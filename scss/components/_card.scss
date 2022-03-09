@@ -94,8 +94,10 @@
         .course-thumbnail {
             @include flex-center;
             @include w100;
-            height: length(162);
+            // height: length(162);
             overflow: hidden;
+            aspect-ratio: 1.77;
+
 
             img {
                 max-width: 100%;
@@ -192,6 +194,179 @@
                     @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
                     color: $gray-800;
                 }
+            }
+        }
+    }
+}
+
+.mycardcourse {
+    @include flex-column;
+    @include radius(8);
+    overflow: hidden;
+    gap: length(8);
+
+    &-header {
+        .mycardcourse-thumbnail {
+            @include flex-center;
+            @include w100;
+            // height: length(162);
+            overflow: hidden;
+            aspect-ratio: 1.77;
+
+            img {
+                max-width: 100%;
+                @include w100;
+                object-fit: cover;
+                @include transitiontransform;
+
+                @include hover {
+                    @include transform(scale(1.05));
+                }
+            }
+        }
+    }
+
+    &-body {
+        background: $white;
+        @include flex-column;
+        gap: length(4);
+        padding: length(8);
+
+        .mycardcourse-title {
+            @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25.92, 16));
+            color: $gray-800;
+            @include line-clamp;
+            @include transitions;
+            height: length(52);
+
+            @include hover {
+                color: $tertiary;
+            }
+        }
+
+        .mycardcoursedetail {
+            @include flex-column;
+            gap: length(10);
+
+            @include breakpoint(mobile360) {
+                flex-direction: row;
+                align-items: center;
+                gap: length(36);
+            }
+
+            .courseinfo {
+                @include flex-column;
+                gap: length(8);
+
+                .course-category {
+                    @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                    color: $gray-600;
+                }
+
+                .course-teacher {
+                    @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                    color: $gray-800;
+                }
+            }
+        }
+
+        .course-progress {
+            @include flex-column;
+            gap: length(4);
+
+            .progress {
+                background: $gray-400;
+                height: length(4);
+                @include radius(0);
+
+                &-bar {
+                    background: $tertiary;
+                }
+            }
+
+            .progresstext {
+                @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                color: $tertiary;
+            }
+        }
+    }
+}
+
+.cardcertificate {
+    @include flex-column;
+    @include radius(8);
+    overflow: hidden;
+    gap: length(8);
+
+    &-header {
+        .cardcertificate-thumbnail {
+            @include flex-center;
+            @include w100;
+            // height: length(162);
+            overflow: hidden;
+            aspect-ratio: 1.77;
+
+            img {
+                max-width: 100%;
+                @include w100;
+                object-fit: cover;
+                @include transitiontransform;
+
+                @include hover {
+                    @include transform(scale(1.05));
+                }
+            }
+        }
+    }
+
+    &-body {
+        background: $white;
+        @include flex-column;
+        gap: length(4);
+        padding: length(8);
+
+        .cardcertificate-title {
+            @include font-face($primaryFont, style('normal'), size(16), weight('semibold'), line-height(25.92, 16));
+            color: $gray-800;
+            @include line-clamp;
+            @include transitions;
+            height: length(52);
+
+            @include hover {
+                color: $tertiary;
+            }
+        }
+
+        .cardcertificatedetail {
+            @include flex-column;
+            gap: length(10);
+
+            @include breakpoint(mobile360) {
+                flex-direction: row;
+                align-items: center;
+                gap: length(36);
+            }
+
+            .courseinfo {
+                @include flex-column;
+                gap: length(8);
+
+                .course-category {
+                    @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                    color: $gray-600;
+                }
+
+                .course-teacher {
+                    @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                    color: $gray-800;
+                }
+            }
+        }
+
+        .complete-date {
+            .date {
+                @include font-face($primaryFont, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                color: $tertiary;
             }
         }
     }

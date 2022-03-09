@@ -186,6 +186,34 @@
             }
         }
     }
+
+    .mycourse {
+        @include flex-center-vert;
+        gap: length(24);
+        flex-wrap: wrap;
+
+        .mycardcourse {
+            @include w100;
+
+            @include breakpoint(mobile576) {
+                max-width: length(267);
+            }
+        }
+    }
+
+    .mycertificate {
+        @include flex-center-vert;
+        gap: length(24);
+        flex-wrap: wrap;
+
+        .cardcertificate {
+            @include w100;
+
+            @include breakpoint(mobile576) {
+                max-width: length(267);
+            }
+        }
+    }
 }
 
 /**=====================================================
