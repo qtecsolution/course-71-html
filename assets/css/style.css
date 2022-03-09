@@ -29,7 +29,7 @@ BORDER-COLORS
                 ANIMATION-STYLES
 =======================================================**/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Noto+Sans+Bengali:wght@100;200;300;400;500;600;700&display=swap");
-.header-content .desktopmenu .desktopsearch .search-suggestions, .header-content .headermenu .iconlist .headerdropdown {
+.header-content .desktopmenu .allcourses .course-dropdown, .header-content .desktopmenu .desktopsearch .search-suggestions, .header-content .headermenu .iconlist .headerdropdown {
   -webkit-animation-duration: 250ms;
   animation-duration: 250ms;
   -webkit-animation-fill-mode: both;
@@ -126,7 +126,7 @@ BORDER-COLORS
   }
 }
 
-.header-content .desktopmenu .desktopsearch .search-suggestions, .header-content .headermenu .iconlist .headerdropdown {
+.header-content .desktopmenu .allcourses .course-dropdown, .header-content .desktopmenu .desktopsearch .search-suggestions, .header-content .headermenu .iconlist .headerdropdown {
   -webkit-animation-name: slideUpIn;
   animation-name: slideUpIn;
 }
@@ -810,7 +810,6 @@ select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.75rem 1.25rem;
 }
 
 .header-content .hamburger {
@@ -1026,6 +1025,7 @@ select {
 }
 
 .header-content .desktopmenu .allcourses .desktopmenu-link {
+  padding: 2.6875rem 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1073,6 +1073,273 @@ select {
   fill: #7D56A5;
 }
 
+.header-content .desktopmenu .allcourses:not([disabled]):hover .course-dropdown {
+  display: block;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  padding: 1rem 0rem;
+  min-height: 70vh;
+  display: none;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  width: 16.6875rem;
+  position: relative;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item {
+  padding-right: 0.75rem;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item .subcategorylist {
+  width: 16.6875rem;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  gap: 0.5rem;
+  border-left: solid 0.0625rem #E2E8F0;
+  display: none;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item .subcategorylist-item {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item .subcategorylist-item .topics {
+  gap: 1rem;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 16.6875rem;
+  display: none;
+  padding-left: 0.75rem;
+  border-left: solid 0.0625rem #E2E8F0;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item .subcategorylist-item .topics .topiclist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item .subcategorylist-item .topics .topiclist-link {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.59875;
+  color: #2D3748;
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0.9375rem 0.5rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item .subcategorylist-item .topics .topiclist-link:not([disabled]):hover {
+  background: #FEF8F6;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item .subcategorylist-item .topics .alltopiclink {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.59875;
+  color: #F78B64;
+  padding: 0rem 0.5rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item .subcategorylist-item .topics .alltopiclink:not([disabled]):hover {
+  color: #7D56A5;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item .subcategorylist-item:not([disabled]):hover .topics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item .subcategorylist-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9375rem 0.5rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item .subcategorylist-link .subcategorytext {
+  width: calc(100% - 2rem);
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.59875;
+  color: #2D3748;
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item .subcategorylist-link .arrowicon {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item .subcategorylist-link:not([disabled]):hover {
+  background: #FEF8F6;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-item:not([disabled]):hover .subcategorylist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-link .icontext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  width: calc(100% - 2rem);
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-link .icontext .icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-link .icontext .development {
+  background: #E7D9FA;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-link .icontext .business {
+  background: #FFD9CB;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-link .icontext .accounting {
+  background: #C9E4FF;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-link .icontext .it {
+  background: #8E8E8E;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-link .icontext .text {
+  width: calc(100% - 2.5rem);
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.59875;
+  color: #2D3748;
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-link .arrowicon {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-content .desktopmenu .allcourses .course-dropdown .categorylist-link:not([disabled]):hover {
+  background: #FEF8F6;
+}
+
 .header-content .desktopmenu .desktopsearch {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -1110,7 +1377,7 @@ select {
 .header-content .desktopmenu .desktopsearch .searchbox .search-field {
   width: calc(100% - 3rem);
   height: 100%;
-  padding: 0.90625rem 1.375rem;
+  padding: 0.8125rem 1.375rem;
   font-family: "Noto Sans Bengali";
   font-style: normal;
   font-size: 1rem;

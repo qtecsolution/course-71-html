@@ -13,7 +13,6 @@
 
     &-content {
         @include flex-between;
-        padding: length(12) length(20);
 
         .hamburger {
             width: 33.33%;
@@ -164,7 +163,9 @@
             }
 
             .allcourses {
+
                 .desktopmenu-link {
+                    padding: length(43) length(20);
                     @include flex-center-vert;
                     gap: length(12);
 
@@ -197,6 +198,174 @@
                             }
                         }
                     }
+
+                    .course-dropdown {
+                        display: block;
+                    }
+                }
+
+                .course-dropdown {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    @include w100;
+                    background: $white;
+                    padding: length(16) length(0);
+                    min-height: 70vh;
+                    display: none;
+                    @extend %animation;
+                    @extend %slideUpIn;
+
+                    .categorylist {
+                        @include list-vertical;
+                        gap: length(8);
+                        width: length(267);
+                        position: relative;
+
+                        &-item {
+                            padding-right: length(12);
+
+                            .subcategorylist {
+                                width: length(267);
+                                position: absolute;
+                                top: 0;
+                                left: 100%;
+                                gap: length(8);
+                                @include border-single(left, solid, 1, $dropdownborder);
+                                display: none;
+
+                                &-item {
+                                    padding-right: length(12);
+                                    padding-left: length(12);
+
+                                    .topics {
+                                        gap: length(16);
+                                        position: absolute;
+                                        top: 0;
+                                        left: 100%;
+                                        width: length(267);
+                                        display: none;
+                                        padding-left: length(12);
+                                        @include border-single(left, solid, 1, $dropdownborder);
+
+                                        .topiclist {
+                                            @include list-vertical;
+
+                                            &-link {
+                                                @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.58, 16));
+                                                color: $gray-800;
+                                                @include text-overflow;
+                                                padding: length(15) length(8);
+                                                @include radius(8);
+                                                @include w100;
+
+                                                @include hover {
+                                                    background: $tertiary-light;
+                                                }
+                                            }
+                                        }
+
+                                        .alltopiclink {
+                                            @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.58, 16));
+                                            color: $tertiary;
+                                            padding: length(0) length(8);
+                                            @include transitions;
+
+                                            @include hover {
+                                                color: $primary;
+                                            }
+                                        }
+                                    }
+
+                                    @include hover {
+                                        .topics {
+                                            @include flex-column;
+                                        }
+                                    }
+                                }
+
+                                &-link {
+                                    @include flex-center-between;
+                                    gap: length(8);
+                                    padding: length(15) length(8);
+                                    @include radius(8);
+                                    @include w100;
+
+                                    .subcategorytext {
+                                        width: calc(100% - 2rem);
+                                        @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.58, 16));
+                                        color: $gray-800;
+                                        @include text-overflow;
+                                    }
+
+                                    .arrowicon {
+                                        @include square(length(24));
+                                        @include flex-center;
+                                    }
+
+                                    @include hover {
+                                        background: $tertiary-light;
+                                    }
+                                }
+                            }
+
+                            @include hover {
+                                .subcategorylist {
+                                    @include list-vertical;
+                                }
+                            }
+                        }
+
+                        &-link {
+                            @include flex-center-between;
+                            gap: length(8);
+                            padding: length(8);
+                            @include radius(8);
+
+                            .icontext {
+                                @include flex-center-vert;
+                                gap: length(8);
+                                width: calc(100% - 2rem);
+
+                                .icon {
+                                    @include square(length(40));
+                                    @include radius(8);
+                                }
+
+                                .development {
+                                    background: $primary-light;
+                                }
+
+                                .business {
+                                    background: $businessBg;
+                                }
+
+                                .accounting {
+                                    background: $accountingBg;
+                                }
+
+                                .it {
+                                    background: $itBg;
+                                }
+
+                                .text {
+                                    width: calc(100% - 2.5rem);
+                                    @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(25.58, 16));
+                                    color: $gray-800;
+                                    @include text-overflow;
+                                }
+                            }
+
+                            .arrowicon {
+                                @include square(length(24));
+                                @include flex-center;
+                            }
+
+                            @include hover {
+                                background: $tertiary-light;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -223,7 +392,7 @@
                     .search-field {
                         width: calc(100% - 3rem);
                         @include h100;
-                        padding: length(14.5) length(22);
+                        padding: length(13) length(22);
                         @include font-face($primaryFont, style('normal'), size(16), weight('normal'), line-height(14, 16));
 
                         &::placeholder {
